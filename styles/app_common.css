@@ -1,0 +1,342 @@
+@import '/fonts/pretendard_gov/pretendard-gov-dynamic-subset.css';
+@import './normalize.css';
+@import './theme.css';
+
+:root {
+  --container-max-width: 1456px;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: white; letter-spacing: -0.02em;
+  color: var(--color-text-500);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Pretendard-Gov-Dynamic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+/*=====================================*/
+/* Layout */
+/*=====================================*/
+
+.app-root{
+  width:100%; position: relative; overflow-x: hidden; overflow-y: auto;
+  min-height:100vh; height: 100vh;
+}
+main {
+  &.app-main{
+    width:100%; position: relative; min-height: 100vh;
+  }
+}
+
+.container{
+  width:100%; position: relative; margin: 0 auto;
+  max-width: var(--container-max-width);
+  padding: 0 16px;
+  &.full {
+    max-width:100%; padding: 0;
+  }
+  >.container-section{
+    width:100%; position: relative; padding-bottom: 48px;
+    >.container-block{
+      width:100%; position: relative;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+    >.container-section{
+      padding-bottom: 48px;
+    }
+  }
+}
+
+.container-root{
+  width:100%; min-height: calc(100vh - 300px); max-width:100%;
+}
+
+/*=====================================*/
+/* Header */
+/*=====================================*/
+
+.app-header{
+  width:100%; position: absolute; top:0; left:0; z-index: 1000;
+  display:flex; flex-direction: column; justify-content: center;;
+  >.header-util-bar{
+    display: none; width:100%; height: 44px; position: relative;
+    border-bottom: 1px solid var(--color-line-150);
+    >.right-block{
+      position: absolute; right:24px; top:0; height: 44px;
+      display: flex;
+      >img{
+        height: 100%;
+      }
+    }
+  }
+  >.gnb-bar{
+    width:100%; position:relative;
+    display:flex; justify-content: center; align-items: center;
+    height: 88px;
+    >.logo-wrap{
+      display: block; position: absolute; left:24px; top: 16px; width:172px; height: 46px;
+      >img{ max-width:100%;}
+    }
+    >.gnb-menu-wrap{
+      display:none;
+    }
+    >.btn-gnb-burger{
+      width:48px; height: 48px; position: absolute; right:24px; top: 16px;
+      display: flex; justify-content: center; align-items: center;
+      cursor: pointer;
+      >.line-wrap{
+        width:24px; height:24px;
+        >.line{
+          display: block; width:100%; height: 3px; border-top: 3px solid var(--color-text-600); margin: 5px 0;
+          border-radius: 4px;
+          transition: transform 0.3s ease, opacity 0.2s ease, width 0.3s ease;
+          &.line-1{ width:100%; }
+          &.line-2{ width:80%; }
+          &.line-3{ width:60%; }
+        }
+      }
+      &:hover>.line-wrap>.line{
+        width: 100%;
+      }
+      &.active{
+        >.line-wrap>.line-1{
+          transform: translateY(5px) rotate(45deg);
+        }
+        >.line-wrap>.line-2{
+          opacity: 0; width:100%;
+          transform: scaleX(0);
+        }
+        >.line-wrap>.line-3{
+          transform: translateY(-11px) rotate(-45deg); width:100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .app-header{
+    >.gnb-bar{
+      >.gnb-menu-wrap{
+        display:block; width:100%; height:88px; position: relative;
+      }
+    }
+  }
+
+  .gnb-inner-menu-bar{
+    width:100%; display:flex; justify-content: center; align-items: center;
+    height:100%;
+    >.gnb-menu-item-wrap{
+      display: block; padding: 24px 16px; margin: 0 16px; height:100%;
+      font-size: 20px; font-weight: 700; display: flex; justify-content: center; align-items: center; color: var(--color-text-600); position: relative;
+      cursor: pointer;
+      >.gnb-menu-item{
+        display: block; position: relative; z-index: 1;
+        letter-spacing: -0.02em; transition: all 0.2s ease;
+        &::after{
+            content: ""; position: absolute; bottom:-12px; left: 50%; transform: translateX(-50%);
+            width: 0; height: 3px; background-color: var(--color-primary-500);
+            transition: all 0.2s ease;
+        }
+      }
+      &.active, &:hover{
+        >.gnb-menu-item{
+          color: var(--color-primary-500);
+          &::after{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes gnbSubOpen {
+  from { max-height: 800px; opacity: 0; }
+  to   { max-height: 800px; opacity: 1; }
+}
+
+.gnb-menu-sub-wrap{
+  display: none;
+  width: auto; min-width: 200px; position: absolute; top:100%; left: 50%;
+  transform: translateX(-50%);
+  background-color:white; border: 1px solid var(--color-line-150);
+  border-radius: 16px; padding: 24px;
+  z-index: 100; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.gnb-menu-item-wrap:hover > .gnb-menu-sub-wrap {
+  display: block;
+  animation: gnbSubOpen 0.25s ease forwards;
+  >.gnb-submenu-inner{
+    width:100%; display:flex; gap:12px;
+    >.gnb-submenu-banner{
+      display: flex; flex-direction: column; flex-shrink: 0; justify-content: space-between; width: 200px; min-height: 250px;
+      align-items: flex-start; align-self: stretch; padding: 22px 20px 24px 24px;
+      border-radius: 12px; background: #FF356B; color: white;
+      overflow: hidden; position: relative;
+      >.gnb-banner-title-block{
+        display: block; font-size: 20px; font-weight: 800; margin-bottom: 8px;
+        width:100%; text-align: left; z-index: 2;
+        >span{ display: block;}
+        >.gnb-banner-title-small{
+          font-size:16px; margin-top: 8px; font-weight: 500;
+        }
+      }
+      >.gnb-banner-link-block{
+        display:flex; align-items: center; gap: 12px; z-index: 2;
+        >.gnb-banner-link-text{
+          display: block; font-size: 18px; font-weight: 800;
+          width:100%; text-align: left;
+        }
+        .gnb-banner-link-bullet{
+          width:24px; height:24px; display:flex; justify-content: center; align-items: center; flex-shrink: 0;
+          border-radius: 24px; background-color: rgba(0,0,0,0.2);
+        }
+      }
+      &::before{
+        content: ""; position: absolute; top:-50%; left:-50%; width:30%; aspect-ratio: 1; border-radius: 50%; transition: transform 0.4s ease;z-index: 1;
+        background-color: rgba(244,0,65,1);
+      }
+      &:hover::before{
+        transform: scale(20);
+      }
+    }
+    >.gnb-submenu-item-wrap{
+      width:100%; display:grid; row-gap: 8px; column-gap: 16px;
+      grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(6, 1fr);
+      >.gnb-submenu-item{
+        display:block; padding: 12px 12px; border-radius: 4px; width:226px;
+        background-color: white; color: var(--color-text-500);
+        font-weight: 600; font-size: 17px; line-height:1em;
+        display: flex; justify-content: space-between; align-items: center;
+        >.gnb-submenu-text, >.gnb-submenu-icon{
+          display: block;
+        }
+        >.gnb-submenu-icon{
+          width:14px; height:14px; background-image:url('/img/gnb_submenu_chevron.svg'); background-size: contain; background-repeat: no-repeat; opacity:0;
+        }
+        &:hover{
+          background-color: var(--color-solid-100);
+          >.gnb-submenu-icon{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-header{
+    >.header-util-bar{
+      display: block; background-color: white;
+      >.right-block{
+        >.menu-item{
+          display: flex; justify-content: center; align-items: center;
+          font-size: 15px; font-weight: 600; color:var(--color-text-500);
+          padding: 0 16px; border:transparent; background-color: transparent;
+          &.faq{ margin-right: 12px;}
+        }
+        >.dropdown-wrap{
+          height:44px;
+          >.menu-item{
+            height:44px; padding:0 12px;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 15px; font-weight: 600; color:var(--color-text-500);
+            border:transparent; background-color: transparent;
+            border-left: 1px solid var(--color-line-150); gap:6px;
+            >.text{ display: inline-block; text-align: left;}
+            &.lang{
+              width: 70px;
+              >.text { min-width: 32px;}
+            }
+            &.branch{
+              width: 120px;
+              >.text { min-width: 80px;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------*/
+/* Dropdown popover (lang / branch 공통) */
+
+.dropdown-wrap{
+  position: relative;
+
+  >ul{
+    display: none;
+    position: absolute; top: 100%; right: 0;
+    margin: 0; padding: 4px 0; list-style: none;
+    background-color: white;
+    border: 1px solid var(--color-line-150);
+    border-radius: 6px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+    z-index: 100;
+    >li{
+      padding: 8px 16px;
+      font-size: 14px; font-weight: 600;
+      color: var(--color-text-500);
+      cursor: pointer; white-space: nowrap;
+      &:hover{ background-color: var(--color-solid-200); }
+    }
+  }
+  >button>svg{ transition: transform 0.2s ease; }
+  &.open{
+    >ul{ display: block; }
+    >button>svg{ transform: rotate(180deg); }
+  }
+
+  &.branch-wrap>ul{ width: 100px; }
+  &.branch-wrap>ul>li{ text-align: left; }
+}
+
+/*=====================================*/
+/* Footer */
+/*=====================================*/
+
+.app-footer{
+  display: block; width:100%; position: relative;
+  border-top: 1px solid var(--color-line-150);
+  >.footer-link-bar{
+    width:100%; padding: 16px 0; text-align: center;
+    border-bottom: 1px solid var(--color-line-150);
+    >img{ width: 1600px; margin: 0 auto;}
+  }
+  >.footer-body-wrap{
+    width:100%; padding: 40px 0; text-align: center;
+    background-color: #F9F9F9;
+    >.img-full{
+      width: 1600px; margin: 0 auto;
+    }
+  }
+}
+
+/*=====================================*/
+/* Floating Quick link */
+/*=====================================*/
+
+.app-quick-link{
+  position:fixed; right:0; bottom: 10%; display: flex; flex-direction: column; gap: 2px; z-index: 100;
+  >.app-quick-link-item{
+    width: 52px; height: 60px; display: flex; justify-content: center; align-items: center; padding: 8px;
+    background-color: #232323; border-radius: 6px 0 0 6px; color: white; font-size: 13px; font-weight: 600; line-height: 1.1em;
+    cursor: pointer; text-align: center;
+  }
+}

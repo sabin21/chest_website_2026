@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/styles/app_common.css" />
+  <link rel="stylesheet" href="/styles/home.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div class="container-root">
+
+      <section class="home-hero-wrap">
+        <span class="back-shape"></span>
+        <span class="back-shape back-shape-2 "></span>
+        <div class="home-hero-inner">
+          <div class="home-donation-wrap">
+            <div class="donation-form-wrap">
+              <img src="/img/home_donation_dummy.png" class="dummy-img" />
+            </div>
+            <div class="donation-img-wrap">
+              <div class="character-wrap"></div>
+            </div>
+          </div>
+
+          <div class="home-hero-carousel-wrap">
+            <div class="hero-swiper-wrap">
+              <div class="swiper-wrapper">
+                <a class="swiper-slide hero-slide" href="#">
+                  <div class="slide-img-wrap">
+                    <img src="/img/hero_slide_img_1.png" />
+                  </div>
+                  <div class="slide-title-wrap">
+                    <span class="head-copy">2026.3.23(월)~2026.4.30(목)</span>
+                    <h2 class="headline">대전 공장화재 <br> 특별모금 안내</h2>
+                    <button class="slide-btn-big">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 14L11 8L5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <a class="swiper-slide hero-slide" href="#">
+                  <div class="slide-img-wrap">
+                    <img src="/img/hero_slide_img_2.png" />
+                  </div>
+                  <div class="slide-title-wrap">
+                    <span class="head-copy">휠체어 장애인과 함께 만드는 자립 반찬 프로젝트</span>
+                    <h2 class="headline">바퀴 위의 식탁<br>자립 반찬 만들기</h2>
+                    <button class="slide-btn-big">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 14L11 8L5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <a class="swiper-slide hero-slide" href="#">
+                  <div class="slide-img-wrap">
+                    <img src="/img/hero_slide_img_3.png" />
+                  </div>
+                  <div class="slide-title-wrap">
+                    <span class="head-copy">지역아동센터 노후 책걸상 교체 지원</span>
+                    <h2 class="headline">흔들리지 않는<br>아이들의 꿈</h2>
+                    <button class="slide-btn-big">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 14L11 8L5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <a class="swiper-slide hero-slide" href="#">
+                  <div class="slide-img-wrap">
+                    <img src="/img/hero_slide_img_4.png" />
+                  </div>
+                  <div class="slide-title-wrap">
+                    <span class="head-copy">자활근로자를 위한 안전교육 및 정서회복 지원사업</span>
+                    <h2 class="headline">오지마을 배송길,<br>안심을 배달합니다</h2>
+                    <button class="slide-btn-big">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 14L11 8L5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div class="hero-swiper-control">
+                <div class="swiper-pagination"></div>
+                <span class="nav-group">
+                  <button class="nav-prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 14L4 8L10 2" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="nav-next">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </span>
+                <button class="swiper-btn-pause" aria-label="자동재생 일시정지">
+                    <svg class="icon-pause" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                      <rect x="9" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                    </svg>
+                    <svg class="icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+              </div>
+
+
+            </div><!-- .swiper-wrapper -->
+          </div><!-- .home-hero-carousel-wrap -->
+        </div>
+      </section>
+
+      <section class="donation-type-wrap">
+        <img src="/img/home_dummy_1.png" class="home-dummy-img" />
+      </section>
+      <section class="notice-strip">
+        <img src="/img/home_dummy_2.png" class="home-dummy-img" />
+      </section>
+
+      <section class="section-project">
+        <div class="section-title">
+          <img src="/img/home_dummy_3.png" class="home-dummy-img" />
+        </div>
+        <div class="project-list-wrap">
+          <div class="project-item">
+            <img src="/img/home_card_project_1.png" class="project-dummy-img" />
+          </div>
+          <div class="project-item">
+            <img src="/img/home_card_project_2.png" class="project-dummy-img" />
+          </div>
+          <div class="project-item">
+            <img src="/img/home_card_project_3.png" class="project-dummy-img" />
+          </div>
+          <div class="project-item">
+            <img src="/img/home_card_project_4.png" class="project-dummy-img" />
+          </div>
+      </section>
+
+      <section class="section-story">
+        <img src="/img/home_dummy_4.png" class="home-dummy-img" />
+      </section>
+
+      <section class="section-news">
+        <img src="/img/home_dummy_5.png" class="home-dummy-img" />
+      </section>
+    </div>
+
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="/components/AppHeader.js"></script>
+<script src="/components/AppFooter.js"></script>
+<script src="/components/AppQuickLink.js"></script>
+<script src="/js/app_common.js"></script>
+<script src="/js/home.js"></script>
+</body>
+
+</html>
