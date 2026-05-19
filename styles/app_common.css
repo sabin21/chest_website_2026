@@ -226,7 +226,7 @@ main {
           display: block;
         }
         >.gnb-submenu-icon{
-          width:14px; height:14px; background-image:url('/img/gnb_submenu_chevron.svg'); background-size: contain; background-repeat: no-repeat; opacity:0;
+          width:14px; height:14px; background-image:url('../img/gnb_submenu_chevron.svg'); background-size: contain; background-repeat: no-repeat; opacity:0;
         }
         &:hover{
           background-color: var(--color-solid-100);
