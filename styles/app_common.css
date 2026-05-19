@@ -1,4 +1,4 @@
-@import '/fonts/pretendard_gov/pretendard-gov-dynamic-subset.css';
+@import '../fonts/pretendard_gov/pretendard-gov-dynamic-subset.css';
 @import './normalize.css';
 @import './theme.css';
 

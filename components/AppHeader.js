@@ -2,7 +2,7 @@ async function initAppHeader() {
   const el = document.getElementById('app-header');
   if (!el) return;
 
-  const res = await fetch('/components/app-header.html');
+  const res = await fetch('components/app-header.html');
   if (!res.ok) return;
 
   const doc = new DOMParser().parseFromString(await res.text(), 'text/html');

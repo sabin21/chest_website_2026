@@ -1,7 +1,7 @@
 async function initAppQuickLink() {
   const el = document.getElementById('app-quick-link');
   if (!el) return;
-  const res = await fetch('/components/app-quick-link.html');
+  const res = await fetch('components/app-quick-link.html');
   if (!res.ok) return;
   const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
   el.innerHTML = doc.body.innerHTML;
