@@ -154,7 +154,7 @@
   }
 }
 .section-story{
-  width:100%;
+  width:100%; max-width:1480px; margin: 0 auto; padding: 0px 0;
   >.home-dummy-img{
     max-width: 100%;
   }
