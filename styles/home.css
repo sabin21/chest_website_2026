@@ -48,33 +48,6 @@
     width:100%; height:100%; position: relative;    
   }
 }
-.hero-swiper-control{
-  position: absolute; bottom: 0; z-index: 50; display: flex; align-items: center !important; justify-content: center; gap: 4px; width: 492px;
-  right: 0px; 
-  >.swiper-pagination{
-    width: 100%; height: 8px; position: relative !important; display: flex; gap: 6px !important; opacity:1 !important;
-    >.swiper-pagination-bullet{
-      display:block; width: 8px; height: 8px; background-color: rgba(0,0,0,0.2) !important; border-radius: 4px; left: 0; opacity: 1 !important;
-      margin: 0 !important;
-      &.swiper-pagination-bullet-active{
-        width: 32px; background-color: var(--color-solid-700) !important;
-      }
-    }
-  }
-  >.nav-group{
-    display:flex; gap: 0; height:40px;
-    background-color:white; border: 1px solid var(--color-line-300); border-radius: 30px; align-items: center; justify-content: center; padding: 0 4px; cursor: pointer;
-    >.nav-prev, >.nav-next{
-      width: 32px; height:32px; display: flex; align-items: center; justify-content: center; background:transparent; border:none;
-    }
-  }
-  >.swiper-btn-pause{
-    width: 40px; height: 40px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; border:1px solid var(--color-line-300); flex-shrink: 0; cursor: pointer;
-    >.icon-pause{
-      width: 16px; height: 16px;
-    }
-  }
-}
 
 .hero-slide{
   width:100%; height:400px !important; position: relative; display: flex !important; 

@@ -2,11 +2,19 @@ async function initAppHeader() {
   const el = document.getElementById('app-header');
   if (!el) return;
 
-  const res = await fetch('components/app-header.html');
-  if (!res.ok) return;
+  const [htmlRes, menuRes] = await Promise.all([
+    fetch('components/app-header.html'),
+    fetch('components/gnb-menu.json'),
+  ]);
+  if (!htmlRes.ok) return;
 
-  const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+  const doc = new DOMParser().parseFromString(await htmlRes.text(), 'text/html');
   el.innerHTML = doc.body.innerHTML;
+
+  if (menuRes.ok) {
+    const menuData = await menuRes.json();
+    applyGnbMenu(el, menuData);
+  }
 
   el.querySelector('.btn-gnb-burger')?.addEventListener('click', function () {
     this.classList.toggle('active');
@@ -17,6 +25,25 @@ async function initAppHeader() {
 
   document.addEventListener('click', () => {
     el.querySelectorAll('.dropdown-wrap.open').forEach(d => d.classList.remove('open'));
+  });
+}
+
+function applyGnbMenu(el, menuData) {
+  const menuWraps = el.querySelectorAll('.gnb-menu-item-wrap');
+  menuWraps.forEach((wrap, i) => {
+    const menu = menuData[i];
+    if (!menu) return;
+
+    const subItemWrap = wrap.querySelector('.gnb-submenu-item-wrap');
+    if (!subItemWrap) return;
+
+    subItemWrap.innerHTML = menu.children
+      .map(({ label, href }) => `
+        <a href="${href}" class="gnb-submenu-item">
+          <span class="gnb-submenu-text">${label}</span>
+          <span class="gnb-submenu-icon"></span>
+        </a>`)
+      .join('');
   });
 }
 

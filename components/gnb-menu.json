@@ -1,0 +1,65 @@
+[
+  {
+    "id": "campaign",
+    "label": "캠페인",
+    "href": "/ca/initCmpgn.do",
+    "children": [
+      { "label": "희망나눔캠페인",             "href": "/bbs/1020/initPostList.do" },
+      { "label": "희망여름 착착착 나눔캠페인", "href": "/ca/sc/initNicecmpgn.do" },
+      { "label": "열매모아(크라우드펀딩)",      "href": "/ca/crwdfund/initReqstfund.do" }
+    ]
+  },
+  {
+    "id": "donation",
+    "label": "기부",
+    "href": "/ct/initSuprt.do",
+    "children": [
+      { "label": "착한나눔(정기기부)",          "href": "/ct/fdrmcntr/initEvemthcntr.do" },
+      { "label": "나를 위한 기부(일시기부)",    "href": "/ct/lmpscntr/initIndvdl.do" },
+      { "label": "착한가정",                    "href": "/ct/cntrpt/initNicehome.do" },
+      { "label": "착한가게",                    "href": "/ct/cntrpt/initNicestore.do" },
+      { "label": "착한일터",                    "href": "/ct/cntrpt/initNicespt.do" },
+      { "label": "착한펫",                      "href": "/ct/cntrpt/initNicepet.do" },
+      { "label": "나눔리더스클럽",              "href": "/ct/cntrpt/initShareleadrclub.do" },
+      { "label": "나눔리더",                    "href": "/ct/cntrpt/initShareleadr.do" },
+      { "label": "기부자맞춤기금",              "href": "/ct/cntrpt/initCntrendw.do" },
+      { "label": "아너 소사이어티",             "href": "/ct/cntrpt/initHonorsociety.do" },
+      { "label": "유산기부(레거시클럽)",        "href": "/ct/cntrpt/initHrtgcntr.do" },
+      { "label": "현물기부",                    "href": "/ct/cntrpt/initActhngcntr.do" },
+      { "label": "희망자산나눔",                "href": "/ct/cntrpt/initHopeassetsshare.do" },
+      { "label": "사회공헌 성금기부",           "href": "/ct/entcntrb/initSoctycntrbdntncntr.do" },
+      { "label": "사회공헌 현물기부",           "href": "/ct/entcntrb/initSoctycntracthngcntr.do" },
+      { "label": "착한소비(공익연계마케팅)",    "href": "/ct/entcntrb/initPblbnfcntcmarkt.do" },
+      { "label": "나눔명문기업",                "href": "/ct/entcntrb/initSharexlcmpstnentrprs.do" }
+    ]
+  },
+  {
+    "id": "sharing-culture",
+    "label": "나눔문화 활성화",
+    "href": "/bn/initShare.do",
+    "children": [
+      { "label": "함께 만든 변화",    "href": "/bbs/1009/initPostList.do" },
+      { "label": "나눔문화연구소",    "href": "/bbs/1018/initPostList.do" },
+      { "label": "나눔체험관",        "href": "/bn/sca/initChildse.do" },
+      { "label": "홍보영상",          "href": "/bbs/1006/initPostList.do" },
+      { "label": "홍보인쇄물",        "href": "/bbs/1010/initPostList.do" },
+      { "label": "국제협력",          "href": "/bn/sca/initUwweducnter.do" },
+      { "label": "나눔봉사단",        "href": "/bn/sharesrvc/initSharesrvc.do" },
+      { "label": "나눔문화아카이브",  "href": "https://archives.chest.or.kr" }
+    ]
+  },
+  {
+    "id": "about",
+    "label": "사랑의열매",
+    "href": "/lf/initCck.do",
+    "children": [
+      { "label": "사랑의열매는",      "href": "/lf/intrcn/initIntrcn.do" },
+      { "label": "함께하는 사람들",   "href": "/lf/intrcn/initWpeople.do" },
+      { "label": "열매소식",          "href": "/bbs/1000/initPostList.do" },
+      { "label": "사업성과",          "href": "/lf/intrcn/initBsnsrslt.do" },
+      { "label": "경영공시",          "href": "/lf/ct/initMngmtpblntf.do" },
+      { "label": "윤리경영",          "href": "/bbs/1027/initPostList.do" },
+      { "label": "홍보대사",          "href": "/lf/intrcn/initPrambassador.do" }
+    ]
+  }
+]

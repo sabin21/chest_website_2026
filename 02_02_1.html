@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/app_common.css" />
+  <link rel="stylesheet" href="styles/depth_template.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/donation.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main donation">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div id="app-breadcrumb" class="depth-head"></div>
+
+    <div class="container-root">
+
+      <div class="container">
+        <div class="page-head-wrap">
+          <div class="depth-page-title-wrap donation">
+            <div class="depth-page-title">
+              <img src="./img/donation/page_title_logo_2.png" alt="착한가게" />
+            </div>
+          </div>
+          <div class="page-head-gnb-wrap center">
+            <a href="#" class="btn-page-head active">착한가게 소개</a>
+            <a href="#" class="btn-page-head">기부하기</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="donation-hero-wrap">
+        <span class="back-circle circle-1"></span>
+        <span class="back-circle circle-2"></span>
+        <div class="donation-head-copy-wrap">
+          <span class="head-copy-row">착한가게에 참여하세요!</span>
+          <span class="head-copy-row">나눔의 참 행복을 느끼세요!</span>
+        </div>
+        <div class="donation-hero-pict-wrap">
+          <span class="pict-circle pict-1">
+            <img src="./img/donation/donation_case_2_1.png" alt="착한가게 - 본도시락 " />
+          </span>
+          <span class="pict-circle pict-2">
+            <img src="./img/donation/donation_case_2_2.png" alt="착한가게 - 본도시락 " />
+          </span>
+          <span class="pict-circle donation-cover">
+            <img src="./img/donation/donation_2_cover.jpg" class="cover-image" alt="착한가게 - 본도시락 " />
+            <p class="intro-copy">착한가게는 매월 최소 3만원 이상, 매출의 일정액을 정기적으로 어려운 이웃들에게 나누는 가게로서, 매장을 경영하는 자영업자 또는 중소기업, 프랜차이즈, 학원, 병원 등 어떠한 업종의 가게도 참여 가능합니다.여러 가게가 모여 착한거리, 착한프랜차이즈와 같은 다양한 형태로도 나눔에 동참하며 개인 기부 문화가 확산되는 데 앞장서고 있습니다.</p>
+          </span>
+        </div>
+      </section>
+
+      <div class="donation-redball-wrap">
+        <div class="pict-wrap">
+          <img src="./img/donation/character_1.png" alt="열매둥이 캐릭터" />
+        </div>
+        <a class="btn-redball">참여하기</a>
+      </div>
+
+      <section class="section-content scene-1">
+        <div class="content-inner-lp3">
+          <div class="content-wrap">
+            <span class="content-title-bar">
+              <span class="content-title">착한가게 참여 혜택</span>
+
+              <div class="swiper-control-basic relative">
+                <div class="swiper-pagination"></div>
+                <span class="nav-group">
+                  <button class="nav-prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 14L4 8L10 2" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="nav-next">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </span>
+                <button class="swiper-btn-pause" aria-label="자동재생 일시정지">
+                    <svg class="icon-pause" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                      <rect x="9" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                    </svg>
+                    <svg class="icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+              </div>
+            </span>
+
+            <div class="swiper-container carousel-card-row">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_1.png" class="card-image" />
+                </div>
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_2.png" class="card-image" />
+                </div>
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_3.png" class="card-image" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-content scene-2">
+        <div class="content-inner-lp3">
+          <div class="content-wrap">
+            <span class="content-title-bar">
+              <span class="content-title">착한가게 사례</span>
+
+              <div class="swiper-control-basic relative">
+                <div class="swiper-pagination"></div>
+                <span class="nav-group">
+                  <button class="nav-prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 14L4 8L10 2" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="nav-next">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </span>
+                <button class="swiper-btn-pause" aria-label="자동재생 일시정지">
+                    <svg class="icon-pause" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                      <rect x="9" y="2" width="2" height="12" rx="1" fill="currentColor"/>
+                    </svg>
+                    <svg class="icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                      <path d="M6 2L12 8L6 14" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+              </div>
+            </span>
+
+            <div class="swiper-container carousel-card-row">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_4.png" class="card-image" />
+                </div>
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_5.png" class="card-image" />
+                </div>
+                <div class="swiper-slide card-item">
+                  <img src="img/donation/dontation_2_card_dummy_6.png" class="card-image" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section-content scene-3">
+        <div class="content-inner-lp3">
+          <div class="content-wrap">
+            <span class="content-title-bar">
+              <span class="content-title">지회별 담당자</span>
+              <button class="btn-basic dark">
+                <span class="label">기부 상담하기</span> 
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 14L11 8L5 2" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </span>
+            <img src="img/donation/branch_dummy.png" style="width:1084px" /> 
+        </div>
+      </section>
+
+    </div><!-- container-root -->
+
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="components/AppHeader.js"></script>
+<script src="components/Breadcrumb.js"></script>
+<script src="components/AppFooter.js"></script>
+<script src="components/AppQuickLink.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app_common.js"></script>
+<script src="js/donation.js"></script>
+</body>
+
+</html>

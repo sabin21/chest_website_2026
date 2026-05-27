@@ -1,0 +1,140 @@
+.app-main{
+    &.donation{
+        background-color:#FBEFE8;
+    }
+}
+
+/* ==========================================================================
+   Depth Head (breadcrumb + page title area)
+   ========================================================================== */
+
+.depth-head {
+  width: 100%; padding-top: 164px;
+}
+
+.depth-head-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 1200px) {
+  .depth-head-inner {
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+
+.breadcrumb-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
+/* 홈 버튼 */
+.breadcrumb-home {
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  color: var(--color-text-500);
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.breadcrumb-home .btn-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.breadcrumb-home:hover .btn-inline {
+  background-color: var(--color-solid-200);
+}
+
+/* breadcrumb 드롭다운 항목 */
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  width: 147px;
+  height: 32px;
+  padding: 4px 4px 12px 4px;
+  border: none;
+  border-bottom: 1px solid var(--color-line-400);
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  gap: 4px;
+}
+
+.breadcrumb-text {
+  flex: 1 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-500);
+  padding-left: 6px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+
+.breadcrumb-chevron {
+  flex-shrink: 0;
+  color: var(--color-text-400);
+  transition: transform 0.2s ease;
+}
+
+.breadcrumb-item:hover .breadcrumb-text {
+  color: var(--color-text-600);
+}
+
+.breadcrumb-item:hover .breadcrumb-chevron {
+  color: var(--color-text-500);
+}
+
+/* ==========================================================================
+   Page Title
+   ========================================================================== */
+.page-head-wrap{
+  width:100%; display:flex; flex-direction:column; gap:24px;
+}
+.depth-page-title-wrap {
+  width:100%; position:relative; 
+  >.depth-page-title {
+    font-size: 32px; font-weight: 700; margin:0 auto;
+    color: var(--color-text-800); line-height: 1.2;
+  }
+  &.donation{
+    >.depth-page-title {
+      max-width:600px;
+      >img{ max-width:100%; height:auto;}
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .depth-page-title-wrap{
+    >.depth-page-title {
+      font-size: 54px;
+    }
+  }  
+}
+
+.page-head-gnb-wrap{
+  width:100%; display:flex; gap:8px; align-items:center;
+  &.center{
+    justify-content:center;
+  } 
+}

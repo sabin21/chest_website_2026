@@ -37,7 +37,7 @@ main {
 .container{
   width:100%; position: relative; margin: 0 auto;
   max-width: var(--container-max-width);
-  padding: 0 16px;
+  padding: 0 16px; word-break: keep-all;
   &.full {
     max-width:100%; padding: 0;
   }
@@ -59,7 +59,7 @@ main {
 }
 
 .container-root{
-  width:100%; min-height: calc(100vh - 300px); max-width:100%;
+  width:100%; 
 }
 
 /*=====================================*/
@@ -218,9 +218,9 @@ main {
       width:100%; display:grid; row-gap: 8px; column-gap: 16px;
       grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(6, 1fr);
       >.gnb-submenu-item{
-        display:block; padding: 12px 12px; border-radius: 4px; width:226px;
+        display:block; padding: 12px 12px; border-radius: 4px; width:226px !important;
         background-color: white; color: var(--color-text-500);
-        font-weight: 600; font-size: 17px; line-height:1em;
+        font-weight: 600; font-size: 17px; line-height:1em; flex-shrink: 0;
         display: flex; justify-content: space-between; align-items: center;
         >.gnb-submenu-text, >.gnb-submenu-icon{
           display: block;
@@ -238,6 +238,27 @@ main {
     }
   }
 }
+
+/* 캠페인(gnb-sub-1): 1 column */
+#gnb-sub-1 .gnb-submenu-item-wrap {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+/* #gnb-sub-1 .gnb-submenu-item { width: auto !important; } */
+
+/* 나눔문화 활성화(gnb-sub-3): 2 columns */
+#gnb-sub-3 .gnb-submenu-item-wrap {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+/* #gnb-sub-3 .gnb-submenu-item { width: auto !important; } */
+
+/* 사랑의열매(gnb-sub-4): 2 columns */
+#gnb-sub-4 .gnb-submenu-item-wrap {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+/* #gnb-sub-4 .gnb-submenu-item { width: auto !important; } */
 
 @media (min-width: 1200px) {
   .app-header{
@@ -314,6 +335,7 @@ main {
 .app-footer{
   display: block; width:100%; position: relative;
   border-top: 1px solid var(--color-line-150);
+  background-color: white;
   >.footer-link-bar{
     width:100%; padding: 16px 0; text-align: center;
     border-bottom: 1px solid var(--color-line-150);
