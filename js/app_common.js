@@ -4,8 +4,8 @@ function initLenis() {
   if (window.innerWidth < MOBILE_BREAKPOINT) return;
 
   const lenis = new Lenis({
-    wrapper: document.querySelector('.app-root'),
-    content: document.querySelector('.app-main'),
+    wrapper: document.querySelector(".app-root"),
+    content: document.querySelector(".app-main"),
   });
 
   // 전역 노출 — GSAP ScrollTrigger 등 다른 스크립트에서 참조

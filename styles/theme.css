@@ -1,31 +1,30 @@
 :root {
-
   /* ==========================================================================
      Palette — Raw color tokens
      ========================================================================== */
 
   /* Gray */
-  --palette-gray-25:    #fafafa;
-  --palette-gray-50:    #f4f5f6;
-  --palette-gray-75:    #f0f1f2;
-  --palette-gray-100:   #e6e8ea;
-  --palette-gray-150:   #d8dde2;
-  --palette-gray-175:   #d8dfe4;
-  --palette-gray-200:   #cdd1d5;
-  --palette-gray-300:   #b1b8be;
-  --palette-gray-400:   #8a949e;
-  --palette-gray-500:   #6d7882;
-  --palette-gray-600:   #58616a;
-  --palette-gray-700:   #464c53;
-  --palette-gray-800:   #33363d;
-  --palette-gray-900:   #1e2124;
-  --palette-gray-950:   #131416;
+  --palette-gray-25: #fafafa;
+  --palette-gray-50: #f4f5f6;
+  --palette-gray-75: #f0f1f2;
+  --palette-gray-100: #e6e8ea;
+  --palette-gray-150: #d8dde2;
+  --palette-gray-175: #d8dfe4;
+  --palette-gray-200: #cdd1d5;
+  --palette-gray-300: #b1b8be;
+  --palette-gray-400: #8a949e;
+  --palette-gray-500: #6d7882;
+  --palette-gray-600: #58616a;
+  --palette-gray-700: #464c53;
+  --palette-gray-800: #33363d;
+  --palette-gray-900: #1e2124;
+  --palette-gray-950: #131416;
   --palette-gray-black: #000000;
   --palette-gray-white: #ffffff;
 
   /* Blue */
-  --palette-blue-50:  #eff6ff;
-  --palette-blue-75:  #e8f2ff;
+  --palette-blue-50: #eff6ff;
+  --palette-blue-75: #e8f2ff;
   --palette-blue-100: #dbeafe;
   --palette-blue-200: #bfdbfe;
   --palette-blue-300: #93c5fd;
@@ -38,7 +37,7 @@
   --palette-blue-950: #192e6c;
 
   /* Cyan */
-  --palette-cyan-50:  #ecfeff;
+  --palette-cyan-50: #ecfeff;
   --palette-cyan-100: #cffafe;
   --palette-cyan-200: #a5f3fc;
   --palette-cyan-300: #67e8f9;
@@ -50,7 +49,7 @@
   --palette-cyan-900: #164e63;
 
   /* Rose */
-  --palette-rose-50:  #fff1f2;
+  --palette-rose-50: #fff1f2;
   --palette-rose-100: #ffe4e6;
   --palette-rose-200: #fecdd3;
   --palette-rose-300: #fda4af;
@@ -61,49 +60,45 @@
   --palette-rose-800: #9f1239;
   --palette-rose-900: #881337;
 
-
   /* ==========================================================================
      Colors — Semantic tokens (alias → Palette)
      ========================================================================== */
 
   /* Text */
-  --color-text-50:    #e6e8ea;   /* → Gray/100 */
-  --color-text-100:   #cdd1d5;   /* → Gray/200 */
-  --color-text-200:   #b1b8be;   /* → Gray/300 */
-  --color-text-300:   #8a949e;   /* → Gray/400 */
-  --color-text-400:   #58616a;   /* → Gray/600 */
-  --color-text-500:   #33363d;   /* → Gray/800 */
-  --color-text-600:   #1e2124;   /* → Gray/900 */
-  --color-text-700:   #131416;   /* → Gray/950 */
-  --color-text-white: #ffffff;   /* → Gray/White */
+  --color-text-50: #e6e8ea; /* → Gray/100 */
+  --color-text-100: #cdd1d5; /* → Gray/200 */
+  --color-text-200: #b1b8be; /* → Gray/300 */
+  --color-text-300: #8a949e; /* → Gray/400 */
+  --color-text-400: #58616a; /* → Gray/600 */
+  --color-text-500: #33363d; /* → Gray/800 */
+  --color-text-600: #1e2124; /* → Gray/900 */
+  --color-text-700: #131416; /* → Gray/950 */
+  --color-text-white: #ffffff; /* → Gray/White */
 
   /* Line */
-  --color-line-50:  #f0f1f2;   /* → Gray/75  */
-  --color-line-100: #d8dde2;   /* → Gray/150 */
-  --color-line-150: #d8dfe4;   /* → Gray/175 */
-  --color-line-200: #cdd1d5;   /* → Gray/200 */
-  --color-line-300: #8a949e;   /* → Gray/400 */
-  --color-line-400: #58616a;   /* → Gray/600 */
-  --color-line-500: #33363d;   /* → Gray/800 */
+  --color-line-50: #f0f1f2; /* → Gray/75  */
+  --color-line-100: #d8dde2; /* → Gray/150 */
+  --color-line-150: #d8dfe4; /* → Gray/175 */
+  --color-line-200: #cdd1d5; /* → Gray/200 */
+  --color-line-300: #8a949e; /* → Gray/400 */
+  --color-line-400: #58616a; /* → Gray/600 */
+  --color-line-500: #33363d; /* → Gray/800 */
 
   /* Solid */
-  --color-solid-50:    #fafafa;   /* → Gray/25  */
-  --color-solid-100:   #f4f5f6;   /* → Gray/50  */
-  --color-solid-200:   #f0f1f2;   /* → Gray/75  */
-  --color-solid-300:   #e6e8ea;   /* → Gray/100 */
-  --color-solid-400:   #cdd1d5;   /* → Gray/200 */
-  --color-solid-500:   #8a949e;   /* → Gray/400 */
-  --color-solid-700:   #464c53;   /* → Gray/700 */
-  --color-solid-800:   #33363d;   /* → Gray/800 */
-  --color-solid-900:   #131416;   /* → Gray/950 */
-  --color-solid-white: #ffffff;   /* → Gray/White */
+  --color-solid-50: #fafafa; /* → Gray/25  */
+  --color-solid-100: #f4f5f6; /* → Gray/50  */
+  --color-solid-200: #f0f1f2; /* → Gray/75  */
+  --color-solid-300: #e6e8ea; /* → Gray/100 */
+  --color-solid-400: #cdd1d5; /* → Gray/200 */
+  --color-solid-500: #8a949e; /* → Gray/400 */
+  --color-solid-700: #464c53; /* → Gray/700 */
+  --color-solid-800: #33363d; /* → Gray/800 */
+  --color-solid-900: #131416; /* → Gray/950 */
+  --color-solid-white: #ffffff; /* → Gray/White */
 
   /* Primary */
   --color-primary-300: #ff4751;
   --color-primary-400: #ee243e;
   --color-primary-500: #cd293f;
   --color-primary-600: #b22638;
-
 }
-
-
