@@ -1,0 +1,453 @@
+/*=====================================*/
+/* 01_home — Section shared             */
+/* Figma: 0_home_xl (291:5631)          */
+/*=====================================*/
+
+/* 섹션 헤더: title + sub + 더보기 */
+.section-head {
+  display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px;
+  >.section-title-group {
+    display: flex; align-items: flex-end; gap: 16px;
+    >.section-title-text {
+      font-size: 40px; font-weight: 700; color: var(--color-text-600);
+      margin: 0; letter-spacing: -0.03em; line-height: 1;
+    }
+    >.section-sub-link {
+      font-size: 18px; font-weight: 700; color: var(--color-text-400);
+      padding-bottom: 4px; line-height: 1;
+      &:hover { color: var(--color-text-500); }
+    }
+  }
+  >.section-head-right {
+    display: flex; align-items: center; gap: 8px;
+  }
+}
+
+/* 더보기 버튼 */
+.btn-more {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 38px; padding: 0 16px; border-radius: 40px;
+  border: 1px solid var(--color-line-150); background: var(--color-solid-100);
+  font-size: 14px; font-weight: 600; color: var(--color-text-500);
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+  &:hover { border-color: var(--color-line-300); background: var(--color-solid-200); }
+}
+
+/* 원형 nav 버튼 쌍 */
+.nav-circle-group {
+  display: flex; align-items: center;
+  height: 38px; border: 1px solid var(--color-line-150); border-radius: 40px;
+  overflow: hidden; background: white;
+  >.nav-btn {
+    width: 38px; height: 36px; display: flex; align-items: center; justify-content: center;
+    background: transparent; border: none; cursor: pointer; color: var(--color-text-500);
+    &:hover { background: var(--color-solid-100); }
+    &:first-child { border-right: 1px solid var(--color-line-150); }
+  }
+}
+
+/*=====================================*/
+/* 기부 참여방법                          */
+/* Figma: donation-type-bar y=724 h=154 */
+/*=====================================*/
+
+.donation-type-wrap {
+  width: 100%;
+  border-top: 1px solid var(--color-line-150);
+  border-bottom: 1px solid var(--color-line-150);
+  >.container { padding-top: 0; padding-bottom: 0; }
+}
+
+.donation-type-inner {
+  display: flex; align-items: center; width: 100%; height: 114px; gap: 0;
+}
+
+.donation-type-title {
+  font-size: 24px; font-weight: 700; color: var(--color-text-400);
+  line-height: 1.3; flex-shrink: 0; margin-right: 28px;
+  letter-spacing: -0.02em;
+}
+
+.donation-type-divider {
+  width: 1px; height: 44px; background: var(--color-line-150); flex-shrink: 0; margin-right: 8px;
+}
+
+.donation-type-list {
+  display: flex; align-items: center; flex: 1; list-style: none; margin: 0; padding: 0;
+  justify-content: space-around;
+  >li>.donation-type-item {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 10px 16px; border-radius: 12px;
+    transition: background 0.15s;
+    &:hover { background: var(--color-solid-100); }
+    >.dt-icon {
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+      color: var(--color-primary-500);
+      >svg { width: 40px; height: 40px; }
+    }
+    >.dt-label {
+      font-size: 16px; font-weight: 700; color: var(--color-text-600);
+      white-space: nowrap; line-height: 1;
+    }
+  }
+}
+
+/*=====================================*/
+/* 공지사항 스트립                        */
+/* Figma: notice-strip y=878 h=94       */
+/*=====================================*/
+
+.notice-strip {
+  width: 100%; border-bottom: 1px solid var(--color-line-150);
+  >.container { padding-top: 0; padding-bottom: 0; }
+}
+
+.notice-inner {
+  display: flex; align-items: center; width: 100%; height: 70px; gap: 0;
+}
+
+.notice-col {
+  flex: 1; display: flex; align-items: center; gap: 12px;
+  padding: 0 24px; height: 100%; overflow: hidden;
+  &:first-child { padding-left: 0; border-right: 1px solid var(--color-line-150); }
+  &:last-of-type { padding-right: 0; }
+}
+
+.notice-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 24px; padding: 0 10px; border-radius: 4px; flex-shrink: 0;
+  background: var(--color-solid-200); color: var(--color-text-500);
+  font-size: 14px; font-weight: 600;
+}
+
+.notice-text {
+  font-size: 18px; font-weight: 500; color: var(--color-text-500);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1;
+  &:hover { color: var(--color-text-700); }
+}
+
+.notice-date {
+  font-size: 14px; color: #8a949e; flex-shrink: 0; font-weight: 500;
+}
+
+.notice-ctrl {
+  display: flex; align-items: center; gap: 6px; flex-shrink: 0; padding-left: 20px;
+  >.nav-btn-sm {
+    width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--color-line-150); border-radius: 50%; background: white;
+    cursor: pointer; color: var(--color-text-400);
+    &:hover { border-color: var(--color-line-300); color: var(--color-text-600); }
+  }
+}
+
+/*=====================================*/
+/* 열매모아 — 모금 프로젝트               */
+/* Figma: Image Coffers y=1211 h=471    */
+/*=====================================*/
+
+.section-project {
+  width: 100%; position: relative; padding: 72px 0 96px;
+}
+
+.project-list-outer {
+  width: 100%; overflow: hidden;
+}
+
+/* Figma 카드: w=424, img-h=300, body-h=147 */
+.project-card {
+  width: 424px !important; border-radius: 20px; overflow: hidden;
+  background: white; border: 1px solid var(--color-line-100);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: box-shadow 0.25s, transform 0.25s;
+  cursor: pointer;
+  &:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.12); transform: translateY(-4px); }
+
+  >.project-card-img {
+    width: 100%; height: 300px; position: relative; overflow: hidden;
+    background: var(--color-solid-200);
+    >img { width: 100%; height: 100%; object-fit: cover; }
+    >.d-badge {
+      position: absolute; top: 16px; left: 16px;
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 28px; padding: 0 12px; border-radius: 14px;
+      background: var(--color-primary-400); color: white;
+      font-size: 14px; font-weight: 800; letter-spacing: 0.02em;
+    }
+  }
+
+  >.project-card-body {
+    height: 147px; padding: 20px 20px 18px; display: flex; flex-direction: column;
+    >.project-title {
+      font-size: 28px; font-weight: 700; color: #1f2937;
+      margin: 0 0 6px; line-height: 1.2; letter-spacing: -0.025em;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    >.project-org {
+      font-size: 16px; font-weight: 700; color: #6b7280; margin: 0; flex: 1;
+    }
+    >.project-progress-row {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+      >.project-progress {
+        flex: 1; height: 4px; background: var(--color-solid-300); border-radius: 4px;
+        position: relative;
+        >.project-progress-fill {
+          height: 100%; background: #ed233d; border-radius: 4px;
+          position: absolute; top: 0; left: 0;
+        }
+      }
+      >.project-pct {
+        font-size: 18px; font-weight: 700; color: #ed233d; flex-shrink: 0; line-height: 1;
+      }
+    }
+    >.project-amount {
+      display: flex; align-items: center; justify-content: space-between;
+      >.current { font-size: 14px; font-weight: 700; color: #374151; }
+      >.goal { font-size: 14px; font-weight: 500; color: #6b7280; }
+    }
+  }
+}
+
+/*=====================================*/
+/* 나눔의 행복 — 스토리 섹션              */
+/* Figma: Group 3465825 y=1802 h=898    */
+/* Grid: 740 | 370 | 370 = 2:1:1        */
+/* Rows: 401 | 401                      */
+/*=====================================*/
+
+.section-story {
+  width: 100%; padding: 72px 0 0;
+  background: white;
+}
+
+/* Gap between cards: Figma cards have zero gap (x=220+740=960, x=960+370=1330 etc.) */
+.story-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 401px 401px;
+  gap: 4px;
+  border-radius: 20px; overflow: hidden;
+}
+
+.story-card {
+  position: relative; overflow: hidden;
+  >.story-img-placeholder {
+    width: 100%; height: 100%; display: block;
+  }
+  >.story-label-wrap {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 60px 28px 28px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    >.story-category {
+      font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.85);
+      display: block; margin-bottom: 8px;
+    }
+    >.story-title {
+      font-size: 26px; font-weight: 700; color: white;
+      margin: 0; line-height: 1.35; letter-spacing: -0.025em;
+    }
+  }
+
+  /* 메인 대형 카드 — col1 두 행 모두 */
+  &.story-main {
+    grid-area: 1 / 1 / 3 / 2;
+    >.story-label-wrap {
+      padding: 80px 32px 32px;
+      >.story-title { font-size: 40px; font-weight: 700; }
+    }
+  }
+
+  /* 아너 소사이어티 — 빨간 카드 */
+  &.story-honor {
+    grid-area: 1 / 2 / 2 / 3;
+    background: #ed233d;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 32px 28px 28px;
+    >.honor-body {
+      >.honor-title {
+        font-size: 31px; font-weight: 700; color: white;
+        margin: 0 0 16px; line-height: 1.25; letter-spacing: -0.025em;
+      }
+      >.honor-desc {
+        font-size: 20px; font-weight: 600; color: rgba(255,255,255,0.85);
+        margin: 0; line-height: 1.55;
+      }
+    }
+    >.honor-logo {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.2); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+  }
+
+  /* 스토리 카드 배치 */
+  &.story-sm-1 { grid-area: 1 / 3 / 2 / 4; } /* 건강/희망 */
+  &.story-sm-2 { grid-area: 2 / 2 / 3 / 3; } /* 웰다잉 */
+  &.story-sm-3 { grid-area: 2 / 3 / 3 / 4; } /* 이달의 회보 */
+
+  /* 이달의 회보 (magazine) — 갈색 */
+  &.story-magazine {
+    grid-area: 2 / 3 / 3 / 4;
+    background: #675c51;
+    display: flex; flex-direction: column; padding: 24px;
+    >.magazine-cover {
+      flex: 1; border-radius: 8px; overflow: hidden; min-height: 0;
+      background: rgba(0,0,0,0.25);
+      display: flex; align-items: center; justify-content: center;
+    }
+    >.magazine-info {
+      padding-top: 16px;
+      >.magazine-text {
+        font-size: 20px; font-weight: 600; color: white;
+        margin: 0; line-height: 1.4;
+      }
+    }
+  }
+}
+
+/*=====================================*/
+/* 열매이야기 — 미디어 & 뉴스            */
+/* Figma: Group 3465828 y=2831 h=716   */
+/* LEFT: youtube-wrap w=715             */
+/* RIGHT: news+quicklinks w=715         */
+/*=====================================*/
+
+.section-news {
+  width: 100%; padding: 72px 0 96px;
+}
+
+.news-layout {
+  display: flex; gap: 50px; align-items: flex-start;
+}
+
+/* LEFT: 열매방송 유튜브 컬럼 (w=715/1480 ≈ 48%) */
+.news-video-wrap {
+  flex: 0 0 calc(715 / 1480 * 100%); display: flex; flex-direction: column;
+}
+
+.news-video-heading {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+  >.video-title-text {
+    font-size: 32px; font-weight: 700; color: #1e2124; letter-spacing: -0.03em;
+  }
+}
+
+/* Figma: Frame 3465815 w=716, h=412 */
+.news-video-main {
+  width: 100%; aspect-ratio: 716/412; border-radius: 12px; overflow: hidden;
+  background: #1a1a2e; position: relative; cursor: pointer; margin-bottom: 8px;
+  >.video-thumb {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    background: #2a2a4a;
+  }
+  >.video-play-btn {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: background 0.2s;
+    >svg { color: white; margin-left: 4px; }
+    &:hover { background: rgba(255,255,255,0.25); }
+  }
+}
+
+/* Figma: Frame 3465849 w=715, h=194, two thumbs 349px each */
+.news-video-thumbs {
+  display: flex; gap: 8px;
+  >.news-thumb-card {
+    flex: 1; aspect-ratio: 349/194; border-radius: 10px; overflow: hidden;
+    background: #2a2a3a; position: relative; cursor: pointer;
+    >.video-thumb {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      background: var(--color-solid-300);
+    }
+    >.thumb-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,0,0,0.9);
+      display: flex; align-items: center; justify-content: center;
+      >svg { color: white; margin-left: 3px; }
+    }
+    >.thumb-title {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 28px 12px 12px;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+      font-size: 14px; font-weight: 600; color: white; line-height: 1.35;
+    }
+  }
+}
+
+/* RIGHT: 뉴스 컬럼 */
+.news-content-wrap {
+  flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0;
+}
+
+/* Figma 탭: 전체(active=dark #131416), 공지사항, 보도 */
+.news-tab-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 4px;
+  >.news-tabs {
+    display: flex; gap: 4px;
+    >.news-tab {
+      height: 43px; padding: 0 20px;
+      font-size: 16px; font-weight: 700;
+      background: white; border: none; cursor: pointer;
+      color: var(--color-text-400); border-radius: 8px;
+      transition: all 0.15s;
+      &.active {
+        background: #131416; color: white;
+      }
+      &:hover:not(.active) { background: var(--color-solid-100); color: var(--color-text-600); }
+    }
+  }
+}
+
+/* Figma 뉴스 아이템: h=49, 내부 h=25 */
+.news-list {
+  list-style: none; margin: 0; padding: 0;
+  >.news-item {
+    display: flex; align-items: center; gap: 12px;
+    height: 49px; border-bottom: 1px solid var(--color-line-50);
+    &:last-child { border-bottom: none; }
+    >.news-badge {
+      flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+      height: 22px; padding: 0 8px; border-radius: 3px;
+      /* 피그마: color=rgb(37,99,235) 파란색 */
+      color: #2563eb; font-size: 12px; font-weight: 500;
+      background: #eff6ff;
+    }
+    >a {
+      flex: 1; font-size: 18px; font-weight: 600; color: var(--color-text-500);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      &:hover { color: var(--color-text-700); }
+    }
+    >.news-date {
+      font-size: 14px; color: #8a949e; flex-shrink: 0; font-weight: 500;
+    }
+  }
+}
+
+/* Figma: home-link y=3355 h=188, 6 items w=94 each */
+.news-quick-links {
+  display: flex; align-items: stretch; gap: 0;
+  border: 1px solid var(--color-line-150); border-radius: 14px; overflow: hidden;
+  margin-top: 20px;
+  >.quick-link-item {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding: 18px 8px;
+    border-right: 1px solid var(--color-line-150); background: white;
+    transition: background 0.15s;
+    &:last-child { border-right: none; }
+    &:hover { background: var(--color-solid-100); }
+    >.ql-icon {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      color: var(--color-text-400);
+      >svg { width: 28px; height: 28px; }
+    }
+    >.ql-label {
+      font-size: 15px; font-weight: 600; color: var(--color-text-500);
+      text-align: center; line-height: 1.3;
+    }
+  }
+}

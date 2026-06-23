@@ -123,3 +123,110 @@
         }
     }   
 }
+
+/*---------------------------*/
+/*---------------------------*/
+
+.donation-form-full-wrap{
+    width:100%; max-width: 1208px; margin:0 auto; text-align: center; position: relative;
+    padding: 40px 0;
+    >.step-wrap{
+        width:100%; margin:0 auto; position: relative;
+        >.dummy-img{
+            width:100%;
+        }
+    }
+    
+}
+.banner-consulting{
+    width:100%; max-width: 1208px; margin:0 auto; position: relative;
+    margin: 40px 0 40px 0; cursor: pointer; border-radius: 16px; overflow: hidden;
+    >.dummy-img{
+        width:100%;
+    }
+}
+#donation-step-2,
+#donation-step-3 {
+    display: none;
+}
+
+#donation-step-1 .dummy-img,
+#donation-step-2 .dummy-img {
+    cursor: pointer;
+}
+
+/*---------------------------*/
+/*---------------------------*/
+
+@keyframes modal-overlay-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes modal-wrap-in {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); z-index: 100;
+    display: none; justify-content: center; align-items: center;
+    &.is-open {
+        display: flex;
+        animation: modal-overlay-in 0.25s ease forwards;
+        >.modal-wrap {
+            animation: modal-wrap-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+    }
+}
+.modal-wrap{
+    &.consulting-request{
+        width: 90%; max-width: 1200px; position: relative;
+        background-color: white; border-radius: 16px; z-index: 200;
+        max-height: 80vh; overflow: hidden;
+        display: flex; flex-direction: column;
+        >.modal-inner{
+            position: relative; display: flex; flex-direction: column;
+            overflow: hidden;
+            >.btn-close{
+                position: absolute; top: 12px; right: 12px; z-index: 10;
+                background: none; border: none; cursor: pointer; padding: 4px;
+                display: flex; align-items: center; justify-content: center;
+            }
+            >.modal-content{
+                overflow-y: auto; padding: 48px 24px 48px 24px; 
+                text-align: center; margin: 0 auto; width: 100%; 
+                scrollbar-width: none;
+                &::-webkit-scrollbar{ display: none; }
+                >.dummy-img{ width: 100%; width: 962px;}
+            }
+        }
+    }
+}
+
+/*---------------------------
+열매모아 상세보기
+---------------------------*/
+
+.project-view-head{
+    width:100%; position:relative; padding-top:180px;
+    >.project-view-head-row{
+        width:100%; margin:0 auto; background-color: white;
+        >.row-inner{
+            width:100%; max-width: var(--container-max-width);
+            &.row-title{
+            display:flex; align-items: center; justify-content: space-between; 
+            padding: 0 16px;
+                >.tag-day{
+                    display:inline-block; padding: 6px 12px; border-radius: 24px;
+                    border: 1px solid var(--color-primary-400); color: var(--color-primary-400);
+                    font-size: 14px; font-weight: 700;
+                }
+                >.project-title-wrap{
+                    display:flex; gap: 8px; align-items: center;
+                    >.project-title{ font-size: 24px; font-weight: 700; color: var(--color-text-900);}
+                }    
+            } 
+        }            
+    }
+}
