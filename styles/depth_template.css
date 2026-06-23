@@ -140,6 +140,7 @@
       padding-top: 40px;
       letter-spacing: -0.025em;
     }
+
   }
   > .depth-page-subtitle {
     > p {
@@ -153,8 +154,9 @@
   }
 
   &.donation {
+    text-align: center;
     > .depth-page-title {
-      max-width: 600px;
+      max-width: 600px; margin: 0 auto;
       > img {
         max-width: 100%;
         height: auto;
