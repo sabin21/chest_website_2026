@@ -126,50 +126,6 @@ tlPict
   .to(pict1, { scale: 0, ease: "power3.in" }, 0)
   .to(pict2, { scale: 0, ease: "power3.in" }, 0);
 
-/* ----------------------------------------
-   btn-redball 파티클 효과
-   일정 간격으로 red ball 파티클 생성 → 위로 상승 + 소멸
----------------------------------------- */
-// (function initRedballParticles() {
-//   const wrap = document.querySelector('.donation-redball-wrap');
-//   if (!wrap) return;
-
-//   const rand = gsap.utils.random; // 편의 alias
-
-//   function spawn() {
-//     const p    = document.createElement('span');
-//     p.className = 'redball-particle';
-
-//     const size    = rand(12, 40, 1);         // 파티클 지름 (px)
-//     const offsetX = rand(-60, 60, 1);       // 버튼 중심 기준 좌우 편차
-//     const riseY   = rand(80, 300, 1);       // 상승 거리
-//     const driftX  = rand(-24, 24, 1);       // 떠오르며 x 흘러가는 양
-//     const dur     = rand(1.2, 2.6);         // 애니메이션 시간
-
-//     p.style.cssText =
-//       `width:${size}px; height:${size}px;` +
-//       `left:calc(50% + ${offsetX - size / 2}px);` +
-//       `bottom:${rand(10, 40, 1)}px;`;
-
-//     wrap.appendChild(p);
-
-//     gsap.fromTo(p,
-//       { y: 0, x: 0, opacity: rand(0.8, 1), scale: 1 },
-//       {
-//         y         : -riseY,
-//         x         : driftX,
-//         opacity   : 0,
-//         scale     : rand(0.3, 0.8),
-//         duration  : dur,
-//         ease      : 'power1.out',
-//         onComplete: () => p.remove(),
-//       }
-//     );
-//   }
-
-//   // 350ms 마다 파티클 1개 생성 → 초당 약 2~3개 흐름
-//   setInterval(spawn, 350);
-// }());
 
 /* ----------------------------------------
    .scene-2 가 viewport 중앙에 진입하면
