@@ -6,7 +6,7 @@
     "children": [
       { "label": "희망나눔캠페인",             "href": "./00_home.html" },
       { "label": "희망여름 착착착 나눔캠페인", "href": "./00_home.html" },
-      { "label": "열매모아(크라우드펀딩)",      "href": "./01_03_1_list.html" }
+      { "label": "열매모아(크라우드펀딩)",      "href": "./cam_funding_list.html" }
     ]
   },
   {
