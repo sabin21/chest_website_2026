@@ -1,21 +1,22 @@
 .btn-page-head {
   display: inline-flex;
-  padding: 8px 16px;
+  padding: 8px 14px;
   background-color: rgba(0, 0, 0, 0.06);
   justify-content: center;
   align-items: center;
   border-radius: 32px;
   color: var(--color-text-400);
   font-weight: 700;
-  font-size: 14px;
-  transition: background-color 0.15s ease;
+  font-size: 14px; border: 1px solid rgba(0,0,0,0);
+  transition: all 0.15s ease;
   &.active {
     background-color: var(--color-primary-400);
     color: white;
     pointer-events: none;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--color-line-200);
   }
 }
 
@@ -30,12 +31,14 @@
 /* Button */
 /*---------------------------*/
 .btn {
-  display: inline-flex; padding: 8px 16px;
+  display: inline-flex; padding: 8px 16px; justify-content:center;
+  align-items:center;
   background-color: var(--color-primary-400);
-  border: none; border-radius: 40px;
+  border: none; border-radius: 40px; flex-shrink:0;
   &.only-icon {
     aspect-ratio: 1/1; padding: 12px;
   }
+  &.lg{ padding: 16px 24px; font-size: 18px; font-weight: 800; }
 }
 .btn-basic {
   display: inline-flex;
@@ -395,5 +398,114 @@
     background-color: #f5f5f5;
     border-color: var(--color-text-700);
     outline: none;
+  }
+}
+
+/*---------------------------*/
+/* Tags */
+/*---------------------------*/
+
+.tags-row{
+  width:100%; position:relative; display:flex; gap:4px;
+  align-items:center;
+  &.center{
+    justify-content:center;
+  }
+}
+.tag{
+  display:inline-block; font-size: 14px; padding: 10px 12px; border-radius: 20px;
+  flex-shrink:0; flex-grow:0; color: var(--color-text-400);
+  font-weight:700; border: 1px solid var(--color-line-200);
+  background:rgba(255,255,255,0);
+  &.teal{
+    background: var(--color-teal-50);
+    border: 1px solid var(--color-teal-400);
+    color: var(--color-teal-600);
+  }
+  &.rose{
+    background: var(--color-rose-50);
+    border: 1px solid var(--color-rose-400);
+    color: var(--color-rose-600);
+  }
+  &.purple{
+    background: var(--color-purple-50);
+    border: 1px solid var(--color-purple-400);
+    color: var(--color-purple-600);
+  }
+  &.green{
+    background: var(--color-green-50);
+    border: 1px solid var(--color-green-400);
+    color: var(--color-green-600);
+  }
+  &.cyan{
+    background: var(--color-cyan-50);
+    border: 1px solid var(--color-cyan-400);
+    color: var(--color-cyan-600);
+  }
+  &.lime{
+    background: var(--color-lime-50);
+    border: 1px solid var(--color-lime-400);
+    color: var(--color-lime-600);
+  }
+  &.active{
+    background: var(--color-solid-900) !important; color:white !important;
+    border: transparent !important;
+  }
+}
+.tags-wrap {
+  display:flex; flex-direction:column; margin-bottom: 40px; gap: 12px;
+}
+/*---------------------------*/
+/* Card project */
+/*---------------------------*/
+
+.card-project {
+  width:100%; display:flex; flex-direction: column;
+  padding-bottom: 16px;
+  >.thumbnail-wrap{
+    width:100%; aspect-ratio: 16/10; background:gray;
+    position: relative; overflow:hidden; border-radius:16px;
+    >.thumbnail-image {
+      width:100%; height:100%; object-fit:cover; object-align:center;
+    }
+    >.day-tag{
+      padding: 8px 12px; font-size:16px; font-weight: 900;
+      color:var(--color-primary-500); background:white; border-radius:30px;
+      position: absolute; top: 12px; left: 12px;
+    }
+  }
+  >.card-content{
+    width:100%; display:flex; flex-direction:column; padding: 0 16px;
+    >.card-title{
+      font-size: 28px; word-break:all; margin-top: 20px;
+    }
+    >.card-subinfo {
+      width:100%; display: block; font-size:16px; margin-top: 8px;
+    }
+    >.progress-wrap{
+      width:100%; display:flex; flex-direction:column;
+      gap: 6px;
+      padding-top: 16px;
+      >.progress-num {
+        font-size: 20px; font-weight:800;
+        color:var(--color-primary-500); text-align:right;
+      }
+      >.progress-bar{
+        display:block; width:100%; height:12px; border-radius:8px;
+        overflow:hidden; background-color: var(--color-solid-200);
+        position: relative;
+        >.progress-marker{
+          display: block; position: absolute; left:0; top:0; height:100%;
+          background-color: var(--color-primary-400);
+        }
+      }
+      >.funding-num-row{
+        width:100%; display: flex; justify-content: space-between;
+        font-size: 15px; font-weight: 700; color: var(--color-text-300);
+        >.funding-current {
+          color: var(--color-text-500);
+        }
+      }
+    }
   }
 }

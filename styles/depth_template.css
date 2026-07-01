@@ -184,7 +184,7 @@
 .page-head-gnb-wrap {
   width: 100%;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
   margin-top: 40px;
   &.center {
@@ -239,12 +239,12 @@
    ========================================================================== */
 
 .list-grid-wrap {
-  width: 100%;
-  display: grid;
-  position: relative;
-  gap: 24px;
-  padding: 16px 0;
-  &.story-grid {
+  width: 100%; display: grid; position: relative;
+  gap: 24px; padding: 16px 0;
+  &.grid-3col {
     grid-template-columns: repeat(3, 1fr);
+  }
+  &.project-grid {
+    row-gap: 72px;
   }
 }

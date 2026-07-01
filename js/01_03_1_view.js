@@ -1,8 +1,9 @@
 // --- project-view-head-row pin ---
-const headRow = document.querySelector(".project-view-head-row");
+const headRow = document.querySelector(".project-view-head-row.row-1");
 
 if (headRow) {
   const headParent = headRow.closest(".project-view-head");
+  const floatingWrap = document.querySelector(".project-floating-wrap");
   let pinned = false;
   const threshold = headRow.getBoundingClientRect().top;
 
@@ -14,9 +15,11 @@ if (headRow) {
     if (shouldPin) {
       headParent.style.paddingBottom = headRow.offsetHeight + "px";
       headRow.classList.add("scrolled");
+      floatingWrap?.classList.add("active");
     } else {
       headRow.classList.remove("scrolled");
       headParent.style.paddingBottom = "";
+      floatingWrap?.classList.remove("active");
     }
   }
 

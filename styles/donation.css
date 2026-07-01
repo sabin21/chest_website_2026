@@ -1,26 +1,16 @@
 .donation-hero-wrap {
-  width: 100%;
-  position: relative;
-  height: 200vh;
+  width: 100%; position: relative; height: 200vh;
+  /* border: 1px solid red; */
   > .back-circle {
-    background-color: #ffc4c4;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0;
-    display: block;
+    background-color: #ffc4c4; border-radius: 50%;
+    position: absolute; z-index: 0; display: block;
     &.circle-1 {
-      width: 320px;
-      height: 320px;
-      left: calc(50% + 500px);
-      top: -100px;
-      filter: blur(80px);
+      width: 320px; height: 320px;
+      left: calc(50% + 500px); top: -100px; filter: blur(80px);
     }
     &.circle-2 {
-      width: 400px;
-      height: 400px;
-      left: calc(50% - 650px);
-      top: -150px;
-      filter: blur(80px);
+      width: 400px; height: 400px;
+      left: calc(50% - 650px); top: -150px; filter: blur(80px);
     }
   }
 }
@@ -50,14 +40,9 @@
 }
 
 .donation-hero-pict-wrap {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: absolute;
-  top: 200px;
-  left: 0;
-  z-index: 50;
-  display: block;
+  width: 100%; height: 100vh; margin: 0 auto;
+  position: absolute; top: 200px; left: 0;
+  z-index: 50; display: block;
   > .pict-circle {
     display: block;
     border-radius: 50%;
@@ -65,38 +50,23 @@
     position: absolute;
     transform-origin: center center;
     > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover;
     }
     &.pict-1 {
-      width: 220px;
-      height: 220px;
-      left: calc(50% - 560px);
-      top: 120px;
+      width: 220px; height: 220px; left: calc(50% - 560px); top: 120px;
     }
     &.pict-2 {
-      width: 300px;
-      height: 300px;
-      left: calc(50% + 380px);
-      top: 0px;
+      width: 300px; height: 300px; left: calc(50% + 380px); top: 0px;
     }
     &.donation-cover {
-      display: flex;
-      overflow: hidden;
-      position: absolute;
-      width: 440px;
-      height: 440px;
-      left: calc(50% - 220px);
-      top: 140px;
-      z-index: 50;
+      display: flex; overflow: hidden; position: absolute;
+      width: 440px; height: 440px;
+      left: calc(50% - 220px); top: 140px; z-index: 50;
       justify-content: center;
       align-items: center;
       background-color: black;
       > .cover-image {
-        position: absolute;
-        filter: blur(0px);
-        opacity: 0.9;
+        position: absolute; filter: blur(0px); opacity: 0.9;
       }
       > .intro-copy {
         position: absolute; width: 680px;
@@ -369,6 +339,34 @@
           flex-shrink: 0;
         }
       }
+      &.row-progress{
+        display: flex; align-items: center; padding: 0 16px; gap: 40px;
+        >.progress-wrap{
+          width:100%; display:flex; flex-direction: column; gap:6px;
+          >.progress-num {
+            width:100%; font-size: 20px; font-weight: 800;
+            color:var(--color-primary-400);
+          }
+          >.progress-bar{
+            display:block; width:100%; height:12px; border-radius:8px;
+            overflow:hidden; background-color: var(--color-solid-300);
+            position: relative;
+            >.progress-marker{
+              display: block; position: absolute; left:0; top:0; height:100%;
+              background-color: var(--color-primary-400);
+            }
+          }
+          >.progress-info-row{
+            width:100%; display:flex; justify-content: space-between;
+            >.text-block{
+              display: inline-flex; font-size:16px; font-weight: 700;
+              color:var(--color-text-400);
+              >.primary{ color: var(--color-primary-400); }
+            }
+          }
+        }
+        >.btn { text-align:center; color:white;}
+      }
     }
     &.scrolled{
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -392,7 +390,11 @@
 }
 
 .project-floating-wrap{
-  width: 260px; position: fixed; bottom: 32px; right: 40px; z-index: 100;
+  width: 260px; position: fixed; bottom: 32px; right: -100%; z-index: 100;
   filter:drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.2));
+  transition: right 0.25s;
   >.dummy-img{ width: 100%; }
+  &.active{
+    right: 40px;
+  }
 }

@@ -8,6 +8,7 @@ const lenis = window.__lenis;
    scroller가 window가 아닌 .app-root이므로
    scrollerProxy로 스크롤 위치를 명시적으로 연결
 ---------------------------------------- */
+
 if (lenis) {
   lenis.on("scroll", ScrollTrigger.update);
 
@@ -29,11 +30,18 @@ if (lenis) {
 
 ScrollTrigger.defaults({ scroller });
 
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => ScrollTrigger.refresh(), 200);
+});
+
 /* ----------------------------------------
    .donation-redball-wrap 핀
    .container-root 가 뷰포트를 통과하는 동안
    .donation-redball-wrap 의 화면 위치 고정
 ---------------------------------------- */
+
 ScrollTrigger.create({
   trigger: ".container-root",
   start: "top top",
@@ -50,7 +58,6 @@ const coverImage = document.querySelector(".donation-cover .cover-image");
 const coverCopy = document.querySelector(".donation-cover .intro-copy");
 
 gsap.to(cover, {
-  /* to: 애니메이션 종료 상태 */
   width: "calc(100vw - 48px)",
   height: "calc(100vh - 48px)",
   left: 24,
@@ -58,10 +65,11 @@ gsap.to(cover, {
   borderRadius: "24px",
   ease: "none",
   scrollTrigger: {
-    trigger: ".container-root",
+    trigger: ".donation-hero-wrap",
     start: "+=200",
     end: "+=350",
     scrub: 1,
+    invalidateOnRefresh: true,
   },
 });
 
@@ -74,6 +82,7 @@ gsap.to(coverImage, {
     start: "+=350",
     end: "+=400",
     scrub: 1,
+    invalidateOnRefresh: true,
   },
 });
 
@@ -86,6 +95,7 @@ gsap.to(coverCopy, {
     start: "+=350",
     end: "+=400",
     scrub: 1,
+    invalidateOnRefresh: true,
   },
 });
 
@@ -94,7 +104,7 @@ ScrollTrigger.create({
   start: "top -200",
   end: "bottom bottom",
   pin: coverWrap,
-  pinSpacing: false,
+  // pinSpacing: false,
 });
 
 /* ---------------------------------------- */
@@ -119,18 +129,20 @@ const tlPict = gsap.timeline({
     start: "+=100",
     end: "+=200",
     scrub: 1,
+    // pinSpacing:false
   },
 });
 
 tlPict
-  .to(pict1, { scale: 0, ease: "power3.in" }, 0)
-  .to(pict2, { scale: 0, ease: "power3.in" }, 0);
+  .to(pict1, { scale: 0, opacity:0, ease: "power3.in" }, 0)
+  .to(pict2, { scale: 0, opacity:0, ease: "power3.in" }, 0);
 
 
 /* ----------------------------------------
    .scene-2 가 viewport 중앙에 진입하면
    .app-main 배경을 white로 전환 (+=200 구간에 걸쳐 scrub)
 ---------------------------------------- */
+
 gsap.to(".app-main", {
   backgroundColor: "#EDE4D6",
   ease: "none",

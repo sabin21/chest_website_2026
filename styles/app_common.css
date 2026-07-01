@@ -176,7 +176,7 @@ main {
     > .gnb-bar {
       > .gnb-menu-wrap {
         display: block;
-        width: 100%;
+
         height: 88px;
         position: relative;
       }
