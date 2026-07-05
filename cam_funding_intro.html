@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/app_common.css" />
+  <link rel="stylesheet" href="styles/depth_template.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/donation.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div id="app-breadcrumb" class="depth-head"></div>
+
+    <div class="container-root">
+
+      <div class="container">
+        <div class="page-head-wrap">
+          <div class="depth-page-title-wrap">
+            <div class="depth-page-title">
+              <h1>열매모아</h1>
+            </div>
+            <!-- <div class="depth-page-subtitle">
+              <p>나눔을 함께하는 이들과 만들어가는 작지만 소중한 이야기들을 만나세요</p>
+            </div> -->
+          </div>
+          <div class="depth-visual-wrap">
+            <img src="img/character_03.png"/>
+          </div>
+
+          <div class="page-head-gnb-wrap">
+            <a href="./cam_funding_list.html" class="btn-page-head">펀딩전체보기</a>
+            <a href="./cam_funding_intro.html" class="btn-page-head active">소개</a>
+            <a href="./cam_funding_apply_intro.html" class="btn-page-head">신청안내</a>
+            <a href="./cam_funding_apply.html" class="btn-page-head">신청하기</a>
+          </div>
+        </div>
+      </div><!-- container-->
+
+      <div class="container">
+        <div class="funding-intro-section-1">
+          <div class="image-wrap">
+            <img src="./img/donation/intro_img.png" />
+          </div>
+          <div class="text-wrap">
+            <h2 class="big-copy">사랑의열매,<br />열매모아는?</h2>
+            <p>
+              사랑의열매에서 진행하는 크라우드펀딩 ‘열매모아’는 어려운<br />
+              이웃을 지원하거나 사회문제 해결을 위해 소액을 모아 특정 사업 및<br />
+              프로젝트를 지원하는 온라인 기부를 말합니다.<br />
+              작은 나눔의 열매가 모여 세상을 변화시키는 힘이 된다는<br />
+              믿음으로 우리 사회 곳곳에서 발생하는 새로운 사회문제를 발굴하고<br />
+              해결하기 위해 사회복지기관의 다양한 사업을 지원하고 있습니다.<br /><br />
+              열매모아를 통해 지역사회 문제에 대한 인식을 높일 뿐만 아니라,<br />
+              많은 사람들이 쉽고 빠르게 나눔에 참여할 수 있고 이를 효과적으로 <br />
+              지원할 수 있는 기회를 제공하고자 합니다.
+            </p>
+          </div>
+        </div>
+      </div><!-- container-->
+
+      <div class="container full funding-intro-section-2">
+        <span class="back-graphic">
+          <span class="circle circle-1"></span>
+          <span class="circle circle-2"></span>
+        </span>
+        <div class="container funding-intro-youtube-outer">
+          <div class="funding-intro-youtube-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/nYOoAv99eTw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div><!-- container-->
+        <div class="container col-10 pt-80 pb-80">
+          <img src="./img/dummy_sample/donation_intro.png" class="dummy-img donation-content">
+        </div>
+      </div><!-- container-->
+
+    </div><!-- container-root -->
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="components/AppHeader.js"></script>
+<script src="components/Breadcrumb.js"></script>
+<script src="components/AppFooter.js"></script>
+<script src="components/AppQuickLink.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app_common.js"></script>
+</body>
+
+</html>

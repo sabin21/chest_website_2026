@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/app_common.css" />
+  <link rel="stylesheet" href="styles/depth_template.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/donation.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div id="app-breadcrumb" class="depth-head"></div>
+
+    <div class="container-root">
+
+      <div class="container">
+        <div class="page-head-wrap">
+          <div class="depth-page-title-wrap">
+            <div class="depth-page-title">
+              <h1>열매모아</h1>
+            </div>
+            <!-- <div class="depth-page-subtitle">
+              <p>나눔을 함께하는 이들과 만들어가는 작지만 소중한 이야기들을 만나세요</p>
+            </div> -->
+          </div>
+          <div class="depth-visual-wrap">
+            <img src="img/character_03.png"/>
+          </div>
+
+          <div class="page-head-gnb-wrap">
+            <a href="./cam_funding_list.html" class="btn-page-head">펀딩전체보기</a>
+            <a href="./cam_funding_intro.html" class="btn-page-head">소개</a>
+            <a href="./cam_funding_apply_intro.html" class="btn-page-head">신청안내</a>
+            <a href="./cam_funding_apply.html" class="btn-page-head active">신청하기</a>
+          </div>
+        </div>
+      </div><!-- container-->
+
+      <div class="container pt-80">
+        <img src="./img/dummy_sample/funding_apply.png" class="dummy-image">
+      </div><!-- container-->
+
+
+    </div><!-- container-root -->
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="components/AppHeader.js"></script>
+<script src="components/Breadcrumb.js"></script>
+<script src="components/AppFooter.js"></script>
+<script src="components/AppQuickLink.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app_common.js"></script>
+</body>
+
+</html>
