@@ -471,3 +471,13 @@ body:has(.project-content-bottom-wrap) .app-footer {
 body:has(.funding-intro-section-2) .app-footer {
   margin-top: 0;
 }
+
+/*---------------------------
+열매모아 전체 리스트
+---------------------------*/
+
+.funding-list-wrap { padding: 64px 0 160px 0 !important; }
+
+body:has(.funding-list-wrap) .app-footer {
+  margin-top: 0;
+}

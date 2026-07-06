@@ -245,6 +245,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
   &.project-grid {
-    row-gap: 72px;
+    row-gap: 24px;
   }
 }
