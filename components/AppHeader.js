@@ -19,8 +19,17 @@ async function initAppHeader() {
     applyGnbMenu(el, menuData);
   }
 
-  el.querySelector(".btn-gnb-burger")?.addEventListener("click", function () {
+  const sitemapWrap = el.querySelector(".app-sitemap-wrap");
+  const burgerBtn = el.querySelector(".btn-gnb-burger");
+
+  burgerBtn?.addEventListener("click", function () {
     this.classList.toggle("active");
+    sitemapWrap?.classList.toggle("active");
+  });
+
+  el.querySelector(".btn-sitemap-close")?.addEventListener("click", () => {
+    burgerBtn?.classList.remove("active");
+    sitemapWrap?.classList.remove("active");
   });
 
   initHeaderDropdown(el, ".lang-wrap", ".lang", ".lang-popover");
