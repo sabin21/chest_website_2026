@@ -53,17 +53,13 @@ body {
 /*=====================================*/
 
 .app-root {
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  min-height: 100vh;
-  height: 100vh;
+  width: 100%; position: relative;
+  overflow-x: hidden; overflow-y: auto;
+  min-height: 100vh; height: 100vh;
 }
 main {
   &.app-main {
-    width: 100%;
-    position: relative;
+    width: 100%; position: relative;
     min-height: 100vh;
   }
 }
@@ -122,18 +118,16 @@ main {
     justify-content: center; align-items: center;
     height: 88px;
     > .logo-wrap {
-      display: block; position: absolute; left: 24px; top: 16px;
-      width: 172px; height: 46px;
-      > img {
-        max-width: 100%;
-      }
+      display: block; position: absolute; left: 12px; top: 12px;
+      width: 140px;
+      > img { max-width: 100%; }
     }
     > .gnb-menu-wrap {
       display: none;
     }
     > .btn-gnb-burger {
-      width: 48px; height: 48px; position: absolute;
-      right: 24px; top: 16px; display: flex;
+      width: 40px; height: 40px; position: absolute;
+      right: 16px; top: 8px; display: flex;
       justify-content: center; align-items: center; cursor: pointer;
       > .line-wrap {
         width: 24px; height: 24px;
@@ -142,36 +136,10 @@ main {
           border-top: 3px solid var(--color-text-600);
           margin: 5px 0;
           border-radius: 4px;
-          transition:
-            transform 0.3s ease,
-            opacity 0.2s ease,
-            width 0.3s ease;
-          &.line-1 {
-            width: 100%;
-          }
-          &.line-2 {
-            width: 80%;
-          }
-          &.line-3 {
-            width: 60%;
-          }
-        }
-      }
-      &:hover > .line-wrap > .line {
-        width: 100%;
-      }
-      &.active {
-        > .line-wrap > .line-1 {
-          transform: translateY(5px) rotate(45deg);
-        }
-        > .line-wrap > .line-2 {
-          opacity: 0;
-          width: 100%;
-          transform: scaleX(0);
-        }
-        > .line-wrap > .line-3 {
-          transform: translateY(-11px) rotate(-45deg);
-          width: 100%;
+          transition: transform 0.3s ease, opacity 0.2s ease, width 0.3s ease;
+          &.line-1 { width: 100%; }
+          &.line-2 { width: 80%; }
+          &.line-3 { width: 60%; }
         }
       }
     }
@@ -181,11 +149,29 @@ main {
 @media (min-width: 1200px) {
   .app-header {
     > .gnb-bar {
+      > .logo-wrap {
+        left: 24px; top: 16px;
+        width: 172px; height: 46px;
+      }
       > .gnb-menu-wrap {
         display: block;
 
         height: 88px;
         position: relative;
+      }
+      > .btn-gnb-burger {
+        width: 48px; height: 48px;
+        right: 24px; top: 16px;
+        > .line-wrap {
+          width: 24px; height: 24px;
+          > .line {
+            height: 3px; border-top: 3px solid var(--color-text-600);
+            margin: 5px 0;
+          }
+        }
+        &:hover > .line-wrap > .line {
+          width: 100%;
+        }
       }
     }
   }
@@ -849,7 +835,7 @@ main {
   }
   .sitemap-item-l3{
     display:block; width:100%; padding: 6px 0;
-    font-size:18px; font-weight: 500;
+    font-size:18px; font-weight: 500; color:var(--color-text-400);
     &:hover{
       color:var(--color-primary-500);
     }
