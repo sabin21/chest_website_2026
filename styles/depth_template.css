@@ -5,14 +5,18 @@
 }
 
 /* ==========================================================================
-   Depth Head (breadcrumb + page title area)
+   Depth Head
    ========================================================================== */
 
 .depth-head {
   width: 100%;
-  padding-top: 164px;
+  padding-top: 48px;
 }
-
+@media (min-width: 1200px) {
+  .depth-head {
+    padding-top: 164px;
+  }
+}
 .depth-head-inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -30,12 +34,16 @@
    ========================================================================== */
 
 .breadcrumb-wrap {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
   height: 40px;
 }
-
+@media (min-width: 1200px) {
+  .breadcrumb-wrap {
+    display:flex;
+  }
+}
 /* 홈 버튼 */
 .breadcrumb-home {
   display: flex;
@@ -110,23 +118,28 @@
    ========================================================================== */
 
 .page-head-wrap {
-  width: 100%;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  width: 100%; min-height: 320px;
+  display: flex; flex-direction: column; gap: 24px;
   > .depth-visual-wrap {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 326px;
-    height: 240px;
+    position: absolute; display: none;
+    top: 0px; right: 0;
+    width: 326px; height: 240px;
     > img {
       max-width: 100%;
       height: auto;
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .page-head-wrap {
+    min-height: 400px;
+    > .depth-visual-wrap {
+      display: block;
+    }
+  }
+}
+
 .depth-page-title-wrap {
   width: 100%;
   position: relative;
@@ -169,8 +182,7 @@
   .depth-page-title-wrap {
     > .depth-page-title {
       h1 {
-        font-size: 54px;
-        padding-top: 64px;
+        font-size: 54px; padding-top: 64px;
       }
     }
     > .depth-page-subtitle {
@@ -183,14 +195,71 @@
 
 .page-head-gnb-wrap {
   width: 100%;
-  display: flex;
-  gap: 4px;
+  display: flex; gap: 4px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  > .btn-page-head {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
   &.center {
     justify-content: center;
   }
 }
+
+@media (min-width: 1024px) {
+  .page-head-gnb-wrap {
+    overflow-x: visible;
+    overflow-y: visible;
+    scrollbar-width: auto;
+    -ms-overflow-style: auto; margin-top: 40px;
+    > .btn-page-head {
+      flex-shrink: 1;
+      white-space: normal;
+    }
+  }
+}
+
+.btn-page-head {
+  display: inline-flex;
+  padding: 10px 14px;
+  background-color: rgba(0, 0, 0, 0.06);
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  color: var(--color-text-400);
+  font-weight: 700;
+  font-size: 14px; border: 1px solid rgba(0,0,0,0);
+  transition: all 0.15s ease;
+  &.active {
+    background-color: var(--color-primary-400);
+    color: white;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--color-line-200);
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn-page-head {
+    padding: 16px 32px;
+    font-size: 20px;
+  }
+}
+
+/*---------------------
+*/
 
 .list-search-wrap {
   width: 100%;
@@ -242,9 +311,17 @@
   width: 100%; display: grid; position: relative;
   gap: 24px; padding: 16px 0;
   &.grid-3col {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   &.project-grid {
     row-gap: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .list-grid-wrap {
+    padding: 16px 0;
+    &.grid-3col {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

@@ -1,31 +1,4 @@
-.btn-page-head {
-  display: inline-flex;
-  padding: 8px 14px;
-  background-color: rgba(0, 0, 0, 0.06);
-  justify-content: center;
-  align-items: center;
-  border-radius: 32px;
-  color: var(--color-text-400);
-  font-weight: 700;
-  font-size: 14px; border: 1px solid rgba(0,0,0,0);
-  transition: all 0.15s ease;
-  &.active {
-    background-color: var(--color-primary-400);
-    color: white;
-    pointer-events: none;
-  }
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid var(--color-line-200);
-  }
-}
 
-@media (min-width: 1200px) {
-  .btn-page-head {
-    padding: 16px 32px;
-    font-size: 20px;
-  }
-}
 
 /*---------------------------*/
 /* Button */
@@ -410,6 +383,19 @@
   align-items:center;
   &.center{
     justify-content:center;
+  }
+}
+@media (max-width: 1023px) {
+  .tags-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 .tag{
