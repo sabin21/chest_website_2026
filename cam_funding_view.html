@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles/app_common.css" />
   <link rel="stylesheet" href="styles/depth_template.css" />
   <link rel="stylesheet" href="styles/components.css" />
-  <link rel="stylesheet" href="styles/donation.css" />
+  <link rel="stylesheet" href="styles/campaign.css" />
 </head>
 
 <body>
@@ -20,19 +20,8 @@
 
     <div id="app-header" class="app-header"></div>
 
-    <!-- <div id="app-breadcrumb" class="depth-head"></div> -->
-
     <div class="container-root">
       <div class="container full">
-        <!-- <div class="btn-back-to-list-bar">
-          <button class="btn-back-to-list">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-back">
-              <path d="M9 6L3 12L9 18" stroke="#33363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.5 12H20" stroke="#33363D" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="label">목록보기</span>
-          </button>
-        </div> -->
         <div class="project-view-head">
           <div class="project-view-head-row row-1">
             <div class="row-inner row-title">
@@ -41,11 +30,37 @@
                 <h1 class="project-title">홍파양로원 튼튼한 가구로 지키는 보금자리</h1>
               </span>
               <span class="action-block">
-                <button class="btn only-icon primary">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.72664 9.00684L10.28 11.6602M10.2733 4.34017L5.72664 6.9935M14 3.3335C14 4.43807 13.1046 5.3335 12 5.3335C10.8954 5.3335 10 4.43807 10 3.3335C10 2.22893 10.8954 1.3335 12 1.3335C13.1046 1.3335 14 2.22893 14 3.3335ZM6 8.00016C6 9.10473 5.10457 10.0002 4 10.0002C2.89543 10.0002 2 9.10473 2 8.00016C2 6.89559 2.89543 6.00016 4 6.00016C5.10457 6.00016 6 6.89559 6 8.00016ZM14 12.6668C14 13.7714 13.1046 14.6668 12 14.6668C10.8954 14.6668 10 13.7714 10 12.6668C10 11.5623 10.8954 10.6668 12 10.6668C13.1046 10.6668 14 11.5623 14 12.6668Z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
+                <div class="share-wrap">
+                  <button type="button" class="btn-project-share" aria-haspopup="true" aria-expanded="false">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72664 9.00684L10.28 11.6602M10.2733 4.34017L5.72664 6.9935M14 3.3335C14 4.43807 13.1046 5.3335 12 5.3335C10.8954 5.3335 10 4.43807 10 3.3335C10 2.22893 10.8954 1.3335 12 1.3335C13.1046 1.3335 14 2.22893 14 3.3335ZM6 8.00016C6 9.10473 5.10457 10.0002 4 10.0002C2.89543 10.0002 2 9.10473 2 8.00016C2 6.89559 2.89543 6.00016 4 6.00016C5.10457 6.00016 6 6.89559 6 8.00016ZM14 12.6668C14 13.7714 13.1046 14.6668 12 14.6668C10.8954 14.6668 10 13.7714 10 12.6668C10 11.5623 10.8954 10.6668 12 10.6668C13.1046 10.6668 14 11.5623 14 12.6668Z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <ul class="share-popover">
+                    <li data-share="kakao">
+                      <button type="button" class="share-item">
+                        <span class="icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="10" fill="#FEE500"/>
+                            <path d="M10 5.2c-3.03 0-5.48 1.94-5.48 4.34 0 1.55 1.02 2.92 2.56 3.7l-.52 1.9a.24.24 0 0 0 .37.26l2.2-1.46c.28.03.57.04.87.04 3.03 0 5.48-1.94 5.48-4.34S13.03 5.2 10 5.2Z" fill="#391B1B"/>
+                          </svg>
+                        </span>
+                        <span class="label">카카오톡</span>
+                      </button>
+                    </li>
+                    <li data-share="link">
+                      <button type="button" class="share-item">
+                        <span class="icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.333 11.667a3.333 3.333 0 0 0 4.714 0l2.357-2.357a3.333 3.333 0 1 0-4.714-4.714l-1.357 1.357" stroke="#33363D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.667 8.333a3.333 3.333 0 0 0-4.714 0L4.596 10.69a3.333 3.333 0 1 0 4.714 4.714l1.357-1.357" stroke="#33363D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        <span class="label">링크복사</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </span>
             </div>
           </div>
@@ -70,11 +85,225 @@
           <img src="img/dummy_sample/project_content.png" class="dummy-img" />
         </div>
         <div class="project-content-bottom-wrap">
-            <img src="img/dummy_sample/project_view_bottom.png" style="margin-top: 80px;"/>
+          <div class="project-bottom-inner">
+
+            <div class="block block-1">
+              <h3 class="headline">모금된 금액은 수수료없이<br />전액 사업에 사용됩니다.</h3>
+              <div class="desc-wrap">
+                <sapn class="text-line1">모금액은 이렇게 사용됩니다</sapn>
+                <span>
+                  [집행내역]<br />
+                  ○ 노후 TV 서랍장, 신발장 교체비 = 3,500,000원<br />
+                  ※최종 펀딩금액에 따라 지원 구성 및 범위가 변동됩니다.
+                </span>
+              </div>
+            </div>
+
+            <div class="block block-2">
+              <div class="sub-block">
+                <span class="title-wrap">프로젝트팀</span>
+                <span class="content-wrap">
+                  <img src="./img/dummy_sample/project_team_logo.png" class="project-team-logo">
+                  <span>홍파양로원</span>
+                </span>
+              </div>
+              <div class="sub-block">
+                <span class="title-wrap">모금기간</span>
+                <span class="content-wrap">
+                  <span>2026.05.20~2026.06.20</span>
+                </span>
+              </div>
+              <div class="sub-block">
+                <span class="title-wrap">목표금액<span class="text-red">3,500,000</span>원</span>
+                <span class="content-wrap">
+                  <span>총<span class="text-red">2,500,000</span>원</span>
+                  <span><span class="text-red">40</span>명</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="block block-comment">
+              <div class="comment-wrap">
+                <div class="comment-row">
+                  <span class="group-front">
+                    <span class="user">
+                      <img src="./img/campaign/icon_comment_user.svg" alt="작성자 아이콘" />
+                      <span class="user-name">홍길동</span>
+                    </span>
+                    <span class="date">2026.10.10</span>
+                  </span>
+                  <span class="group-message">
+                    양로원 펀딩 화이팅 입니다! 어르신들의 안전한 하루를 기원합니다!
+                  </span>
+                  <span class="group-btns">
+                    <button class="btn xs basic">수정</button>
+                    <button class="btn xs basic">삭제</button>
+                  </span>
+                </div>
+                <div class="comment-row">
+                  <span class="group-front">
+                    <span class="user">
+                      <img src="./img/campaign/icon_comment_user.svg" alt="작성자 아이콘" />
+                      <span class="user-name">홍길동</span>
+                    </span>
+                    <span class="date">2026.10.10</span>
+                  </span>
+                  <span class="group-message">
+                    양로원 펀딩 화이팅 입니다! 어르신들의 안전한 하루를 기원합니다!
+                  </span>
+                  <span class="group-btns">
+                    <button class="btn xs basic">수정</button>
+                    <button class="btn xs basic">삭제</button>
+                  </span>
+                </div>
+                <div class="comment-row">
+                  <span class="group-front">
+                    <span class="user">
+                      <img src="./img/campaign/icon_comment_user.svg" alt="작성자 아이콘" />
+                      <span class="user-name">홍길동</span>
+                    </span>
+                    <span class="date">2026.10.10</span>
+                  </span>
+                  <span class="group-message">
+                    양로원 펀딩 화이팅 입니다! 어르신들의 안전한 하루를 기원합니다!
+                  </span>
+                  <span class="group-btns">
+                    <button class="btn xs basic">수정</button>
+                    <button class="btn xs basic">삭제</button>
+                  </span>
+                </div>
+                <div class="comment-row">
+                  <span class="group-front">
+                    <span class="user">
+                      <img src="./img/campaign/icon_comment_user.svg" alt="작성자 아이콘" />
+                      <span class="user-name">홍길동</span>
+                    </span>
+                    <span class="date">2026.10.10</span>
+                  </span>
+                  <span class="group-message">
+                    양로원 펀딩 화이팅 입니다! 어르신들의 안전한 하루를 기원합니다!
+                  </span>
+                  <span class="group-btns">
+                    <button class="btn xs basic">수정</button>
+                    <button class="btn xs basic">삭제</button>
+                  </span>
+                </div>
+                <div class="comment-row">
+                  <span class="group-front">
+                    <span class="user">
+                      <img src="./img/campaign/icon_comment_user.svg" alt="작성자 아이콘" />
+                      <span class="user-name">홍길동</span>
+                    </span>
+                    <span class="date">2026.10.10</span>
+                  </span>
+                  <span class="group-message">
+                    양로원 펀딩 화이팅 입니다! 어르신들의 안전한 하루를 기원합니다!
+                  </span>
+                  <span class="group-btns">
+                    <button class="btn xs basic">수정</button>
+                    <button class="btn xs basic">삭제</button>
+                  </span>
+                </div>
+              </div>
+              <div class="pagination-bar">
+                <div class="pagination-wrap">
+
+                  <div class="pagination-ctrl-group">
+                    <button class="pagination-ctrl" aria-label="처음으로">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.91675 12.8334V1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.6666 12.8334L5.83325 7.00008L11.6666 1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <button class="pagination-ctrl" aria-label="이전">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.33333 12.8334L3.5 7.00008L9.33333 1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="pagination-num-group">
+                    <button class="pagination-num-cell">1</button>
+                    <button class="pagination-num-cell">2</button>
+                    <button class="pagination-num-cell">3</button>
+                    <button class="pagination-num-cell">4</button>
+                    <button class="pagination-num-cell active">5</button>
+                    <button class="pagination-num-cell">6</button>
+                    <button class="pagination-num-cell">7</button>
+                    <button class="pagination-num-cell">8</button>
+                    <button class="pagination-num-cell ellipsis" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                      </svg>
+                    </button>
+                    <button class="pagination-num-cell">20</button>
+                  </div>
+
+                  <div class="pagination-ctrl-group">
+                    <button class="pagination-ctrl" aria-label="다음">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66675 12.8334L10.5001 7.00008L4.66675 1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <button class="pagination-ctrl" aria-label="마지막으로">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0833 12.8334V1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.33325 12.8334L8.16659 7.00008L2.33325 1.16675" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
+          <div class="container">
+            <div class="view-other-list-wrap">
+              <div class="view-other-row-wrap">
+                <div class="view-other-row">
+                  <span class="leading">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 11L8 5L14 11" stroke="#33363D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>이전글</span>
+                  </span>
+                  <a class="list-title" href="#">홍파양로원, 튼튼한 가구로 지키는 보금자리</a>
+                  <span class="tail">모금중</span>
+                </div>
+                <div class="view-other-row">
+                  <span class="leading">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 5.5L8 11.5L14 5.5" stroke="#33363D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>다음글</span>
+                  </span>
+                  <a class="list-title" href="#">홍파양로원, 튼튼한 가구로 지키는 보금자리</a>
+                  <span class="tail">모금중</span>
+                </div>
+              </div>
+              <div class="bottom-btn-row">
+                <a class="btn lg" href="./cam_funding_list.html">목록보기</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
         <div class="project-floating-wrap">
-          <img src="img/dummy_sample/project_floating.png" class="dummy-img" />
+          <div class="progress-wrap">
+            <div class="progress-num">75%</div>
+            <span class="progress-bar">
+              <span class="progress-marker" style="width:75%;"></span>
+            </span>
+            <span class="progress-info-row">
+              <span class="text-block"><span class="primary">2,500,000</span><span>원 모금</span></span>
+              <span class="text-block"><span>3,500,000</span><span>원 목표</span></span>
+            </span>
+          </div>
+          <button class="btn lg"><span>펀딩 참여하기</span></button>
         </div>
 
       </div>
@@ -95,7 +324,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/app_common.js"></script>
-<script src="js/01_03_1_view.js"></script>
+<script src="js/cam_funding_view.js"></script>
 
 </body>
 

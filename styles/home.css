@@ -67,7 +67,7 @@
       position: absolute;
       top: -50%;
       left: calc(50% - 152px);
-      background-image: url("../img/character_motion_1.png");
+      background-image: url("../img/character_motion_0.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       animation: characterSprite 3s linear infinite;

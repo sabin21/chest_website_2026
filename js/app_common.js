@@ -1,6 +1,7 @@
 const MOBILE_BREAKPOINT = 1024;
 
 function initLenis() {
+  if (typeof Lenis === "undefined") return; // lenis.min.js 미포함 페이지는 네이티브 스크롤 사용
   if (window.innerWidth < MOBILE_BREAKPOINT) return;
 
   const lenis = new Lenis({

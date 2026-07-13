@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles/app_common.css" />
   <link rel="stylesheet" href="styles/depth_template.css" />
   <link rel="stylesheet" href="styles/components.css" />
-  <link rel="stylesheet" href="styles/donation.css" />
+  <link rel="stylesheet" href="styles/campaign.css" />
 </head>
 
 <body>
@@ -30,9 +30,6 @@
             <div class="depth-page-title">
               <h1>열매모아</h1>
             </div>
-            <!-- <div class="depth-page-subtitle">
-              <p>나눔을 함께하는 이들과 만들어가는 작지만 소중한 이야기들을 만나세요</p>
-            </div> -->
           </div>
           <div class="depth-visual-wrap">
             <img src="img/character_03.png"/>
@@ -48,7 +45,312 @@
       </div><!-- container-->
 
       <div class="container pt-80">
-        <img src="./img/dummy_sample/funding_apply.png" class="dummy-image">
+        <div class="container-col-4-8">
+          <div class="title-left-section">
+            <h3 class="title">열매모아 펀딩 프로젝트를<br>신청하세요.</h3>
+            <p>입력하신 내용은 접수 및 선정과정에서<br>꼭 필요한 정보 이므로 정확히 작성해 주세요</p>
+            <button class="btn stroke">
+              <span class="label">신청안내 보기</span> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 14L11 8L5 2" stroke="#33363D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="funding-apply-form">
+            <div class="form-comment">
+              <span class="carrot">* </span>은 필수입력사항입니다.
+            </div>
+            <div class="inner-group">
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="applicant-name" class="label">신청자 성명</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="applicant-name" name="applicant-name" placeholder="성함을 입력해주세요">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="applicant-phone" class="label">연락처</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="applicant-phone" name="applicant-phone" placeholder="'-'없이 입력하세요">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="applicant-mail" class="label">이메일</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="applicant-mail" name="applicant-mail" placeholder="메일을 입력해 주세요">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="applicant-org" class="label">기관명</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="applicant-org" name="applicant-org" placeholder="30자 이내로 입력해 주세요">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="applicant-number" class="label">고유번호</label>
+                  <span class="sub-label">사업자등록번호</span>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="applicant-number" name="applicant-number" placeholder="'-'없이 입력하세요">
+                </div>
+              </div>
+            </div>
+            
+            <span class="divider"> <span class="line"></span> </span>
+
+            <div class="inner-group column-span">
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-title" class="label">사업/프로그램명</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="project-title" name="project-title" placeholder="ex.영케어러 청년들의 꿈을 지켜주세요!">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-category" class="label">사업분야</label>
+                </span>
+                <div class="input-row">
+                  <select id="project-category">
+                    <option value="" selected disabled>선택해 주세요</option>
+                    <option value="community">지역사회</option>
+                    <option value="youth">아동/청소년</option>
+                    <option value="elderly">노인</option>
+                    <option value="disabled">장애인</option>
+                    <option value="women">여성/다문화</option>
+                    <option value="overseas">해외/북한</option>
+                    <option value="crisis">위기가정</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-purpose" class="label">펀딩 목적</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="project-purpose" name="project-purpose" placeholder="50자 이내로 입력해 주세요">
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-necessary" class="label">사업 필요성</label>
+                </span>
+                <div class="input-row">
+                  <textarea name="project-necessary" id="project-necessary" placeholder="근거/데이터, 공공지자체 지원 이력을 입력해 주세요(500자 이내)" maxlength="500" style="resize:none; height: 200px;"></textarea>
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-content" class="label">사업 내용</label>
+                </span>
+                <div class="input-row">
+                  <textarea name="project-content" id="project-content" placeholder="구체적인 사업내용을 입력해 주세요(500자 이내)" maxlength="500" style="resize:none; height: 200px;"></textarea>
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-schedule" class="label">사업 일정</label>
+                </span>
+                <div class="input-row">
+                  <textarea name="project-schedule" id="project-schedule" placeholder="상세 추진일정을 입력해 주세요(500자 이내)" maxlength="500" style="resize:none; height: 200px;"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <span class="divider"> <span class="line"></span> </span>
+
+            <div class="inner-group">
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="fund-period-start" class="label">희망모금 기간</label>
+                </span>
+                <div class="input-row date-range">
+                  <div class="date-field">
+                    <input type="date" id="fund-period-start" name="fund-period-start">
+                    <button type="button" class="btn-calendar" aria-label="시작일 달력 열기">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="14" height="13" rx="2" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M3 8H17" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M6.5 2.5V5.5M13.5 2.5V5.5" stroke="#33363D" stroke-width="1.4" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="date-sep">~</span>
+                  <div class="date-field">
+                    <input type="date" id="fund-period-end" name="fund-period-end">
+                    <button type="button" class="btn-calendar" aria-label="종료일 달력 열기">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="14" height="13" rx="2" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M3 8H17" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M6.5 2.5V5.5M13.5 2.5V5.5" stroke="#33363D" stroke-width="1.4" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="fund-project-start" class="label">사업기간</label>
+                </span>
+                <div class="input-row date-range">
+                  <div class="date-field">
+                    <input type="date" id="fund-project-start" name="fund-project-start">
+                    <button type="button" class="btn-calendar" aria-label="시작일 달력 열기">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="14" height="13" rx="2" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M3 8H17" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M6.5 2.5V5.5M13.5 2.5V5.5" stroke="#33363D" stroke-width="1.4" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="date-sep">~</span>
+                  <div class="date-field">
+                    <input type="date" id="fund-project-end" name="fund-project-end">
+                    <button type="button" class="btn-calendar" aria-label="종료일 달력 열기">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="14" height="13" rx="2" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M3 8H17" stroke="#33363D" stroke-width="1.4"/>
+                        <path d="M6.5 2.5V5.5M13.5 2.5V5.5" stroke="#33363D" stroke-width="1.4" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <span class="item-message">
+                  *사업기간은 희망모금기간 종료일로부터 2주 이후 부터 설정 가능합니다.
+                </span>
+              </div>
+
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-people" class="label">서비스 대상 인원</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="project-people" name="project-people" placeholder="인원을 입력해주세요">
+                  <span class="unit">명</span>
+                </div>
+              </div>
+
+              <div class="input-item-wrap">
+                <span class="item-label">
+                  <label for="project-region" class="label">서비스 지역</label>
+                </span>
+                <div class="input-row">
+                  <select id="project-region" name="project-region">
+                    <option value="" selected disabled>선택해 주세요</option>
+                    <option value="community">중앙회</option>
+                    <option value="youth">아동/청소년</option>
+                    <option value="elderly">노인</option>
+                    <option value="disabled">장애인</option>
+                    <option value="women">여성/다문화</option>
+                    <option value="overseas">해외/북한</option>
+                    <option value="crisis">위기가정</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-amount" class="label">목표 모금액</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="project-amount" name="project-amount" placeholder="금액을 입력해주세요">
+                  <span class="unit">원</span>
+                </div>
+                <span class="item-message">
+                  *사업예산에 맞게 최대 500만원까지 신청 가능
+                </span>
+              </div>
+
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="project-target" class="label">서비스 대상</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="project-target" name="project-target" placeholder="20자 이내로 입력해주세요">
+                </div>
+              </div>
+
+              <div class="input-item-wrap" style="grid-column: span 2;">
+                <span class="item-label required">
+                  <label for="funds-usage" class="label">모금액 사용계획</label>
+                  <span class="sub-label">(소요예산)</span>
+                </span>
+                <div class="input-row">
+                  <textarea name="funds-usage" id="funds-usage" placeholder="구체적인 사용계획을 적어주세요" maxlength="500" style="resize:none; height: 200px;"></textarea>
+                </div>
+              </div>
+
+              <div class="input-item-wrap" style="grid-column: span 2;">
+                <span class="item-label required">
+                  <label for="funds-short" class="label">목표금액 미달 시</label>
+                </span>
+                <div class="input-row">
+                  <input type="text" id="funds-short" name="funds-short" placeholder="50자 이내로 입력해 주세요">
+                </div>
+              </div>
+
+            </div>
+
+            <span class="divider"> <span class="line"></span> </span>
+
+            <div class="inner-group column-span">
+
+              <div class="input-item-wrap">
+                <span class="item-label required">
+                  <label for="captcha" class="label">이미지 인증</label>
+                </span>
+                <div class="input-row">
+                  <div class="captcha-img-wrap">
+                    <svg viewBox="0 0 160 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="보안문자 4 0 2 9 5 1">
+                      <rect width="160" height="56" fill="#F4F5F6"/>
+                      <path d="M0 14 Q40 28 80 10 T160 22" stroke="#D8DFE4" stroke-width="1.5" fill="none"/>
+                      <path d="M0 42 Q45 24 90 46 T160 38" stroke="#D8DFE4" stroke-width="1.5" fill="none"/>
+                      <circle cx="18" cy="12" r="1.5" fill="#CDD1D5"/>
+                      <circle cx="140" cy="44" r="1.5" fill="#CDD1D5"/>
+                      <circle cx="70" cy="8" r="1.5" fill="#CDD1D5"/>
+                      <text x="16" y="38" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#33363D" transform="rotate(-8 16 38)">4</text>
+                      <text x="40" y="34" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#58616A" transform="rotate(10 40 34)">0</text>
+                      <text x="64" y="40" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#33363D" transform="rotate(-12 64 40)">2</text>
+                      <text x="88" y="32" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#58616A" transform="rotate(7 88 32)">9</text>
+                      <text x="112" y="38" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#33363D" transform="rotate(-6 112 38)">5</text>
+                      <text x="134" y="34" font-family="'Pretendard GOV', sans-serif" font-size="28" font-weight="700" fill="#58616A" transform="rotate(11 134 34)">1</text>
+                    </svg>
+                  </div>
+                  <button class="btn only-icon xs ghost">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.6663 5.99967C11.0991 6.57666 11.333 7.27844 11.333 7.99967C11.333 8.72091 11.0991 9.42269 10.6663 9.99967M12.909 12.2423C13.4662 11.6852 13.9081 11.0237 14.2097 10.2958C14.5112 9.56782 14.6664 8.7876 14.6664 7.99967C14.6664 7.21173 14.5112 6.43151 14.2097 5.70355C13.9081 4.97559 13.4662 4.31415 12.909 3.757M7.33301 3.13436C7.33287 3.0415 7.30524 2.95076 7.25358 2.8736C7.20193 2.79643 7.12858 2.7363 7.04278 2.70078C6.95698 2.66526 6.86258 2.65595 6.7715 2.67403C6.68042 2.69211 6.59674 2.73677 6.53101 2.80236L4.27501 5.05769C4.18794 5.14528 4.08436 5.21471 3.97027 5.26198C3.85618 5.30924 3.73384 5.33339 3.61034 5.33303H1.99967C1.82286 5.33303 1.65329 5.40326 1.52827 5.52829C1.40325 5.65331 1.33301 5.82288 1.33301 5.99969V9.99969C1.33301 10.1765 1.40325 10.3461 1.52827 10.4711C1.65329 10.5961 1.82286 10.6664 1.99967 10.6664H3.61034C3.73384 10.666 3.85618 10.6901 3.97027 10.7374C4.08436 10.7847 4.18794 10.8541 4.27501 10.9417L6.53034 13.1977C6.59607 13.2636 6.67988 13.3084 6.77114 13.3266C6.86239 13.3448 6.957 13.3355 7.04296 13.2999C7.12892 13.2642 7.20237 13.2039 7.25401 13.1265C7.30564 13.0491 7.33314 12.9581 7.33301 12.865V3.13436Z" stroke="#33363D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="btn only-icon xs ghost">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66699 6.66634C2.66699 5.61151 2.97979 4.58036 3.56582 3.7033C4.15186 2.82624 4.98481 2.14265 5.95935 1.73899C6.93389 1.33532 8.00624 1.2297 9.04081 1.43549C10.0754 1.64128 11.0257 2.14923 11.7716 2.89511C12.5174 3.64099 13.0254 4.5913 13.2312 5.62586C13.437 6.66043 13.3314 7.73278 12.9277 8.70732C12.524 9.68186 11.8404 10.5148 10.9634 11.1008C10.0863 11.6869 9.05516 11.9997 8.00033 11.9997H2.66699M5.33366 9.33301L2.66699 11.9997L5.33366 14.6663" stroke="#33363D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <input type="text" id="captcha" name="captcha" placeholder="숫자를 입력하세요">
+                </div>
+              </div>
+
+            </div>
+
+            <span class="divider"> <span class="line"></span> </span>
+
+            <div class="form-sumit-btn-wrap">
+              <button class="btn basic lg">취소</button>
+              <button class="btn lg">신청하기</button>
+            </div>
+
+          </div>
+
+        </div>
       </div><!-- container-->
 
 
@@ -68,6 +370,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/app_common.js"></script>
+<script src="js/cam_funding_apply.js"></script>
 </body>
 
 </html>

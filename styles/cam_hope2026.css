@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'MBC1961M';
+  src: url('../fonts/mbc1961m/MBC-1961-M.woff2') format('woff2'),
+       url('../fonts/mbc1961m/MBC-1961-M.woff') format('woff');
+  font-style: normal;
+}
+
+.pc-hidden { display: none !important; }
+.mo-hidden { display: block !important; }
+.pc-hidden-1024 { display: none !important; }
+
+/* Lenis 미사용: app-root 내부 스크롤을 해제하고 원본과 같은 문서(window) 스크롤 사용 */
+html, body { overflow-x: hidden; }
+.app-root {
+  height: auto;
+  overflow: visible;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-text-300) transparent;
+}
+html::-webkit-scrollbar { width: 6px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb { background-color: var(--color-text-300); border-radius: 8px; }
+html::-webkit-scrollbar-thumb:hover { background-color: var(--color-text-400); }
+
+/***************** 희망2026 나눔캠페인 *****************/
+/* 원본 .base-main > .contents-area 의 width: 1336px 반영 */
+.subpage-new.campaign-2025 { 
+  max-width: 1336px; margin: 0 auto; box-sizing: border-box; color: #1f2937; font-size: 18px; text-align: center;
+  padding-top: 80px;
+}
+@media (min-width:1200px){
+  .subpage-new.campaign-2025{
+    padding-top: 140px;
+  }
+}
+.subpage-new.campaign-2025 .school { font-family: 'MBC1961M'; }
+.subpage-new.campaign-2025 .campaign-intro { position: relative; padding: 144px 0; z-index: 0; }
+.subpage-new.campaign-2025 .campaign-intro:before { content: ''; position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; transform: translateX(-50%); background-image: url(../img/hope2026/img_campaign2026_bg1.png); background-size: contain; background-repeat: no-repeat; background-position: center top; }
+.subpage-new.campaign-2025 .campaign-tit { position: relative; margin-top: 18px; margin-bottom: 30px; font-size: 80px; line-height: 1.2; z-index: 1; }
+.subpage-new.campaign-2025 .campaign-tit span { color: #D41616; }
+.subpage-new.campaign-2025 .campaign-tit-sm { font-size: 48px; margin-left: -8px; }
+.subpage-new.campaign-2025 .campaign-tit-sm > span { color: #D41616; }
+.subpage-new.campaign-2025 .campaign-txt { position: relative; z-index: 1; }
+.subpage-new.campaign-2025 .campaign-txt.campaign-txt-md { font-size: 24px; }
+.subpage-new.campaign-2025 .campaign-txt > span { display: block; line-height: 1.6em; }
+.subpage-new.campaign-2025 .campaign-txt em { font-weight: 600; font-style: normal; }
+.subpage-new.campaign-2025 .campaign-txt + .campaign-txt { margin-top: 28px; }
+.subpage-new.campaign-2025 .campaign-link {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; align-items: center; gap: 24px;
+  max-width: 1108px; margin: auto; margin-top: 72px; border-radius: 30px;
+  background: #D41616; padding: 34px; font-size: 28px; font-weight: 700;
+  color: #fff; line-height: 1;
+}
+.subpage-new.campaign-2025 .campaign-link:hover { color: #fff !important; }
+.subpage-new.campaign-2025 .campaign-link:after { content: ''; width: 40px; height: 40px; background-image: url(../img/hope2026/btn_more.svg); background-size: contain; }
+.subpage-new.campaign-2025 .campaign-tower { position: relative; padding-top: 730px; margin-top: 204px; }
+.subpage-new.campaign-2025 .campaign-tower:before { content: ''; position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; transform: translateX(-50%); background-image: url(../img/hope2026/img_campaign2026_bg2.png); background-size: contain; background-repeat: no-repeat; background-position: center top 72%; }
+.subpage-new.campaign-2025 .campaign-tower-img { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+.subpage-new.campaign-2025 .campaign-tower-img img { max-width: 480px; width: 100%; backface-visibility: hidden; }
+.subpage-new.campaign-2025 .campaign-tower .campaign-txt { position: relative; padding-top: 40px; margin-top: 18px; }
+.subpage-new.campaign-2025 .campaign-tower .campaign-txt:before { content: ''; display: inline-block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40px; height: 6px; background-color: #6b7280; border-radius: 80px; }
+
+.subpage-new.campaign-2025 .campaign-donation { margin-top: 84px; text-align: left; }
+.subpage-new.campaign-2025 .campaign-donation h3 { margin-bottom: 4px; font-size: 48px; }
+.subpage-new.campaign-2025 .campaign-donation > p { font-size: 18px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap { margin-top: 60px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap h4 { margin-bottom: 32px; padding: 22px 32px 18px; border-radius: 96px; background-color: #d41616; font-size: 28px; font-weight: 500; color: #fff; text-align: center; line-height: 1.2; max-width: 300px; letter-spacing: -0.006em; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a { display: flex; flex-direction: column; min-height: 290px; padding: 38px 32px; border-radius: 15px; border: 1px solid #D4D4D4; line-height: 1.2; background-image: url(../img/hope2026/btn_more.svg); background-size: 36px 36px; background-position: right 23px bottom 30px; background-repeat: no-repeat; transition: 0.3s; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:hover { color: inherit !important; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li h5 { margin-bottom: 18px; color: #1F2937; font-size: 24px; font-weight: 700; transition: 0.3s; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li p { font-size: 16px; color: #1F2937; transition: 0.3s; transform-origin: center left; line-height: 1.6; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon { margin-top: auto; align-self: flex-start; max-width: 56px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-1 { max-width: 80px; margin-bottom: -12px; margin-left: -4px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-2 { max-width: 80px; margin-bottom: -14px; margin-left: -10px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-3 { max-width: 60px; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-4 { max-width: 72px; margin-bottom: -14px; margin-left: -10px; width: 100%; }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:hover,
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:focus { background-image: url(../img/hope2026/btn_more_b.svg); border-color: #D41616; box-shadow: 0px 0px 15px 0px rgba(212, 22, 22, 0.50); }
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:hover h5,
+.subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:focus h5 { color: #D41616; font-size: 32px; }
+
+.subpage-new.campaign-2025 .campaign-field { position: relative; background-color: #faf2e6; padding: 116px 0 130px; }
+.subpage-new.campaign-2025 .campaign-field:before { content: ''; position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; transform: translateX(-50%); background-color: #faf2e6; }
+.subpage-new.campaign-2025 .campaign-field-wrap { position: relative; display: flex; gap: 20px; margin-top: 30px; z-index: 1; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li { position: relative; display: flex; width: calc(33.333% - 24px); height: 440px; border-radius: 30px; overflow: hidden; cursor: pointer; background-repeat: no-repeat; background-size: cover; background-position: center; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li .cover-area { display: flex; gap: 12px; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; z-index: 1; max-width: 424px; width: 100%; height: 100%; padding: 40px 32px; flex-shrink: 0; border-radius: 30px; color: #fff; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li .cover-area p { text-align: left; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li::after { content: ""; display: block; width: 100%; height: 100%; background: linear-gradient(360deg, rgba(31, 41, 55, 0.75) 0%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0) 100%); position: absolute; z-index: 0; top: 0; left: 0; transition: all .3s; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li.active::after { background-color: rgba(31, 41, 55, 0.4); }
+.subpage-new.campaign-2025 .campaign-field-wrap > li .desc-area { position: relative; display: none; flex-direction: column; gap: 16px; justify-content: flex-end; width: 100%; height: 100%; z-index: 1; padding: 40px 32px; align-items: flex-start; text-align: left; color: #fff; font-size: 16px; }
+.subpage-new.campaign-2025 .campaign-field-wrap strong { font-size: 28px; font-weight: 600; }
+.subpage-new.campaign-2025 .campaign-field-wrap .desc-list { margin-top: 4px; width: 100%; background-color: rgba(31, 41, 55, 0.6); padding: 10px 8px; border-radius: 10px; }
+.subpage-new.campaign-2025 .campaign-field-wrap .desc-list > li { position: relative; padding-left: 16px; }
+.subpage-new.campaign-2025 .campaign-field-wrap .desc-list > li + li { margin-top: 6px; }
+.subpage-new.campaign-2025 .campaign-field-wrap .desc-list > li:before { content: ""; position: absolute; top: 9px; left: 5px; display: inline-block; width: 4px; height: 4px; background-color: #fff; border-radius: 50%; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li.active { max-width: 600px; width: 100%; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li.active .desc-area { display: flex; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li.active .cover-area { display: none; flex-direction: column; }
+.subpage-new.campaign-2025 .campaign-field-wrap > li:nth-child(1) { background-image: url(../img/hope2026/img_campaign2026_field1.jpg); }
+.subpage-new.campaign-2025 .campaign-field-wrap > li:nth-child(2) { background-image: url(../img/hope2026/img_campaign2026_field2.jpg); }
+.subpage-new.campaign-2025 .campaign-field-wrap > li:nth-child(3) { background-image: url(../img/hope2026/img_campaign2026_field3.jpg); }
+
+@media all and (max-width: 1384px) {
+  .subpage-new.campaign-2025 .campaign-intro { padding: 10.4046vw 0; }
+  .subpage-new.campaign-2025 .campaign-tit { margin-bottom: 2.89vw; font-size: 5.202vw; }
+  .subpage-new.campaign-2025 .campaign-txt { font-size: 1.3005vw; }
+  .subpage-new.campaign-2025 .campaign-txt + .campaign-txt { margin-top: 2.0231vw; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap h4 { margin-bottom: 4.3352vw; padding: 1.412vw 1.412vw 1.012vw; font-size: 2.0231vw; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li h5 { margin-bottom: 1.3vw; font-size: 1.734vw; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li p { font-size: 1.0115vw; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a { min-height: 20.9537vw; padding: 2.7456vw 2.3121vw; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:hover h5,
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:focus h5 { font-size: 2.3121vw; }
+}
+
+@media all and (max-width: 1024px) {
+  .pc-hidden { display: block !important; }
+  .mo-hidden { display: none !important; }
+  .pc-hidden-1024 { display: block !important; }
+
+  .subpage-new.campaign-2025 { padding: 0 20px; }
+  .subpage-new.campaign-2025 .campaign-intro { padding: 50px 0; }
+  .subpage-new.campaign-2025 .campaign-intro:before { background-image: url(../img/hope2026/img_campaign2026_bg1_mo.png); background-size: 100%; }
+  .subpage-new.campaign-2025 .campaign-tit { margin-bottom: 18px; font-size: 42px; }
+  .subpage-new.campaign-2025 .campaign-tit-sm { font-size: 28px; line-height: 1.3em; }
+  .subpage-new.campaign-2025 .campaign-txt.campaign-txt-md { font-size: 16px; }
+  .subpage-new.campaign-2025 .campaign-txt { font-size: 16px; }
+  .subpage-new.campaign-2025 .campaign-txt > span { display: inline; }
+  .subpage-new.campaign-2025 .campaign-txt + .campaign-txt { margin-top: 20px; }
+  .subpage-new.campaign-2025 .campaign-link { gap: 12px; margin-top: 40px; border-radius: 8px; padding: 18px; font-size: 18px; }
+  .subpage-new.campaign-2025 .campaign-link:after { width: 24px; height: 24px; }
+
+  .subpage-new.campaign-2025 .campaign-tower { padding-top: 422px; margin-top: 72px; }
+  .subpage-new.campaign-2025 .campaign-tower-img img { width: 270px; }
+  .subpage-new.campaign-2025 .campaign-tower:before { background-size: 290%; background-position: center top 49%; }
+
+  .subpage-new.campaign-2025 .campaign-field { padding: 60px 0; }
+  .subpage-new.campaign-2025 .campaign-field-wrap { flex-direction: column; gap: 16px; }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li { width: 100%; height: auto; border-radius: 10px; }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li::after { background: linear-gradient(90deg, rgba(31, 41, 55, 0.75) 0%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0) 100%); }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li.active { max-width: 100%; }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li .desc-area { padding: 20px 18px; font-size: 14px; }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li .cover-area { padding: 20px 18px; min-height: 170px; }
+  .subpage-new.campaign-2025 .campaign-field-wrap > li .cover-area p { font-size: 14px; }
+  .subpage-new.campaign-2025 .campaign-field-wrap strong { font-size: 21px; font-weight: 700; }
+
+  .subpage-new.campaign-2025 .campaign-donation { margin-top: 60px; }
+  .subpage-new.campaign-2025 .campaign-donation h3 { margin-bottom: 12px; font-size: 28px; line-height: 1.2em; }
+  .subpage-new.campaign-2025 .campaign-donation > p { font-size: 16px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap { margin-top: 36px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap h4 { font-size: 19px; margin-bottom: 22px; padding: 10px 10px 6px; max-width: 150px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul { grid-template-columns: 1fr; gap: 16px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li h5 { margin-bottom: 8px; font-size: 20px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li p { font-size: 14px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon { transform: scale(0.6666); transform-origin: bottom left; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a { min-height: 160px; padding: 14px 20px; background-size: 24px 24px; background-position: right 24px bottom 32px; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-1 { margin-top: 0; margin-bottom: 0; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-2 { margin-top: 0; margin-bottom: 0; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li .icon.icon-4 { margin-top: 0; margin-bottom: 0; }
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:hover h5,
+  .subpage-new.campaign-2025 .campaign-donation .donation-item-wrap ul li a:focus h5 { color: #1F2937; font-size: 20px; }
+}

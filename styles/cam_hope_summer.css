@@ -1,0 +1,130 @@
+/* Lenis 미사용: app-root 내부 스크롤을 해제하고 문서(window) 스크롤 사용 (AOS가 window 스크롤을 감지) */
+html, body { overflow-x: hidden; }
+.app-root {
+  height: auto;
+  overflow: visible;
+}
+
+html::-webkit-scrollbar { width: 6px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb { background-color: var(--color-text-300); border-radius: 8px; }
+html::-webkit-scrollbar-thumb:hover { background-color: var(--color-text-400); }
+
+.pc-hidden { display: none !important; }
+.pc-hidden-500 { display: none; }
+
+@media (max-width: 1024px) {
+  .pc-hidden { display: block !important; }
+}
+@media (max-width: 500px) {
+  .pc-hidden-500 { display: block; }
+}
+
+/***************** 희망여름 착!착!착! 나눔캠페인 *****************/
+.campaign-sub.nice { color: #1f2937; }
+.campaign-sub.nice .default-wrap.new { position: relative; padding-left: 24px; padding-right: 24px; max-width: 1384px; width: 100%; margin-left: auto; margin-right: auto; }
+
+.campaign-sub.nice .section-1 { padding: 136px 0; }
+.campaign-sub.nice .section-1 .content-wrap { display: flex; align-items: center; justify-content: center; gap: 261px; padding-top: 70px; }
+.campaign-sub.nice .section-1 .content-wrap .image-area { max-width: 652px; width: 100%; }
+.campaign-sub.nice .section-1 .content-wrap .image-area .image { text-align: center; }
+.campaign-sub.nice .section-1 .content-wrap .image-area span { display: block; font-size: 40px; font-weight: 400; color: #1F2937; }
+
+.campaign-sub.nice .section-2 { background-color: #eaf6f7; padding: 58px 0; }
+.campaign-sub.nice .section-2 .default-wrap { display: flex; justify-content: space-between; }
+.campaign-sub.nice .section-2 .title-wrap { max-width: 525px; width: 100%; padding-top: 62px; letter-spacing: -0.08em;}
+.campaign-sub.nice .section-2 .title-wrap strong { display: block; font-size: 40px; font-weight: 800; line-height: 1.2; margin-bottom: 80px; }
+.campaign-sub.nice .section-2 .title-wrap strong > span { font-size: 60px; color: #57a233; line-height: 1.4; }
+.campaign-sub.nice .section-2 .title-wrap p { font-size: 24px; line-height: 1.6; }
+.campaign-sub.nice .section-2 .image-area { max-width: 646px; width: calc(100% - 525px); }
+
+.campaign-sub.nice .section-3 { padding-top: 60px; padding-bottom: 85px; }
+.campaign-sub.nice .section-3 strong { display: block; font-size: 40px; font-weight: 800; }
+.campaign-sub.nice .section-3 .link-title-wrap { margin-top: 95px; margin-bottom: 49px; text-align: center; }
+.campaign-sub.nice .section-3 .link-title-wrap p { font-size: 34px; }
+.campaign-sub.nice .section-3 .link-title-wrap strong { font-size: 50px; font-weight: 800; }
+
+.campaign-sub.nice .section-3 .link-list-wrap { display: flex; align-items: center; gap: 20px; }
+.campaign-sub.nice .section-3 .link-list-wrap li { width: 25%; border-radius: 20px; overflow: hidden; }
+.campaign-sub.nice .section-3 .link-list-wrap li .image-area { display: block; overflow: hidden; }
+.campaign-sub.nice .section-3 .link-list-wrap li .image-area > span { display: block; width: 100%; padding-bottom: 61.443%; background-repeat: no-repeat; background-size: cover; background-position: center; transition: all .3s; }
+.campaign-sub.nice .section-3 .link-list-wrap li:nth-child(1) .image-area > span { background-image: url(../img/hope_summer/img_list01.jpg); }
+.campaign-sub.nice .section-3 .link-list-wrap li:nth-child(2) .image-area > span { background-image: url(../img/hope_summer/img_list02.jpg); }
+.campaign-sub.nice .section-3 .link-list-wrap li:nth-child(3) .image-area > span { background-image: url(../img/hope_summer/img_list03.jpg); }
+.campaign-sub.nice .section-3 .link-list-wrap li:nth-child(4) .image-area > span { background-image: url(../img/hope_summer/img_list04.jpg); }
+.campaign-sub.nice .section-3 .link-list-wrap li .txt-area { background-color: #EDEDED; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
+.campaign-sub.nice .section-3 .link-list-wrap li .txt-area .tit { width: 98px; height: 27px; }
+.campaign-sub.nice .section-3 .link-list-wrap li .txt-area .tit img { display: block; width: 100%; }
+.campaign-sub.nice .section-3 .link-list-wrap li .txt-area .attend-btn { width: 77px; height: 25px; line-height: 25px; text-align: center; background-color: #fff; font-size: 14px; color: #2F2F2F; border-radius: 50px; }
+.campaign-sub.nice .section-3 .link-list-wrap li a:hover .image-area > span { transform: scale(1.2); }
+.campaign-sub.nice .section-3 .link-list-wrap li a:hover .attend-btn { color: #E30613; }
+
+.campaign-sub.nice .section-3 .list-wrap { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start; margin-top: 125px; margin-bottom: 82px; }
+.campaign-sub.nice .section-3 .icon-list { display: flex; gap: 32px; }
+.campaign-sub.nice .section-3 .icon-list li { text-align: center; }
+.campaign-sub.nice .section-3 .icon-list li .icon-wrap { display: flex; align-items: center; justify-content: center; width: 310px; height: 310px; background-color: #F3F4F6; border-radius: 50%; margin: 0 auto 41px; }
+.campaign-sub.nice .section-3 .icon-list li p { font-size: 24px; font-weight: 600; color: #004B9F; }
+.campaign-sub.nice .section-3 .icon-list li p + span,
+.campaign-sub.nice .section-3 .icon-list li p + a { font-size: 24px; }
+
+.campaign-sub.nice .section-3 .table-title { display: none; }
+.campaign-sub.nice .section-3 .wide-scroll { position: relative; }
+.campaign-sub.nice .section-3 table { width: 100%; border-radius: 18px; border: 1px solid #8D8D8D; border-spacing: 0; overflow: hidden; }
+.campaign-sub.nice .section-3 table thead { background-color: #e1f7d5; }
+.campaign-sub.nice .section-3 table thead th { position: relative; height: 43px; font-size: 20px; font-weight: bold; }
+.campaign-sub.nice .section-3 table thead .title th { height: 80px; border-bottom: 1px solid rgba(0,0,0,.1); font-size: 24px; font-weight: 800; }
+.campaign-sub.nice .section-3 table tbody { text-align: center; }
+.campaign-sub.nice .section-3 table tbody tr td { height: 40px; font-size: 18px; border-top: 1px solid rgba(0,0,0,.1); }
+.campaign-sub.nice .section-3 .table-desc { font-size: 18px; margin-top: 7px; line-height: 2.2; text-align: right; }
+
+.campaign-sub.nice .section-4 { padding-bottom: 123px; }
+.campaign-sub.nice .section-4 .campaign-img { max-width: 1108px; margin: 50px auto auto; border-radius: 50px; font-size: 0; overflow: hidden; }
+
+@media (max-width: 1024px) {
+  .campaign-sub.nice .section-1 { padding: 64px 0 60px; }
+  .campaign-sub.nice .section-1 .content-wrap { flex-direction: column; gap: 112px; padding-top: 70px; }
+  .campaign-sub.nice .section-1 .content-wrap .image-area span { font-size: 25px; }
+
+  .campaign-sub.nice .section-2 { padding: 60px 0; }
+  .campaign-sub.nice .section-2 .default-wrap { flex-direction: column; align-items: center; gap: 40px; }
+  .campaign-sub.nice .section-2 .title-wrap { text-align: center; padding-top: 0; }
+  .campaign-sub.nice .section-2 .title-wrap strong { font-size: 24px; margin-bottom: 24px; }
+  .campaign-sub.nice .section-2 .title-wrap strong > span { font-size: 50px; }
+  .campaign-sub.nice .section-2 .title-wrap p { font-size: 20px; line-height: 1.3; }
+  .campaign-sub.nice .section-2 .image-area { width: 100%; }
+
+  .campaign-sub.nice .section-3 strong { font-size: 24px; }
+  .campaign-sub.nice .section-3 .link-title-wrap { margin-bottom: 36px; }
+  .campaign-sub.nice .section-3 .link-title-wrap p { font-size: 24px; }
+  .campaign-sub.nice .section-3 .link-title-wrap strong { line-height: 1.2; }
+  .campaign-sub.nice .section-3 .link-list-wrap { flex-wrap: wrap; }
+  .campaign-sub.nice .section-3 .link-list-wrap li { width: calc(50% - 20px); }
+
+  .campaign-sub.nice .section-3 .list-wrap { margin-top: 100px; gap: 24px; flex-flow: column; align-items: center; }
+  .campaign-sub.nice .section-3 .icon-list { gap: 24px; }
+  .campaign-sub.nice .section-3 .icon-list li .icon-wrap { width: 158px; height: 158px; margin: 0 auto 16px; }
+  .campaign-sub.nice .section-3 .icon-list li .icon-wrap > img { width: 80px; }
+  .campaign-sub.nice .section-3 .icon-list li:nth-child(2) .icon-wrap > img { width: 58px; }
+  .campaign-sub.nice .section-3 .icon-list li p,
+  .campaign-sub.nice .section-3 .icon-list li p + span,
+  .campaign-sub.nice .section-3 .icon-list li p + a { font-size: 18px; }
+
+  .campaign-sub.nice .section-3 .table-title { display: block; margin-top: 62px; font-size: 22px; font-weight: 800; margin-bottom: 32px; text-align: center; }
+  .campaign-sub.nice .section-3 .table-desc { margin-top: 19px; text-align: left; line-height: 1.6; }
+}
+
+@media (max-width: 768px) {
+  .campaign-sub.nice .section-1 .content-wrap .image-area .image { max-width: 340px; width: 100%; margin: 0 auto; }
+  .campaign-sub.nice .section-3 .link-list-wrap { gap: 26px; }
+  .campaign-sub.nice .section-3 .link-list-wrap li { width: 100%; }
+  .campaign-sub.nice .section-3 .wide-scroll { overflow-x: auto; padding-bottom: 10px; margin-bottom: -10px; }
+  .campaign-sub.nice .section-3 table th,
+  .campaign-sub.nice .section-3 table td { word-break: keep-all; }
+  .campaign-sub.nice .section-3 table td { white-space: nowrap; }
+  .campaign-sub.nice .section-3 table thead th { font-size: 18px; padding: 0 12px; }
+}
+
+@media (max-width: 400px) {
+  .campaign-sub.nice .section-3 .icon-list { gap: 10px; }
+  .campaign-sub.nice .section-3 .icon-list li p { font-size: 14px; }
+}
