@@ -1,23 +1,5 @@
 [
   {
-    "id": "campaign",
-    "label": "캠페인",
-    "href": "",
-    "children": [
-      { "label": "희망나눔캠페인",             "href": "./cam_hope2026.html" },
-      { "label": "희망여름 착착착 나눔캠페인", "href": "./cam_hope_summer.html" },
-      {
-        "label": "열매모아(크라우드펀딩)", "href": "./cam_funding_list.html",
-        "children": [
-          { "label": "펀딩전체보기", "href": "./cam_funding_list.html" },
-          { "label": "소개",         "href": "./cam_funding_intro.html" },
-          { "label": "신청안내",     "href": "./cam_funding_apply_intro.html" },
-          { "label": "신청하기",     "href": "./cam_funding_apply.html" }
-        ]
-      }
-    ]
-  },
-  {
     "id": "donation",
     "label": "기부",
     "href": "/02_02_1.html",
@@ -39,6 +21,24 @@
       { "label": "사회공헌 현물기부",           "href": "./02_02_1.html" },
       { "label": "착한소비(공익연계마케팅)",    "href": "./02_02_1.html" },
       { "label": "나눔명문기업",                "href": "./02_02_1.html" }
+    ]
+  },
+  {
+    "id": "campaign",
+    "label": "캠페인",
+    "href": "",
+    "children": [
+      { "label": "희망나눔캠페인",             "href": "./cam_hope2026.html" },
+      { "label": "희망여름 착착착 나눔캠페인", "href": "./cam_hope_summer.html" },
+      {
+        "label": "열매모아(크라우드펀딩)", "href": "./cam_funding_list.html",
+        "children": [
+          { "label": "펀딩전체보기", "href": "./cam_funding_list.html" },
+          { "label": "소개",         "href": "./cam_funding_intro.html" },
+          { "label": "신청안내",     "href": "./cam_funding_apply_intro.html" },
+          { "label": "신청하기",     "href": "./cam_funding_apply.html" }
+        ]
+      }
     ]
   },
   {
