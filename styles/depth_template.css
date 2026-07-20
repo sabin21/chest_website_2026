@@ -36,6 +36,9 @@
 .breadcrumb-wrap {
   display: flex; align-items: center; gap: 8px; height: 40px;
 }
+.breadcrumb-items {
+  display: flex; align-items: center; gap: 8px;
+}
 @media (max-width: 1024px) {
   .breadcrumb-wrap { display: none; }
 }
@@ -83,6 +86,14 @@
 
 .breadcrumb-item:hover .breadcrumb-chevron {
   color: var(--color-text-500);
+}
+
+.breadcrumb-dropdown > .breadcrumb-popover {
+  left: 0; right: auto; min-width: 100%;
+}
+
+.breadcrumb-popover > li.active {
+  color: var(--color-primary-400);
 }
 
 /* ==========================================================================

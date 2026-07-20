@@ -6,7 +6,15 @@
     "children": [
       { "label": "희망나눔캠페인",             "href": "./cam_hope2026.html" },
       { "label": "희망여름 착착착 나눔캠페인", "href": "./cam_hope_summer.html" },
-      { "label": "열매모아(크라우드펀딩)",      "href": "./cam_funding_list.html" }
+      {
+        "label": "열매모아(크라우드펀딩)", "href": "./cam_funding_list.html",
+        "children": [
+          { "label": "펀딩전체보기", "href": "./cam_funding_list.html" },
+          { "label": "소개",         "href": "./cam_funding_intro.html" },
+          { "label": "신청안내",     "href": "./cam_funding_apply_intro.html" },
+          { "label": "신청하기",     "href": "./cam_funding_apply.html" }
+        ]
+      }
     ]
   },
   {
