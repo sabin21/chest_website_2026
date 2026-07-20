@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Template-basic</title>
+  <title>사랑의열매</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/app_common.css" />
   <link rel="stylesheet" href="styles/components.css" />
@@ -24,11 +24,60 @@
       <section class="home-hero-wrap">
         <span class="back-shape"></span>
         <span class="back-shape back-shape-2 "></span>
+
         <div class="home-hero-inner">
+
           <div class="home-donation-wrap">
-            <div class="donation-form-wrap">
-              <img src="img/home_donation_dummy.png" class="dummy-img" />
+            
+            <div class="donation-content-wrap">
+              <div class="donation-content-inner">
+              <ul class="donation-tab-wrap">
+                <li><button class="home-donation-tab active" id="home-donation-tab-1">정기기부</button></li>
+                <li><button class="home-donation-tab" id="home-donation-tab-2">일시기부</button></li>     
+              </ul>
+              <div class="donation-form-wrap active" id="home-donation-1">
+                <div class="input-item-wrap">
+                  <div class="input-row">
+                    <select id="home-donation-1-select">
+                      <option value="" selected>직접입력</option>
+                      <option value="community">100,000</option>
+                      <option value="youth">50,000</option>
+                      <option value="elderly">30,000</option>
+                      <option value="disabled">20,000</option>
+                      <option value="women">10,000</option>
+                      <option value="overseas">5,000</option>
+                    </select>
+                  </div>
+                  <div class="input-row">
+                    <input type="text" id="home-donation-1-amount" name="home-donation-1-amount" placeholder="기부금액을 입력하세요" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <span class="unit">원</span>
+                  </div>
+                </div>
+                <button class="btn" style="width:100%;">정기기부하기</button>
+              </div>
+              <div class="donation-form-wrap" id="home-donation-2">
+                <div class="input-item-wrap">
+                  <div class="input-row">
+                    <select id="home-donation-2-select">
+                      <option value="" selected>직접입력</option>
+                      <option value="community">100,000</option>
+                      <option value="youth">50,000</option>
+                      <option value="elderly">30,000</option>
+                      <option value="disabled">20,000</option>
+                      <option value="women">10,000</option>
+                      <option value="overseas">5,000</option>
+                    </select>
+                  </div>
+                  <div class="input-row">
+                    <input type="text" id="home-donation-2-amount" name="home-donation-2-amount" placeholder="기부금액을 입력하세요" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <span class="unit">원</span>
+                  </div>
+                </div>
+                <button class="btn" style="width:100%;">일시기부하기</button>
+              </div>
+              </div>
             </div>
+
             <div class="donation-img-wrap">
               <div class="character-wrap"></div>
             </div>
@@ -43,7 +92,7 @@
                   </div>
                   <div class="slide-title-wrap">
                     <span class="head-copy">2026.3.23(월)~2026.4.30(목)</span>
-                    <h2 class="headline">대전 공장화재 <br> 특별모금 안내</h2>
+                    <h2 class="headline">대전 공장화재 <br class="sm-hidden">특별모금 안내</h2>
                     <button class="slide-btn-big">
                       <span class="label">바로가기</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +107,7 @@
                   </div>
                   <div class="slide-title-wrap">
                     <span class="head-copy">휠체어 장애인과 함께 만드는 자립 반찬 프로젝트</span>
-                    <h2 class="headline">바퀴 위의 식탁<br>자립 반찬 만들기</h2>
+                    <h2 class="headline">바퀴 위의 식탁 <br class="sm-hidden">자립 반찬 만들기</h2>
                     <button class="slide-btn-big">
                       <span class="label">바로가기</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +122,7 @@
                   </div>
                   <div class="slide-title-wrap">
                     <span class="head-copy">지역아동센터 노후 책걸상 교체 지원</span>
-                    <h2 class="headline">흔들리지 않는<br>아이들의 꿈</h2>
+                    <h2 class="headline">흔들리지 않는 <br class="sm-hidden">아이들의 꿈</h2>
                     <button class="slide-btn-big">
                       <span class="label">바로가기</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +137,7 @@
                   </div>
                   <div class="slide-title-wrap">
                     <span class="head-copy">자활근로자를 위한 안전교육 및 정서회복 지원사업</span>
-                    <h2 class="headline">오지마을 배송길,<br>안심을 배달합니다</h2>
+                    <h2 class="headline">오지마을 배송길, <br class="sm-hidden">안심을 배달합니다</h2>
                     <button class="slide-btn-big">
                       <span class="label">바로가기</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,48 +171,432 @@
                     </svg>
                   </button>
               </div>
-
-
             </div><!-- .swiper-wrapper -->
           </div><!-- .home-hero-carousel-wrap -->
         </div>
       </section>
 
-      <section class="donation-type-wrap">
-        <img src="img/home_dummy_1.png" class="home-dummy-img" />
-      </section>
-      <section class="notice-strip">
-        <img src="img/home_dummy_2.png" class="home-dummy-img" />
+      <section class="donation-type-link-wrap">
+        <div class="inner-wrap">
+          <h4 class="title">기부<br class="md-hidden" />참여방법</h4>
+          <div class="items-row-wrap">
+            <button class="scroll-arrow prev" aria-label="이전">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 11L4 7L8 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="items-row">
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/good_family.svg" />
+              </span>
+              <span class="type-name">착한가정</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/good_workshop.svg" />
+              </span>
+              <span class="type-name">착한일터</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/good_store.svg" />
+              </span>
+              <span class="type-name">착한가게</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/good_pet.svg" />
+              </span>
+              <span class="type-name">착한펫</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/leader.svg" />
+              </span>
+              <span class="type-name">나눔리더</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/best_company.svg" />
+              </span>
+              <span class="type-name">나눔명문기업</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/honor_society.svg" />
+              </span>
+              <span class="type-name">아너 소사이어티</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/custom_fund.svg" />
+              </span>
+              <span class="type-name">기부자맞춤기금</span>
+            </a>
+            <a class="item-link" href="#">
+              <span class="emblem">
+                <img src="./img/logos/emblem/leaders_club.svg" />
+              </span>
+              <span class="type-name">나눔리더스클럽</span>
+            </a>
+            </span>
+            <button class="scroll-arrow next" aria-label="다음">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L10 7L6 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
       </section>
 
-      <section class="section-project">
-        <div class="section-title">
-          <img src="img/home_dummy_3.png" class="home-dummy-img" />
+      <section class="notice-strip-wrap">
+        <div class="inner-wrap">
+          <span class="notices-rail">
+            <span class="swiper-wrapper">
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">[모집] 2026년 사회복지공동모금회(중앙회)'배분사업 평가지원단 모집' 공고</span>
+                <span class="date">2026.10.15</span>
+              </div>
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">촉탁계약직 채용 결과 발표(임원수행)</span>
+                <span class="date">2026.10.15</span>
+              </div>
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">[모집] 2026년 사회복지공동모금회(중앙회)'배분사업 평가지원단 모집' 공고</span>
+                <span class="date">2026.10.15</span>
+              </div>
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">촉탁계약직 채용 결과 발표(임원수행)</span>
+                <span class="date">2026.10.15</span>
+              </div>
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">[모집] 2026년 사회복지공동모금회(중앙회)'배분사업 평가지원단 모집' 공고</span>
+                <span class="date">2026.10.15</span>
+              </div>
+              <div class="notice-strip-item swiper-slide">
+                <span class="tag-category">공지</span>
+                <span class="item-title">촉탁계약직 채용 결과 발표(임원수행)</span>
+                <span class="date">2026.10.15</span>
+              </div>
+            </span>
+          </span>
+          <div class="swiper-control-more">
+            <div class="nav-group">
+              <button class="nav-prev">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 11L4 7L8 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="nav-next">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 11L10 7L6 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>              
+            </div>
+            <button class="btn-more">
+              <span class="label">더보기</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 7H11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 3L7 11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="project-list-wrap">
-          <div class="project-item">
-            <img src="img/home_card_project_1.png" class="project-dummy-img" />
+      </section>
+
+      <section class="section-funding-project">
+        <div class="home-section-title-wrap">
+          <div class="title-row">
+            <h3>열매모아</h3>
+            <div class="swiper-control-more">
+              <div class="nav-group">
+                <button class="nav-prev" id="project-nav-prev">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 11L4 7L8 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="nav-next" id="project-nav-next">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 11L10 7L6 3" stroke="#33363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>              
+              </div>
+              <button class="btn-more">
+                <span class="label">더보기</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7H11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M7 3L7 11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
           </div>
-          <div class="project-item">
-            <img src="img/home_card_project_2.png" class="project-dummy-img" />
+        </div>
+
+        <div class="swiper-funding-project">
+          <div class="swiper-wrapper">
+            <a class="swiper-slide card-project-home" href="./cam_funding_view.html">
+              <div class="thumbnail-wrap">
+                <img src="img/dummy_sample/project_1.jpg" class="thumbnail-image" />
+                <div class="day-tag">D-30</div>
+              </div>
+              <div class="card-content">
+                <!-- <span class="card-subtitle">착한가게</span> -->
+                <h3 class="card-title">든든한 보행 지원으로 내딛는 힘찬 한 걸음</h3>
+                <span class="card-subinfo">펀딩진행기관 이름</span>
+                <span class="progress-wrap">
+                  <span class="progress-num">75%</span>
+                  <div class="progress-bar">
+                    <span class="progress-marker" style="width: 75%"></span>
+                  </div>
+                  <div class="funding-num-row">
+                    <span class="funding-current">2,500,000원</span>
+                    <span class="funding-goal">2,500,000원</span>
+                  </div>
+                </span>
+              </div>
+            </a>
+            <a class="swiper-slide card-project-home" href="./cam_funding_view.html">
+              <div class="thumbnail-wrap">
+                <img src="img/dummy_sample/project_2.jpg" class="thumbnail-image" />
+                <div class="day-tag">D-30</div>
+              </div>
+              <div class="card-content">
+                <!-- <span class="card-subtitle">착한가게</span> -->
+                <h3 class="card-title">든든한 보행 지원으로 내딛는 힘찬 한 걸음</h3>
+                <span class="card-subinfo">펀딩진행기관 이름</span>
+                <span class="progress-wrap">
+                  <span class="progress-num">75%</span>
+                  <div class="progress-bar">
+                    <span class="progress-marker" style="width: 75%"></span>
+                  </div>
+                  <div class="funding-num-row">
+                    <span class="funding-current">2,500,000원</span>
+                    <span class="funding-goal">2,500,000원</span>
+                  </div>
+                </span>
+              </div>
+            </a>
+            <a class="swiper-slide card-project-home" href="./cam_funding_view.html">
+              <div class="thumbnail-wrap">
+                <img src="img/dummy_sample/project_3.jpg" class="thumbnail-image" />
+                <div class="day-tag">D-30</div>
+              </div>
+              <div class="card-content">
+                <!-- <span class="card-subtitle">착한가게</span> -->
+                <h3 class="card-title">든든한 보행 지원으로 내딛는 힘찬 한 걸음</h3>
+                <span class="card-subinfo">펀딩진행기관 이름</span>
+                <span class="progress-wrap">
+                  <span class="progress-num">75%</span>
+                  <div class="progress-bar">
+                    <span class="progress-marker" style="width: 75%"></span>
+                  </div>
+                  <div class="funding-num-row">
+                    <span class="funding-current">2,500,000원</span>
+                    <span class="funding-goal">2,500,000원</span>
+                  </div>
+                </span>
+              </div>
+            </a>
+            <a class="swiper-slide card-project-home" href="./cam_funding_view.html">
+              <div class="thumbnail-wrap">
+                <img src="img/dummy_sample/project_4.jpg" class="thumbnail-image" />
+                <div class="day-tag">D-30</div>
+              </div>
+              <div class="card-content">
+                <!-- <span class="card-subtitle">착한가게</span> -->
+                <h3 class="card-title">든든한 보행 지원으로 내딛는 힘찬 한 걸음</h3>
+                <span class="card-subinfo">펀딩진행기관 이름</span>
+                <span class="progress-wrap">
+                  <span class="progress-num">75%</span>
+                  <div class="progress-bar">
+                    <span class="progress-marker" style="width: 75%"></span>
+                  </div>
+                  <div class="funding-num-row">
+                    <span class="funding-current">2,500,000원</span>
+                    <span class="funding-goal">2,500,000원</span>
+                  </div>
+                </span>
+              </div>
+            </a>
+            <a class="swiper-slide card-project-home" href="./cam_funding_view.html">
+              <div class="thumbnail-wrap">
+                <img src="img/dummy_sample/project_5.jpg" class="thumbnail-image" />
+                <div class="day-tag">D-30</div>
+              </div>
+              <div class="card-content">
+                <!-- <span class="card-subtitle">착한가게</span> -->
+                <h3 class="card-title">든든한 보행 지원으로 내딛는 힘찬 한 걸음</h3>
+                <span class="card-subinfo">펀딩진행기관 이름</span>
+                <span class="progress-wrap">
+                  <span class="progress-num">75%</span>
+                  <div class="progress-bar">
+                    <span class="progress-marker" style="width: 75%"></span>
+                  </div>
+                  <div class="funding-num-row">
+                    <span class="funding-current">2,500,000원</span>
+                    <span class="funding-goal">2,500,000원</span>
+                  </div>
+                </span>
+              </div>
+            </a>
           </div>
-          <div class="project-item">
-            <img src="img/home_card_project_3.png" class="project-dummy-img" />
-          </div>
-          <div class="project-item">
-            <img src="img/home_card_project_4.png" class="project-dummy-img" />
-          </div>
+        </div>
       </section>
 
       <section class="section-story">
-        <img src="img/home_dummy_4.png" class="home-dummy-img" />
+        <div class="home-section-title-wrap">
+          <div class="title-row">
+            <h3>나눔의 행복</h3>
+          </div>
+        </div>
+        <div class="story-content-wrap">
+          <a class="newsletter-cover" href="#">
+            <img class="cover-img" src="./img/story/newsletter/cover_2026_07.jpg" />
+          </a>
+          <div class="content-grid">
+            <a class="content-card card-honor">
+              <div class="card-content">
+                <h4 class="title">나눔문화의 리더,<br>아너 소사이어티</h4>
+                <p class="desc">우리사회에 선한 영향력을 전파하는<br class="md-hidden">고액기부 프로그램</p>
+              </div>
+              <img class="emblem" src="./img/common/home_emblem_honor.svg" />
+            </a>
+            <a class="content-card card-full-img">
+              <img class="full-img" src="./img/dummy_sample/story_1.png" />
+              <span class="img-overlay"></span>
+              <div class="card-content">
+                <span class="category">함께 만든 변화</span>
+                <h5>건강과 희망까지 한 상 가득 차렸습니다!</h5>
+              </div>
+            </a>
+            <a class="content-card card-full-img">
+              <img class="full-img" src="./img/dummy_sample/story_2.png" />
+              <span class="img-overlay"></span>
+              <div class="card-content">
+                <span class="category">함께 만든 변화</span>
+                <h5>건강과 희망까지 한 상 가득 차렸습니다!</h5>
+              </div>
+            </a>
+            <a class="content-card card-full-img">
+              <img class="full-img" src="./img/dummy_sample/story_4.png" />
+              <span class="img-overlay"></span>
+              <div class="card-content">
+                <span class="category">함께 만든 변화</span>
+                <h5>건강과 희망까지 한 상 가득 차렸습니다!</h5>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section class="section-news">
-        <img src="img/home_dummy_5.png" class="home-dummy-img" />
+      <section class="section-pr">
+        <div class="home-section-title-wrap">
+          <div class="title-row">
+            <h3>열매이야기</h3>
+          </div>
+        </div>
+        <div class="pr-content-wrap">
+          <div class="youtube-wrap">
+            <a class="youtube-card big">
+              <img class="poster-img" src="./img/dummy_sample/youtube_poster_1.png" />
+              <img class="icon-youtube" src="./img/common/youtube_symbol.svg" />
+            </a>
+            <a class="youtube-card">
+              <img class="poster-img" src="./img/dummy_sample/youtube_poster_2.png" />
+              <img class="icon-youtube" src="./img/common/youtube_symbol.svg" />
+            </a>
+            <a class="youtube-card">
+              <img class="poster-img" src="./img/dummy_sample/youtube_poster_3.png" />
+              <img class="icon-youtube" src="./img/common/youtube_symbol.svg" />
+            </a>
+          </div>
+          <div class="news-link-wrap">
+            <div class="news-wrap">
+              <div class="news-control-row">
+                <div class="tags-row">
+                  <button class="tag active">전체</button>
+                  <button class="tag">공지사항</button>
+                  <button class="tag">보도</button>
+                </div>
+                <button class="btn-more">
+                <span class="label">더보기</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7H11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M7 3L7 11" stroke="#33363D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+              </div>
+              <div class="news-list-wrap">
+                <a class="news-list-item">
+                  <span class="tag xs square teal">공지</span>
+                  <span class="title">[모집] 2026년 사회복지공동모금회(중앙회) ’배분사업 평가지원단 모집’ 공고</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+                <a class="news-list-item">
+                  <span class="tag xs square teal">공지</span>
+                  <span class="title">촉탁계약직 채용 결과 발표(임원수행)</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+                <a class="news-list-item">
+                  <span class="tag xs square rose">보도</span>
+                  <span class="title">“85세 출향인, 고향 산청에 2억 원 쾌척”</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+                <a class="news-list-item">
+                  <span class="tag xs square teal">공지</span>
+                  <span class="title">사회복지공동모금회 사무총장 공모 결과 안내</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+                <a class="news-list-item">
+                  <span class="tag xs square rose">보도</span>
+                  <span class="title">뮤지컬 무산 후에도 기부 실천한 백성현 실제 기부자 연기한다</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+                <a class="news-list-item">
+                  <span class="tag xs square teal">공지</span>
+                  <span class="title">사회복지공동모금회 사무총장 공모 결과 안내</span>
+                  <span class="date">2026.10.20</span>
+                </a>
+              </div>
+            </div>
+            <div class="links-wrap">
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_disclosure.svg" />
+                <h5>공익신고</h5>
+              </a>
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_distrbution.svg" />
+                <h5>배분공고</h5>
+              </a>
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_result_report.svg" />
+                <h5>기부자결과보고</h5>
+              </a>
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_faq.svg" />
+                <h5>FAQ</h5>
+              </a>
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_blog.svg" />
+                <h5>나눔문화연구소<br>블로그</h5>
+              </a>
+              <a class="link-item" href="#">
+                <img src="./img/common/icon_home_location.svg" />
+                <h5>오시는 길</h5>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
+
     </div>
-
 
     <div id="app-footer" class="app-footer"></div>
     <div id="app-quick-link" class="app-quick-link"></div>

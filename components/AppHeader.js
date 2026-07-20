@@ -20,20 +20,68 @@ async function initAppHeader() {
   }
 
   const sitemapWrap = el.querySelector(".app-sitemap-wrap");
+  const sitemapBtn = el.querySelector(".btn-gnb-sitemap");
+  const sitemapBtnMo = el.querySelector(".btn-sitemap-mo");
   const burgerBtn = el.querySelector(".btn-gnb-burger");
+  const headerUtilBar = el.querySelector(".header-util-bar");
+  const mognbWrap = el.querySelector(".mo-gnb-wrap");
 
-  burgerBtn?.addEventListener("click", function () {
+  sitemapBtn?.addEventListener("click", function () {
     this.classList.toggle("active");
     sitemapWrap?.classList.toggle("active");
   });
 
+  sitemapBtnMo?.addEventListener("click", function () {
+    // this.classList.toggle("active");
+    sitemapWrap?.classList.toggle("active");
+  });
+
+  burgerBtn?.addEventListener("click", function () {
+    this.classList.toggle("active");
+    headerUtilBar?.classList.toggle("mo-gnb-active");
+    mognbWrap?.classList.toggle("active");
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      burgerBtn?.classList.remove("active");
+      headerUtilBar?.classList.remove("mo-gnb-active");
+      mognbWrap?.classList.remove("active");
+    }
+  });
+
   el.querySelector(".btn-sitemap-close")?.addEventListener("click", () => {
-    burgerBtn?.classList.remove("active");
+    sitemapBtn?.classList.remove("active");
     sitemapWrap?.classList.remove("active");
   });
 
   initHeaderDropdown(el, ".lang-wrap", ".lang", ".lang-popover");
   initHeaderDropdown(el, ".branch-wrap", ".branch", ".branch-popover");
+
+  el.querySelectorAll(".mo-gnb-item-level1 > .label").forEach((label) => {
+    label.addEventListener("click", (e) => {
+      e.preventDefault();
+      const item = label.closest(".mo-gnb-item-level1");
+      el.querySelectorAll(".mo-gnb-item-level1.active").forEach((other) =>
+        other.classList.remove("active"),
+      );
+      item.classList.add("active");
+    });
+  });
+
+  el.querySelectorAll(".mo-gnb-item-level2 > a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const item = link.closest(".mo-gnb-item-level2");
+      if (!item.querySelector(".mo-gnb-level3-wrap")) return;
+
+      const isActive = item.classList.contains("active");
+      el.querySelectorAll(".mo-gnb-item-level2.active").forEach((other) =>
+        other.classList.remove("active"),
+      );
+      if (!isActive) item.classList.add("active");
+    });
+  });
 
   document.addEventListener("click", () => {
     el.querySelectorAll(".dropdown-wrap.open").forEach((d) =>

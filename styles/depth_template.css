@@ -12,7 +12,7 @@
   width: 100%;
   padding-top: 164px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .depth-head {
     padding-top: 48px;
   }
@@ -23,7 +23,7 @@
   padding: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .depth-head-inner {
     padding: 0 16px;
   }
@@ -34,37 +34,22 @@
    ========================================================================== */
 
 .breadcrumb-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 40px;
+  display: flex; align-items: center; gap: 8px; height: 40px;
 }
-@media (max-width: 1200px) {
-  .breadcrumb-wrap {
-    display: none;
-  }
+@media (max-width: 1024px) {
+  .breadcrumb-wrap { display: none; }
 }
 /* 홈 버튼 */
 .breadcrumb-home {
-  display: flex;
-  align-items: center;
-  padding-bottom: 6px;
-  color: var(--color-text-500);
-  flex-shrink: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
+  display: flex; align-items: center; padding-bottom: 6px;
+  color: var(--color-text-500); flex-shrink: 0; background: none;
+  border: none; cursor: pointer;
 }
 
 .breadcrumb-home .btn-inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 8px 4px;
-  border-radius: 6px;
-  transition: background-color 0.15s ease;
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; padding: 8px 4px;
+  border-radius: 6px; transition: background-color 0.15s ease;
 }
 
 .breadcrumb-home:hover .btn-inline {
@@ -73,30 +58,17 @@
 
 /* breadcrumb 드롭다운 항목 */
 .breadcrumb-item {
-  display: flex;
-  align-items: center;
-  width: 147px;
-  height: 32px;
-  padding: 4px 4px 12px 4px;
-  border: none;
+  display: flex; align-items: center; width: 147px;
+  height: 32px; padding: 4px 4px 12px 4px; border: none;
   border-bottom: 1px solid var(--color-line-400);
-  background: none;
-  cursor: pointer;
-  flex-shrink: 0;
-  gap: 4px;
+  background: none; cursor: pointer; flex-shrink: 0; gap: 4px;
 }
 
 .breadcrumb-text {
-  flex: 1 0 0;
-  font-size: 13px;
-  font-weight: 600;
+  flex: 1 0 0; font-size: 13px; font-weight: 600;
   color: var(--color-text-500);
-  padding-left: 6px;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1;
+  padding-left: 6px; text-align: left; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; line-height: 1;
 }
 
 .breadcrumb-chevron {
@@ -114,7 +86,7 @@
 }
 
 /* ==========================================================================
-   Page Title
+   Page Title 영역
    ========================================================================== */
 
 .page-head-wrap {
@@ -124,17 +96,24 @@
     position: absolute; display: block;
     top: 0px; right: 0;
     width: 326px; height: 240px;
-    > img {
-      max-width: 100%;
-      height: auto;
+    > img { max-width: 100%; height: auto; }
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-head-wrap {
+    min-height: auto; padding-bottom: 32px;
+    > .depth-visual-wrap {
+      top: 10px; width: 200px; 
     }
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .page-head-wrap {
-    min-height: auto; padding-bottom: 32px;
+    padding-bottom: 24px;
     > .depth-visual-wrap {
+      top: 8px; width: 100px; 
       display: none;
     }
   }
@@ -178,7 +157,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .depth-page-title-wrap {
     > .depth-page-title {
       h1 {
@@ -252,7 +231,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .btn-page-head {
     padding: 10px 14px;
     font-size: 14px;
@@ -317,7 +296,7 @@
     row-gap: 24px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .list-grid-wrap {
     &.grid-3col {
       grid-template-columns: repeat(2, 1fr);
@@ -333,7 +312,7 @@
 }
 
 /* ======================================================
-   Layout 4-8
+   Layout 4-8 / 캠페인 - 펀딩 신청하기
    =================================================== */
 
 .container-col-4-8{
@@ -342,19 +321,38 @@
     width:100%; display: flex; flex-direction: column;    
   }
 }
-@media (max-width: 768px) {
-  .container-col-4-8{
-    grid-template-columns: 1fr; 
-  }
-}
+
 .title-left-section {
-  width:100%; 
+  width:100%; margin-bottom:32px;
   >.title{
     font-weight:700; color:var(--color-text-800); font-size:32px;
   }
-  >p{ font-size:18px; font-weight: 500; line-height:1.5em;}
+  >p{ font-size:18px; font-weight: 500; line-height:1.5em; margin: 8px 0 24px 0; }
 }
 
 .container-col-3-9{
   width:100%; display: grid; grid-template-columns: 3fr 9fr;
+  margin-bottom:140px;
+}
+
+@media (max-width: 1024px) {
+  .container-col-4-8{
+    grid-template-columns: 1fr; 
+  }
+  .container-col-3-9{
+    grid-template-columns: 1fr; 
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .container-col-4-8{
+    display: flex; flex-direction: column;
+  }
+  .container-col-3-9{
+    display: flex; flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .title-left-section {
+    margin-bottom:24px;
+  }
 }

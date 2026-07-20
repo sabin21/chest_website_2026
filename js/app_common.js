@@ -58,3 +58,26 @@ function initGnbSwipe() {
 }
 
 initGnbSwipe();
+
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    if (!question) return;
+
+    question.addEventListener("click", () => {
+      const siblings = item.parentElement.querySelectorAll(
+        ":scope > .faq-item.active"
+      );
+      siblings.forEach((sibling) => {
+        if (sibling !== item) sibling.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+}
+
+initFaqAccordion();

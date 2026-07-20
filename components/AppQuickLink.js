@@ -11,9 +11,14 @@ async function initAppQuickLink() {
 function observeFooter(el) {
   const footer = document.getElementById("app-footer");
   if (!footer) return;
+  const isMobileLayout = () => window.matchMedia("(max-width: 1024px)").matches;
   const thresholds = Array.from({ length: 101 }, (_, i) => i / 100);
   new IntersectionObserver(
     (entries) => {
+      if (isMobileLayout()) {
+        el.style.bottom = "";
+        return;
+      }
       const { isIntersecting, intersectionRect } = entries[0];
       el.style.bottom = isIntersecting
         ? `${intersectionRect.height + 32}px`

@@ -7,6 +7,7 @@ const swiper = new Swiper(".hero-swiper-wrap", {
   loop: true,
   slidesPerView: 1,
   speed: 1,
+  spaceBetween: 40,
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
@@ -23,6 +24,64 @@ const swiper = new Swiper(".hero-swiper-wrap", {
     afterInit: setActiveSlide,
     slideChange: setActiveSlide,
   },
+});
+
+const fundingProjectSwiper = new Swiper(".swiper-funding-project", {
+  slidesPerView: 1.25,
+  spaceBetween: 16,
+  navigation: {
+    prevEl: ".section-funding-project .nav-prev",
+    nextEl: ".section-funding-project .nav-next",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 3.5,
+      spaceBetween: 24,
+    },
+  },
+});
+
+const noticesRailSwiper = new Swiper(".notices-rail", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  freeMode: true,
+  loop: true,
+  navigation: {
+    prevEl: ".notice-strip-wrap .nav-prev",
+    nextEl: ".notice-strip-wrap .nav-next",
+  },
+});
+
+const donationItemsRowWrap = document.querySelector(".donation-type-link-wrap .items-row-wrap");
+
+if (donationItemsRowWrap) {
+  const donationItemsRow = donationItemsRowWrap.querySelector(".items-row");
+  const donationScrollPrev = donationItemsRowWrap.querySelector(".scroll-arrow.prev");
+  const donationScrollNext = donationItemsRowWrap.querySelector(".scroll-arrow.next");
+  const donationScrollAmount = () => donationItemsRow.querySelector(".item-link")?.offsetWidth + 16 || 166;
+
+  donationScrollPrev.addEventListener("click", () => {
+    donationItemsRow.scrollBy({ left: -donationScrollAmount(), behavior: "smooth" });
+  });
+  donationScrollNext.addEventListener("click", () => {
+    donationItemsRow.scrollBy({ left: donationScrollAmount(), behavior: "smooth" });
+  });
+}
+
+const donationTabs = document.querySelectorAll(".home-donation-tab");
+
+donationTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    donationTabs.forEach((t) => t.classList.remove("active"));
+    document.querySelectorAll(".donation-form-wrap").forEach((form) => form.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(`home-donation-${index + 1}`).classList.add("active");
+  });
 });
 
 const btnPause = document.querySelector(".swiper-btn-pause");
