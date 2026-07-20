@@ -351,7 +351,7 @@
           transition: background 0.2s;
           &:hover{ background: var(--color-solid-200);}
           >.emblem {
-            display: block; width: 80px; height: 80px; padding: 8px;
+            display: block; width: 80px; height: 80px; padding: 10px;
             >img{ width:100%; height:100%; }
           }
           >.type-name {
@@ -505,22 +505,21 @@
   >.honor-wrap{
     width: 100% ; position: relative;
     >.honor-content-wrap{
-      display: block; overflow: hidden; border-radius: 24px;
+      display: block; overflow: hidden; border-radius: 24px; position: relative;
       >.back-img{
-        display: block; height:100%; overflow: hidden;
+        display: block; width:100%; height:100%; overflow: hidden; 
         position: relative; line-height: 0; max-height: 840px;
         >.cover-img{ width:100%; height:100%; object-fit: cover; }
       }
       >.card-honor{
         background-color: var(--color-primary-400);
-        background-color: #1b1714;
+        background-color: #805e2c;
         width: 280px; height: 280px;
         padding: 40px 40px 40px 40px; display: flex; flex-direction: column;
         justify-content: center; align-items: center;
         color:white; position: absolute; right:20px; bottom:20px;
         overflow: hidden; aspect-ratio: 1/1;
-        border: 1px solid #9c7803;
-        border-radius: 24px 0 24px 0; border-radius: 50%;
+        border-radius: 50%;
         >.card-content {
           width:100%; padding-bottom:40px; 
           >.title-sub { 
@@ -535,13 +534,12 @@
         }
         >.emblem { width: 100px; }
         &::after {
-          content:''; display: block; width:94%; height: 94%;
+          content:''; display: block; width:93%; height: 93%;
           position: absolute; margin: auto; left:0; right:0;
-          top:0; bottom:0; border-radius: 50%; border: 1px solid #9d7900;
+          top:0; bottom:0; border-radius: 50%; border: 1px solid #d6a70e;
         }
       }
-    }
-    
+    }  
   }
   
   >.story-wrap{
@@ -550,7 +548,7 @@
       width:100%; height:100%; display: grid;
       grid-template-columns: repeat(2, 1fr); 
       grid-template-rows: repeat(2, 1fr);
-      max-height: 840px; gap: 12px;
+      max-height: 840px; gap: 16px;
       >.content-card{
         width:100%; height: 100%; overflow: hidden; border-radius: 24px;
       }
