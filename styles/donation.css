@@ -1,6 +1,24 @@
+
+/*---------------------------------*/
+/* 기부 > 기부 타입 소개 > 기본형 */
+/*---------------------------------*/
+
+.page-head-wrap.donation-intro {
+  width:100%; padding-top: 40px;
+  >.depth-page-title-wrap{
+    margin: 0 auto; position: relative;
+    >.depth-page-title{
+      display: flex; justify-content: center;
+      >img{ width:640px; }
+    }
+  }
+  >.page-head-gnb-wrap.center{
+    margin-top:24px; padding:0;
+  }
+}
+
 .donation-hero-wrap {
-  width: 100%; position: relative; height: 200vh;
-  /* border: 1px solid red; */
+  width: 100%; position: absolute; height: 200vh; left:0; top:480px; 
   > .back-circle {
     background-color: #ffc4c4; border-radius: 50%;
     position: absolute; z-index: 0; display: block;
@@ -15,20 +33,12 @@
   }
 }
 .donation-head-copy-wrap {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 800px;
-  padding-top: 80px;
-  z-index: 10;
-  > .head-copy-row {
-    width: 100%;
-    font-size: 56px;
-    font-weight: 700;
-    color: var(--color-text-900);
-    line-height: 1.3em;
-    text-align: center;
-    display: block;
+  position: relative; width: 100%; margin: 0 auto;
+  max-width: 800px; padding-top: 80px; z-index: 10; 
+  >.head-copy-row {
+    width: 100%; font-weight: 700; color: var(--color-text-900); 
+    line-height: 1.3em; text-align: center; display: block;
+    font-size: 56px; letter-spacing: -0.03em;
   }
 }
 @media (max-width: 1024px) {
@@ -41,9 +51,9 @@
 
 .donation-hero-pict-wrap {
   width: 100%; height: 100vh; margin: 0 auto;
-  position: absolute; top: 200px; left: 0;
-  z-index: 50; display: block;
-  > .pict-circle {
+  position: absolute; left: 0; top:200px;
+  display: block; pointer-events: none; z-index: 50;
+  >.pict-circle {
     display: block;
     border-radius: 50%;
     overflow: hidden;
@@ -61,7 +71,7 @@
     &.donation-cover {
       display: flex; overflow: hidden; position: absolute;
       width: 440px; height: 440px;
-      left: calc(50% - 220px); top: 140px; z-index: 50;
+      left: calc(50% - 220px); top: 140px; 
       justify-content: center;
       align-items: center;
       background-color: black;
@@ -79,80 +89,43 @@
   }
 }
 
-.hero-pict-outer {
-  width: 100%;
-  height: 150vh;
-  position: relative;
-}
-
 .donation-redball-wrap {
-  position: absolute;
-  width: 200px;
-  height: 370px;
-  left: calc(50% - 730px);
-  top: 400px;
-  z-index: 20;
-  overflow: visible;
-  > .pict-wrap {
-    width: 200px;
-    height: 220px;
-    z-index: 2;
-    position: absolute;
-    > img {
-      max-width: 100%;
-      height: auto;
+  position: absolute; width: 200px; height: 370px; left: calc(50% - 730px);
+  top: 400px; z-index: 20; overflow: visible;
+  >.redball-inner{
+    width: 100%; height: 100%; position: relative;
+    >.pict-wrap {
+      width: 200px; height: 220px; z-index: 2; position: absolute;
+      >img {
+        max-width: 100%; height: auto;
+      }
+    }
+    > .btn-redball {
+      position: absolute; bottom: 0; margin: 0 auto; left: 0; right: 0;
     }
   }
-  > .btn-redball {
-    position: absolute;
-    bottom: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-  }
+  
 }
 
-.redball-particle {
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-primary-400);
-  pointer-events: none;
-  z-index: 1;
-}
-.section-scene {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  align-items: center;
-}
-
-.section-content {
-  width: 100%;
-  position: relative;
-  padding: 120px 0;
+.don-intro-section-content {
+  width: 100%; position: relative; padding: 120px 0;
   > .content-inner-lp3 {
-    width: 100%;
-    position: relative;
-    padding-left: calc(50% - 356px);
+    width: 100%; position: relative; padding-left: calc(50% - 356px);
     > .content-wrap {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
+      width: 100%; overflow: hidden; position: relative; display: flex;
+      flex-direction: column; gap: 48px; max-width: 1084px;
+      &.full { max-width:100%;}
       > .content-title-bar {
-        display: flex;
-        width: 1084px;
-        justify-content: space-between;
-        align-items: center;
+        display: flex; width: 1084px;
+        justify-content: space-between; align-items: center;
         > .content-title {
-          font-size: 40px;
-          font-weight: 800;
-          color: var(--color-text-900);
+          font-size: 40px; font-weight: 700; color: var(--color-text-800);
         }
       }
     }
+  }
+  &.scene-1{
+    margin-top:200vh;
   }
 }
 
@@ -169,6 +142,91 @@
           }
         }
       }
+    }
+  }
+}
+
+/* Cards --------------------*/
+.swiper-wrapper{
+  >.swiper-slide {
+    &:last-child { margin-right:24px;}
+  }
+}
+.card-donation-benefit {
+  width:100%; position: relative; display: flex;
+  flex-direction: column; background-color: white;
+  overflow: hidden; border-radius: 24px; padding: 20px; 
+  width:500px; height: 510px;
+  >.benefit-num{
+    width:100%; margin-bottom: 32px;
+    >.inner-row{
+      display: block; width:100%; display: flex; gap: 6px; align-items: center;
+      >.bullet { 
+        display: block; width:18px; height:18px; border-radius: 50%; 
+        background-color: var(--color-primary-400);
+      }
+      >.title {
+        font-size:22px; font-weight: 700;
+        color:var(--color-text-400);
+      }
+    } 
+  }
+  >.card-content-text{
+    width:100%; padding: 0 24px 24px 24px;
+    >.headline {
+      width:100%; font-size: 32px; word-break: keep-all;
+    }
+    >.desc {
+      width:100%; font-size: 20px; word-break: keep-all;
+      line-height: 1.4em; font-weight: 500;
+      color:var(--color-text-400); margin-top:12px;
+    }
+  }
+  >.graphic-wrap{
+    position: relative; width:100%; height:100%; display: flex; 
+    justify-content: center; align-items: center; min-height: 0;
+    padding: 24px 24px;
+    >img{ height:100%; }
+  }
+}
+
+.card-donation-case{
+  width:500px; height: 480px; position: relative; display: flex;
+  flex-direction: column; background-color: white;
+  overflow: hidden; border-radius: 24px;
+  >.thumbnail{
+    width:100%; overflow: hidden; aspect-ratio: 3/2;
+    border-radius: 0 0 0 24px;
+    >img{ width:100%; height:100%; object-fit: cover;}
+  }
+  >.card-body{
+    width:100%; padding: 24px 32px;
+    >.category{ 
+      display: block; font-size: 20px; font-weight: 600; color:var(--color-text-400);
+      margin-bottom:8px; 
+    }
+    >.headline{
+      width:100%; font-size:26px; font-weight: 700;
+      color:var(--color-text-800);
+    }
+  }
+}
+
+.branch-contact-wrap{
+  width:100%; display: grid; gap:8px; width: 1084px;
+  grid-template-columns: repeat(4, 1fr);
+  >.card-contact {
+    width:100%; background-color: rgba(255,255,255,0.7); overflow: hidden;
+    border-radius: 8px; display: flex; flex-direction: column;
+    padding: 20px 20px; gap:4px;
+    >.branch-title{
+      font-size: 18px; margin-bottom: 4px;
+    }
+    >.contact-info-row{
+      display: block; width:100%; display: flex; gap: 8px;
+      align-items: center;
+      >img{ width:14px; height: 14px;}
+      >.info-text { display: block; width:100%; font-size: 16px; }
     }
   }
 }
@@ -303,386 +361,5 @@
       }
     }
   }
-}
-
-/*---------------------------
-열매모아 전체 리스트
----------------------------*/
-
-.funding-list-wrap { padding: 64px 0 160px 0 !important; }
-@media (max-width: 1024px) {
-  .funding-list-wrap { padding: 8px 0 80px 0 !important; }
-}
-
-body:has(.funding-list-wrap) .app-footer {
-  margin-top: 0;
-}
-
-/*---------------------------
-열매모아 상세보기
----------------------------*/
-
-.project-view-head {
-  width: 100%; position: relative; padding-top: 180px;
-  >.project-view-head-row {
-    width: 100%; margin: 0 auto; background-color: white;
-    padding: 24px 0; border-top: 1px solid var(--color-line-150);
-    transition: all 0.2s ease;
-    >.row-inner {
-      width: 100%; max-width: var(--container-max-width);
-      position: relative; margin: 0 auto;
-      &.row-title {
-        display: flex; align-items: center; padding: 0 16px;
-        >.tag-day {
-          display: inline-block; padding: 8px 12px; border-radius: 24px;
-          border: 1px solid var(--color-primary-400); color: var(--color-primary-400);
-          font-size: 16px; font-weight: 700;
-          flex-shrink: 0;
-        }
-        >.project-title-wrap {
-          display: flex; gap: 8px; align-items: center; margin:0 0 0 16px;
-          width:100%;
-          >.project-title {
-            font-size: 32px; font-weight: 700;
-            color: var(--color-text-900); transition: all 0.2s ease;
-          }
-        }
-        >.action-block{
-          display:flex; gap: 8px; align-items: center; flex-shrink: 0;
-          >.btn-project-share{
-            background-color: var(--color-primary-400); border-radius: 50%;
-            border: none; display: flex; justify-content: center; align-items: center;
-            width:40px; height:40px;
-            >svg{ transform: scale(1);}
-          }
-        }
-      }
-      &.row-progress{
-        display: flex; align-items: center; padding: 0 16px; gap: 40px;
-        >.progress-wrap{
-          width:100%; display:flex; flex-direction: column; gap:6px;
-          >.progress-num {
-            width:100%; font-size: 20px; font-weight: 800;
-            color:var(--color-primary-400);
-          }
-          >.progress-bar{
-            display:block; width:100%; height:12px; border-radius:8px;
-            overflow:hidden; background-color: var(--color-solid-300);
-            position: relative;
-            >.progress-marker{
-              display: block; position: absolute; left:0; top:0; height:100%;
-              background-color: var(--color-primary-400);
-            }
-          }
-          >.progress-info-row{
-            width:100%; display:flex; justify-content: space-between;
-            >.text-block{
-              display: inline-flex; font-size:16px; font-weight: 700;
-              color:var(--color-text-400);
-              >.primary{ color: var(--color-primary-400); }
-            }
-          }
-        }
-        >.btn { text-align:center; color:white;}
-      }
-    }
-    &.scrolled{
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 8px 0 10px 0; border-top: none;
-      >.row-inner{
-        &.row-title{
-          >.tag-day{ padding: 4px 8px; font-size: 12px; }
-          >.project-title-wrap{
-            margin:0 0 0 8px;
-            >.project-title{ font-size: 20px; }
-          }
-        }
-      }
-    }
-    &.row-2{
-      display:block;
-    }
-  }
-}
-@media (max-width: 1024px) {
-  .project-view-head{
-    padding-top: 56px;
-    >.project-view-head-row{
-      padding: 16px 0;
-      >.row-inner {
-        &.row-title{
-          >.tag-day {
-            padding: 4px 6px; font-size: 12px;
-          }
-          >.project-title-wrap{
-            margin:0 0 0 8px;
-            >.project-title{ font-size: 16px; }
-          }
-          >.action-block{
-            >.btn-project-share{
-              width:32px; height:32px;
-              >svg{ transform: scale(0.8);}
-            }
-          }
-        }
-      }
-      &.scrolled{
-        >.row-inner{
-          &.row-title{
-            >.tag-day{ padding: 4px 8px; font-size: 10px; }
-            >.project-title-wrap{
-              margin:0 0 0 8px;
-              >.project-title{ font-size: 14px; }
-            }
-          }
-        }
-      }
-      &.row-2{
-        display:none;
-      }
-    }
-  }
-}
-
-.project-content-wrap {
-  width: 100%; position: relative; margin: 0 auto; text-align: center;
-  line-height:0;
-  >.dummy-img { width: 100%; line-height:0; }
-}
-
-body:has(.project-content-bottom-wrap) .app-footer {
-  margin-top: 0;
-}
-
-.project-floating-wrap{
-  width: 260px; position: fixed; right: -100%; bottom: 32px; z-index: 100;
-  transition: right 0.25s;
-  filter:drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.2));
-  background-color:white;
-  display: flex; align-items: center; gap: 24px;
-  flex-direction: column; padding: 16px;
-  border-radius: 12px;
-  &.active{ right: 24px; }
-
-  >.progress-wrap{
-    width:100%; display:flex; flex-direction: column; gap:6px;
-    >.progress-num {
-      width:100%; font-size: 20px; font-weight: 800;
-      color:var(--color-primary-400);
-    }
-    >.progress-bar{
-      display:block; width:100%; height:12px; border-radius:8px;
-      overflow:hidden; background-color: var(--color-solid-300);
-      position: relative;
-      >.progress-marker{
-        display: block; position: absolute; left:0; top:0; height:100%;
-        background-color: var(--color-primary-400);
-      }
-    }
-    >.progress-info-row{
-      width:100%; display:flex; justify-content: space-between;
-      >.text-block{
-        display: inline-flex; font-size:13px; font-weight: 700;
-        color:var(--color-text-400);
-        >.primary{ color: var(--color-primary-400); }
-      }
-    }
-  }
-  >.btn {
-    text-align:center; color:white; border-radius: 8px; width:100%;
-    font-size:16px; padding: 12px; font-weight:500;
-  }
-
-}
-@media (max-width: 1024px) {
-  .project-floating-wrap {
-    width: 100%; right: 0; bottom: 0px;
-    filter:drop-shadow(0px -4px 8px rgba(0, 0, 0, 0.2));
-    padding: 8px 12px; gap: 12px; border-radius: 0;
-    &.active{ right: 0; }
-    >.progress-wrap{
-      >.progress-num {
-        font-size: 14px;
-      }
-      >.progress-bar{
-        height:6px;
-      }
-      >.progress-info-row{
-        >.text-block{
-          font-size:12px;
-        }
-      }
-    }
-  }
-}
-
-/* 열매모아 상세보기 하단 컨텐츠 영역*/
-
-.project-content-bottom-wrap {
-  width: 100%; position: relative; margin: 0 auto;
-  background-color:#FDEDE8; display: flex; justify-content: center;
-  padding: 120px 0 120px 0;
-}
-.project-bottom-inner{
-  width:100%; max-width: var(--container-max-width);
-  display:flex; flex-direction: column; overflow:hidden;
-  background-color: white; padding: 0 0 48px 0;
-  border-radius: 16px;
-  >.block { width:100%; padding: 40px 56px;}
-  >.block-1{
-    background: #3A424D; color: white;
-    display: flex; flex-direction: row; row-gap: 16px;
-    line-height: 1.4em; padding-bottom: 56px;
-    >.headline {
-      width: 45%; font-weight:700; font-size: 32px;
-      line-height:1.3em;
-    }
-    >.desc-wrap{
-      width:100%; font-size:18px; display:flex; flex-direction: column;
-      >span { display:block; font-weight: 700; line-height:1.4em; }
-      >.text-line1{
-        width:100%; font-size:18px; color:var(--colo-text-100);
-        padding-bottom: 8px;
-      }
-    }
-  }
-  >.block-2{
-    display:flex; flex-direction: row; align-items: first baseline;
-    >.sub-block {
-      width:100%; display:flex; flex-direction: column; padding: 0;
-      border-top: none;
-      >.title-wrap {
-        display:block; padding: 0 0 16px 0; display: inline-flex;
-        color: var(--color-text-400); font-weight: 500; font-size: 18px;
-        >.text-red { color:var(--color-primary-400); font-weight:700; margin:0 4px 0 12px; }
-      }
-      >.content-wrap{
-        display:block; font-size: 24px; display:flex; align-items: center;
-        gap: 8px; font-weight: 700;
-        .text-red { color:var(--color-primary-400); font-weight:700; margin:0 4px 0 8px; }
-      }
-    }
-  }
-  >.block-comment {
-    border-top: 1px solid var(--color-line-150);
-    >.comment-wrap{
-      display:flex; flex-direction: column; row-gap: 24px;
-      >.comment-row{
-        display: flex; flex-direction: row; row-gap: 8px; align-items: center;
-        >.group-front{
-          display:flex; gap:4px; align-items: center;
-          >.user{
-            display:flex; gap:6px; min-width:90px;
-            >.user-name { font-size:15px; font-weight:700; }
-          }
-          >.date { font-size:14px; color:var(--color-text-400); }
-        }
-        >.group-message{
-          font-size:16px; font-weight:600; width:100%; padding-left: 24px;
-        }
-        >.group-btns{ flex-shrink: 0;}
-      }
-    }
-  }
-
-}
-@media (max-width: 1024px) {
-  .project-content-bottom-wrap {
-    padding: 0;
-  }
-  .project-bottom-inner{
-    border-radius: 0;
-    >.block { padding: 24px 16px; }
-    >.block-1 {
-      flex-direction: column; padding-bottom: 24px;
-      >.headline { font-size: 18px; width: 100%; line-height: 1.4em;}
-      >.desc-wrap{
-        font-size:15px;
-        >.text-line1{
-          font-size:15px;
-        }
-      }
-    }
-    >.block-2 {
-      flex-direction: column; align-items: stretch;
-      >.sub-block {
-        border-top: 1px solid var(--color-line-150); padding: 24px 0;
-        &:first-child { padding: 0 0 24px 0; border-top: none; }
-        >.title-wrap { font-size: 16px; }
-        >.content-wrap { font-size: 20px;}
-      }
-    }
-    >.block-comment{
-      >.comment-wrap{
-        >.comment-row{
-          flex-direction: column; align-items: normal;
-          >.group-message { padding-left: 0; }
-        }
-      }
-    }
-  }
-}
-
-/*---------------------------
-열매모아 > 소개
----------------------------*/
-
-.funding-intro-section-1{
-  width:100%; display:flex; gap: 80px;
-  >.image-wrap{
-    width:660px; flex-shrink:0;
-    >img{ max-width: 100%}
-  }
-  >.text-wrap{
-    width:100%; display:flex; flex-direction:column;
-    padding-top: 80px;
-    >.big-copy{
-      font-size: 64px;
-    }
-    >p{
-      font-size:20px; line-height:1.5em; font-weight: 500;
-    }
-  }
-}
-.funding-intro-section-2{
-  padding: 80px 0 80px 0 !important;
-  >.back-graphic{
-    display:block; width:100%; height:calc(100% - 500px); position: absolute;
-    left:0; top:500px; background:#FDEDE8;
-    >.circle{
-      display:block; border-radius: 50%; position: absolute;
-      &.circle-1{
-        width:800px; height: 800px; background:#FDEDE8;
-        right:-200px; top: -220px;
-      }
-      &.circle-2{
-        width: 300px; height:300px; background:#FFE8D1;
-        right:150px; top:-420px; mix-blend-mode: multiply;
-      }
-    }
-  }
-}
-.funding-intro-youtube-outer{
-  padding: 80px 0;
-}
-.funding-intro-youtube-wrap {
-  position: relative; margin:0 auto;
-  width: 100%; max-width: 1208px;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  > iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-}
-.dummy-img{
-  &.donation-content { max-width: 1208px;}
-}
-body:has(.funding-intro-section-2) .app-footer {
-  margin-top: 0;
 }
 

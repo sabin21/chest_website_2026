@@ -26,15 +26,12 @@ if (lenis) {
       };
     },
   });
+
+  ScrollTrigger.addEventListener("refresh", () => lenis.resize());
 }
 
 ScrollTrigger.defaults({ scroller });
 
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => ScrollTrigger.refresh(), 200);
-});
 
 /* ----------------------------------------
    .donation-redball-wrap 핀
@@ -48,6 +45,30 @@ ScrollTrigger.create({
   end: "bottom bottom",
   pin: ".donation-redball-wrap",
   pinSpacing: false,
+});
+
+/* ----------------------------------------
+   .donation-redball-wrap 등장 모션
+   viewport 왼쪽 밖에서 안으로 들어옴
+---------------------------------------- */
+
+gsap.from(".donation-redball-wrap", {
+  x: -window.innerWidth,
+  duration: 1.2,
+  ease: "power3.out",
+});
+
+/* ----------------------------------------
+   .redball-inner idle 모션
+   y축으로 10px 정도 위아래로 계속 흔들림
+---------------------------------------- */
+
+gsap.to(".redball-inner", {
+  y: -10,
+  duration: 1,
+  ease: "sine.inOut",
+  repeat: -1,
+  yoyo: true,
 });
 
 /* ----------------------------------------*/
@@ -100,11 +121,11 @@ gsap.to(coverCopy, {
 });
 
 ScrollTrigger.create({
-  trigger: ".donation-hero-wrap",
-  start: "top -200",
+  trigger: coverWrap,
+  start: "top top",
+  endTrigger: ".donation-hero-wrap",
   end: "bottom bottom",
   pin: coverWrap,
-  // pinSpacing: false,
 });
 
 /* ---------------------------------------- */
@@ -138,17 +159,12 @@ tlPict
   .to(pict2, { scale: 0, opacity:0, ease: "power3.in" }, 0);
 
 
-/* ----------------------------------------
-   .scene-2 가 viewport 중앙에 진입하면
-   .app-main 배경을 white로 전환 (+=200 구간에 걸쳐 scrub)
----------------------------------------- */
-
 gsap.to(".app-main", {
-  backgroundColor: "#EDE4D6",
+  backgroundColor: "#E2E8F2",
   ease: "none",
   scrollTrigger: {
-    trigger: ".scene-2",
-    start: "bottom bottom",
+    trigger: ".scene-last",
+    start: "top 50%",
     end: "+=200",
     scrub: 1,
   },
@@ -156,7 +172,7 @@ gsap.to(".app-main", {
 
 /* ----------------------------------------*/
 
-document.querySelectorAll(".section-content").forEach((section) => {
+document.querySelectorAll(".don-intro-section-content").forEach((section) => {
   const el = section.querySelector(".carousel-card-row");
   if (!el) return;
 
