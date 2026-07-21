@@ -146,7 +146,26 @@
   }
 }
 
+.good-workshop-join-wrap{
+  width:100%; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  >.card-panel{
+    width:100%; display: flex; gap:16px; align-items: center; position: relative;
+    padding: 24px 24px 24px 40px; background-color: white; border-radius: 12px;
+    border: 1px solid var(--color-line-200);
+    >img{ width: 80px; height: 80px; }
+    >p{ width:100%; font-size: 20px; font-weight: 700; line-height: 1.3em;}
+    >.order-num {
+      display: flex; position: absolute; top: 12px; left:12px; padding:12px;
+      width: 24px; height:24px; background-color: var(--color-solid-800);
+      border-radius: 50%; color:white; font-weight: 700; font-size: 14px;
+      justify-content: center; align-items: center;
+    }
+  }
+}
+
 /* Cards --------------------*/
+
 .swiper-wrapper{
   >.swiper-slide {
     &:last-child { margin-right:24px;}
