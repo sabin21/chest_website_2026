@@ -35,8 +35,6 @@ ScrollTrigger.defaults({ scroller });
 
 /* ----------------------------------------
    .donation-redball-wrap 핀
-   .container-root 가 뷰포트를 통과하는 동안
-   .donation-redball-wrap 의 화면 위치 고정
 ---------------------------------------- */
 
 ScrollTrigger.create({
@@ -47,21 +45,11 @@ ScrollTrigger.create({
   pinSpacing: false,
 });
 
-/* ----------------------------------------
-   .donation-redball-wrap 등장 모션
-   viewport 왼쪽 밖에서 안으로 들어옴
----------------------------------------- */
-
 gsap.from(".donation-redball-wrap", {
   x: -window.innerWidth,
   duration: 1.2,
   ease: "power3.out",
 });
-
-/* ----------------------------------------
-   .redball-inner idle 모션
-   y축으로 10px 정도 위아래로 계속 흔들림
----------------------------------------- */
 
 gsap.to(".redball-inner", {
   y: -10,
@@ -71,13 +59,18 @@ gsap.to(".redball-inner", {
   yoyo: true,
 });
 
-/* ----------------------------------------*/
+/* --------------------------------------
+donation hero image motion
+----------------------------------------*/
 
 const coverWrap = document.querySelector(".donation-hero-pict-wrap");
 const cover = document.querySelector(".donation-cover");
 const coverImage = document.querySelector(".donation-cover .cover-image");
 const coverCopy = document.querySelector(".donation-cover .intro-copy");
+const coverVideoWrap = cover?.querySelector(".donation-intro-video-wrap");
+const isVideoCover = !!coverVideoWrap;
 
+/* cover 박스 확대 모션은 이미지/비디오 버전 공통 */
 gsap.to(cover, {
   width: "calc(100vw - 48px)",
   height: "calc(100vh - 48px)",
@@ -86,39 +79,44 @@ gsap.to(cover, {
   borderRadius: "24px",
   ease: "none",
   scrollTrigger: {
-    trigger: ".donation-hero-wrap",
-    start: "+=200",
-    end: "+=350",
+    trigger: ".container-root",
+    start: "+=100",
+    end: "+=200",
     scrub: 1,
     invalidateOnRefresh: true,
   },
 });
 
-gsap.to(coverImage, {
-  filter: "blur(15px)",
-  opacity: 0.5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".container-root",
-    start: "+=350",
-    end: "+=400",
-    scrub: 1,
-    invalidateOnRefresh: true,
-  },
-});
+/* 이미지 blur + coverCopy 등장 모션은 이미지/비디오 버전 공통 */
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".container-root",
+      start: "+=200",
+      end: "+=300",
+      scrub: 1,
+      invalidateOnRefresh: true,
+    },
+  })
+  .to(coverImage, { filter: "blur(15px)", opacity: 0.5, ease: "none" }, 0)
+  .to(coverCopy, { opacity: 1, top: "calc(50% - 150px)", ease: "none" }, 0);
 
-gsap.to(coverCopy, {
-  opacity: 1,
-  top: "calc(50% - 150px)",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".container-root",
-    start: "+=350",
-    end: "+=400",
-    scrub: 1,
-    invalidateOnRefresh: true,
-  },
-});
+if (isVideoCover) {
+  /* 비디오 버전 — 위 모션이 끝난 뒤 coverImage/coverCopy를 사라지게 해서 비디오를 드러냄
+     (타임라인 하나에 scrollTrigger 하나만 붙여서 테스트) */
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".container-root",
+        start: "+=800",
+        end: "+=1000",
+        scrub: 1,
+        invalidateOnRefresh: true,
+      },
+    })
+    .to(coverImage, { opacity: 0, ease: "none" }, 0)
+    .to(coverCopy, { opacity: 0, ease: "none" }, 0);
+}
 
 ScrollTrigger.create({
   trigger: coverWrap,

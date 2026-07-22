@@ -34,7 +34,7 @@
 }
 .donation-head-copy-wrap {
   position: relative; width: 100%; margin: 0 auto;
-  max-width: 800px; padding-top: 80px; z-index: 10; 
+  max-width: 800px; padding-top: 40px; z-index: 10; 
   >.head-copy-row {
     width: 100%; font-weight: 700; color: var(--color-text-900); 
     line-height: 1.3em; text-align: center; display: block;
@@ -51,7 +51,7 @@
 
 .donation-hero-pict-wrap {
   width: 100%; height: 100vh; margin: 0 auto;
-  position: absolute; left: 0; top:200px;
+  position: absolute; left: 0; top:140px;
   display: block; pointer-events: none; z-index: 50;
   >.pict-circle {
     display: block;
@@ -91,7 +91,7 @@
 
 .donation-redball-wrap {
   position: absolute; width: 200px; height: 370px; left: calc(50% - 730px);
-  top: 400px; z-index: 20; overflow: visible;
+  top: 300px; z-index: 20; overflow: visible;
   >.redball-inner{
     width: 100%; height: 100%; position: relative;
     >.pict-wrap {
@@ -162,6 +162,17 @@
       justify-content: center; align-items: center;
     }
   }
+}
+
+.donation-intro-video-wrap{
+  width:100%; 
+}
+
+body:has(.donation-intro-video-wrap){
+  .donation-hero-wrap{ height: 3000px; }
+  .don-intro-section-content{
+    &.scene-1 { margin-top: 3000px;}
+  }  
 }
 
 /* Cards --------------------*/
