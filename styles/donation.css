@@ -104,8 +104,7 @@
     > .btn-redball {
       position: absolute; bottom: 0; margin: 0 auto; left: 0; right: 0;
     }
-  }
-  
+  }  
 }
 
 .don-intro-section-content {
@@ -166,11 +165,12 @@
 }
 
 .donation-intro-video-wrap{
-  position: absolute; width:100%; height:100%;
-  left:0; top:0; 
+  position: relative; width:100%; height:100%; aspect-ratio: 16/9;
+  overflow: hidden; border-radius: 16px;
   >.video-overlay {
     display: block; position: absolute; width: 100%; height: 100%;
-    left:0; top:0; background-color: black; pointer-events: none;
+    left:0; top:0; background-color: #f72c4d; pointer-events: none;
+    opacity: 0;
   }
   >.youtube-video-wrap{
     position: relative; width: 100%; height:100%;
@@ -180,13 +180,6 @@
   }
 }
 
-/* body:has(.donation-intro-video-wrap){
-  .donation-hero-wrap{ height: 3000px; }
-  .don-intro-section-content{
-    &.scene-1 { margin-top: 3000px;}
-  }  
-} */
-
 /* Cards --------------------*/
 
 .swiper-wrapper{
@@ -194,13 +187,14 @@
     &:last-child { margin-right:24px;}
   }
 }
+
 .card-donation-benefit {
   width:100%; position: relative; display: flex;
   flex-direction: column; background-color: white;
   overflow: hidden; border-radius: 24px; padding: 20px; 
   width:500px; height: 510px;
-  border: 1px solid var(--color-primary-300);
-  background: linear-gradient(to top, #ffffff 94%,#fff0ef 100%);
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
+
   >.benefit-num{
     width:100%; margin-bottom: 32px;
     >.inner-row{
@@ -238,6 +232,7 @@
   width:500px; height: 480px; position: relative; display: flex;
   flex-direction: column; background-color: white;
   overflow: hidden; border-radius: 24px;
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
   >.thumbnail{
     width:100%; overflow: hidden; aspect-ratio: 3/2;
     border-radius: 0 0 0 24px;

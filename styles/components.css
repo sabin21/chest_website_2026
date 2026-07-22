@@ -208,6 +208,7 @@
 .carousel-card-row {
   width: 100%;
   > .swiper-wrapper {
+    padding-bottom: 24px;
     > .card-item { width: auto; height: auto; }
   }
 }
