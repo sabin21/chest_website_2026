@@ -86,7 +86,7 @@
   background-color: var(--color-solid-100);
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 8px;
   color: var(--color-text-500);
   font-weight: 700;
   font-size: 15px;
@@ -100,6 +100,13 @@
   }
   &.dark {
     background-color: var(--color-solid-800);
+    color: white;
+    &:hover {
+      background-color: var(--color-solid-900);
+    }
+  }
+  &.primary{
+    background-color: var(--color-primary-400);
     color: white;
     &:hover {
       background-color: var(--color-solid-900);

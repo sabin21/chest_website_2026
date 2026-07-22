@@ -176,6 +176,8 @@
   flex-direction: column; background-color: white;
   overflow: hidden; border-radius: 24px; padding: 20px; 
   width:500px; height: 510px;
+  border: 1px solid var(--color-primary-300);
+  background: linear-gradient(to top, #ffffff 94%,#fff0ef 100%);
   >.benefit-num{
     width:100%; margin-bottom: 32px;
     >.inner-row{
