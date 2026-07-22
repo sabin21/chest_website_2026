@@ -514,13 +514,14 @@
       >.emblem { position: absolute; width: 140px; z-index: 5; top: 48px; left: 48px;}
       >.card-honor{
         background-color: var(--color-primary-400);
-        background-color: #805e2c;
+        background-color: #694f2e;
         width: 280px; height: 280px;
         padding: 40px 40px 40px 40px; display: flex; flex-direction: column;
         justify-content: center; align-items: center;
         color:white; position: absolute; right:20px; bottom:20px;
         overflow: hidden; aspect-ratio: 1/1;
-        border-radius: 50%;
+        border-radius: 50%; transition: all 0.2s;
+        filter:drop-shadow(2px 2px 12px rgba(0,0,0,0.3));
         >.card-content {
           width:100%; 
           >.title-sub { 
@@ -542,7 +543,10 @@
         &::after {
           content:''; display: block; width:93%; height: 93%;
           position: absolute; margin: auto; left:0; right:0;
-          top:0; bottom:0; border-radius: 50%; border: 1px solid #d6a70e;
+          top:0; bottom:0; border-radius: 50%; border: 1px solid #cca421;
+        }
+        &:hover{
+          background-color: black;
         }
       }
     }  
