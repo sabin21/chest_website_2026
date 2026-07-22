@@ -67,10 +67,7 @@ const coverWrap = document.querySelector(".donation-hero-pict-wrap");
 const cover = document.querySelector(".donation-cover");
 const coverImage = document.querySelector(".donation-cover .cover-image");
 const coverCopy = document.querySelector(".donation-cover .intro-copy");
-const coverVideoWrap = cover?.querySelector(".donation-intro-video-wrap");
-const isVideoCover = !!coverVideoWrap;
 
-/* cover 박스 확대 모션은 이미지/비디오 버전 공통 */
 gsap.to(cover, {
   width: "calc(100vw - 48px)",
   height: "calc(100vh - 48px)",
@@ -80,43 +77,25 @@ gsap.to(cover, {
   ease: "none",
   scrollTrigger: {
     trigger: ".container-root",
-    start: "+=100",
-    end: "+=200",
+    start: "+=200",
+    end: "+=250",
     scrub: 1,
     invalidateOnRefresh: true,
   },
 });
 
-/* 이미지 blur + coverCopy 등장 모션은 이미지/비디오 버전 공통 */
 gsap
   .timeline({
     scrollTrigger: {
       trigger: ".container-root",
-      start: "+=200",
-      end: "+=300",
+      start: "+=250",
+      end: "+=400",
       scrub: 1,
       invalidateOnRefresh: true,
     },
   })
-  .to(coverImage, { filter: "blur(15px)", opacity: 0.5, ease: "none" }, 0)
-  .to(coverCopy, { opacity: 1, top: "calc(50% - 150px)", ease: "none" }, 0);
-
-if (isVideoCover) {
-  /* 비디오 버전 — 위 모션이 끝난 뒤 coverImage/coverCopy를 사라지게 해서 비디오를 드러냄
-     (타임라인 하나에 scrollTrigger 하나만 붙여서 테스트) */
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".container-root",
-        start: "+=800",
-        end: "+=1000",
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-    })
-    .to(coverImage, { opacity: 0, ease: "none" }, 0)
-    .to(coverCopy, { opacity: 0, ease: "none" }, 0);
-}
+  .to(coverImage, { filter: "blur(15px)", opacity: 0.6, ease: "none" }, 0.25)
+  .to(coverCopy, { opacity: 1, top: "calc(50% - 170px)", ease: "none" }, 0);
 
 ScrollTrigger.create({
   trigger: coverWrap,
