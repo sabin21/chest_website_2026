@@ -255,8 +255,8 @@
     width: 100%; position: relative; padding-left: calc(50% - 356px);
     > .content-wrap {
       width: 100%; overflow: hidden; position: relative; display: flex;
-      flex-direction: column; gap: 48px; max-width: 1084px;
-      &.full { max-width:100%;}
+      flex-direction: column; gap: 48px; max-width: 1084px; 
+      &.full { max-width:100%; }
       > .content-title-bar {
         display: flex; width: 1084px;
         justify-content: space-between; align-items: center;
@@ -276,10 +276,16 @@
     padding: 80px 0 0 16px;
     > .content-inner-lp3 {
       padding-left: 0;
-      > .content-wrap {
-        gap: 32px;
+      >.content-wrap {
+        gap: 32px; padding-right:16px;
+        &.full { 
+          padding-right: 0;
+          >.content-title-bar{
+            padding-right:16px;
+          }
+        }
         > .content-title-bar {
-          width: 100%; padding-right:16px;
+          width: 100%; 
           > .content-title {
             font-size: 24px;
           }
@@ -301,9 +307,8 @@
     > .content-inner-lp3 {
       padding-left: 0;
       > .content-wrap {
-        gap: 32px;
+        gap: 32px; 
         > .content-title-bar {
-          width: 100%; padding-right:16px;
           > .content-title {
             font-size: 20px;
           }
@@ -341,7 +346,6 @@
 
 @media (max-width: 1024px) {
   .good-workshop-join-wrap{
-    padding-right:16px;
     >.card-panel{
       padding: 24px 24px 24px 32px; 
       >img{ width: 64px; height: 64px; }
@@ -388,7 +392,7 @@
 }
 
 .card-donation-benefit {
-  width:100%; position: relative; display: flex;
+  position: relative; display: flex;
   flex-direction: column; background-color: white;
   overflow: hidden; border-radius: 24px; padding: 20px; 
   width:530px; height: 510px;
@@ -424,6 +428,9 @@
     justify-content: center; align-items: center; min-height: 0;
     padding: 24px 24px;
     >img{ height:100%; }
+  }
+  &.big{
+    width: 1084px;
   }
 }
 @media (max-width:1024px){
@@ -568,7 +575,7 @@
 
 @media (max-width:1024px){
   .branch-contact-wrap{
-    width: 100%; padding-right:16px;
+    width: 100%; 
     grid-template-columns: repeat(3, 1fr);
     >.card-contact {
       border-radius: 8px; padding: 16px 16px; gap:4px;
@@ -585,7 +592,7 @@
 
 @media (max-width:640px){
   .branch-contact-wrap{
-    width: 100%; padding-right:16px;
+    width: 100%; 
     grid-template-columns: repeat(1, 1fr);
     >.card-contact {
       border-radius: 8px; padding: 16px 16px; gap:4px;
