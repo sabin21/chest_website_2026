@@ -12,7 +12,7 @@
       { "label": "착한펫",                      "href": "./don_intro_good_pet.html" },
       { "label": "나눔리더스클럽",              "href": "./don_intro_leaders_club.html" },
       { "label": "나눔리더",                    "href": "./don_intro_leader.html" },
-      { "label": "기부자맞춤기금",              "href": "./don_intro_good_store.html" },
+      { "label": "기부자맞춤기금",              "href": "./don_intro_custom_fund.html" },
       { "label": "아너 소사이어티",             "href": "./02_02_1.html" },
       { "label": "유산기부(레거시클럽)",        "href": "./02_02_1.html" },
       { "label": "현물기부",                    "href": "./02_02_1.html" },
