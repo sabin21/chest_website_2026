@@ -81,3 +81,51 @@ function initFaqAccordion() {
 }
 
 initFaqAccordion();
+
+/*-----------------------------
+  Modal
+------------------------------*/
+function initModalOverlay() {
+  const overlays = document.querySelectorAll(".modal-overlay");
+  if (!overlays.length) return;
+
+  // 어떤 스크립트가 .modal-overlay에 is-open을 붙이든(직접 classList.add 등)
+  // 항상 감지되도록 클래스 변경 자체를 관찰해서 스크롤 잠금을 매번 다시 계산한다.
+  const appRoot = document.querySelector(".app-root");
+
+  function updateScrollLock() {
+    const anyOpen = Array.from(overlays).some((el) =>
+      el.classList.contains("is-open")
+    );
+    if (anyOpen) {
+      window.__lenis?.stop();
+      if (appRoot) appRoot.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      window.__lenis?.start();
+      if (appRoot) appRoot.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }
+
+  overlays.forEach((overlay) => {
+    function closeModal() {
+      overlay.classList.remove("is-open");
+    }
+
+    overlay
+      .querySelector(".btn-modal-close")
+      ?.addEventListener("click", closeModal);
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeModal();
+    });
+
+    new MutationObserver(updateScrollLock).observe(overlay, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+}
+
+initModalOverlay();

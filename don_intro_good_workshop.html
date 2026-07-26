@@ -38,9 +38,13 @@
         </div>
       </div>
 
-      <section class="donation-hero-wrap">
+      <div class="donation-back-circle-wrap">
         <span class="back-circle circle-1"></span>
         <span class="back-circle circle-2"></span>
+      </div>
+      
+      <section class="donation-hero-wrap">
+        
         <div class="donation-head-copy-wrap">
           <span class="head-copy-row">사랑을 나누는 회사</span>
           <span class="head-copy-row">착한일터입니다</span>
@@ -55,10 +59,11 @@
           <span class="pict-circle donation-cover">
             <img src="./img/donation/intro/cover_good_workshop.jpg" class="cover-image" alt="착한일터 이미지" />
             <p class="intro-copy">
-              착한일터는 기업의 임직원이 매달 급여에서 <br />
-              약정한 후원금을 자동이체하는 <br />정기적 나눔 참여 방법입니다. <br />
-              직장 내 전 직원의 참여부터 소모임별 참여까지 <br />
-              다양한 형태로 나눔을 실천할 수 있습니다.<br />
+              착한일터는 기업의 임직원이 매달 급여에서 <br class="xs-hidden">
+              약정한 후원금을 자동이체하는 <br class="xs-hidden">
+              정기적 나눔 참여 방법입니다. <br class="xs-hidden">
+              직장 내 전 직원의 참여부터 소모임별 참여까지 <br class="xs-hidden">
+              다양한 형태로 나눔을 실천할 수 있습니다.<br class="xs-hidden">
             </p>
             <!-- <div class="donation-intro-video-wrap"></div> -->
           </span>
@@ -153,7 +158,7 @@
           <div class="content-wrap">
             <span class="content-title-bar">
               <span class="content-title text-scale-40">단체 가입 순서</span>
-              <button class="btn-basic dark">
+              <button class="btn-basic dark" id="btn-workshop-receipt">
                 <span class="label">착한일터 임직원 영수증신청</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 14L11 8L5 2" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -195,8 +200,6 @@
             </div>
         </div>
       </section>
-      
-      
 
       <section class="don-intro-section-content scene-3">
         <div class="content-inner-lp3">
@@ -278,7 +281,7 @@
           <div class="content-wrap">
             <span class="content-title-bar">
               <span class="content-title">지회별 담당자</span>
-              <button class="btn-basic dark">
+              <button class="btn-basic dark" id="btn-request-consultation">
                 <span class="label">기부 상담하기</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 14L11 8L5 2" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -288,230 +291,303 @@
             <div class="branch-contact-wrap">
               <div class="card-contact">
                 <h4 class="branch-title">중앙회</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">서울 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">부산 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">대구 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">인천 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">광주 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">대전 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">울산 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">경기 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">경기북부 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">강원 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">충북 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">충남 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">전북 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">전남 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">경북 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">경남 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">제주 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
               <div class="card-contact">
                 <h4 class="branch-title">세종 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
+                <span class="contact-info-wrap">
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_phone.svg" />
+                    <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
+                  </span>
+                  <span class="contact-info-row">
+                    <img src="./img/donation/intro/icon_14_fill_mail.svg" />
+                    <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
+                  </span>
+                </span> 
               </div>
-              <!-- <div class="card-contact">
-                <h4 class="branch-title">서울 사랑의열매</h4>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_phone.svg" />
-                  <a class="info-text" href="phone:02-3144-0101">02-3144-0101</a>
-                </span>
-                <span class="contact-info-row">
-                  <img src="./img/donation/intro/icon_14_fill_mail.svg" />
-                  <a class="info-text" href="mailto:leesw@chest.or.kr">leesw@chest.or.kr</a>
-                </span>
-              </div> -->
             </div>
         </div>
       </section>
 
     </div><!-- container-root -->
 
+    <div class="modal-overlay" id="modal-request-consultation"></div>
+
+    <div class="modal-overlay" id="modal-workshop-receipt">
+      <div class="modal-wrap">
+        <button class="btn-modal-close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L14 14M14 2L2 14" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="modal-inner">
+          <div class="modal-title-wrap">
+            <h3 class="title">착한일터 임직원 영수증신청</h3>
+          </div>
+          <div class="modal-form-wrap">
+            <div class="input-item-wrap">
+              <span class="item-label">
+                <label for="branch" class="label">참여기업명</label>
+              </span>
+              <div class="input-row">
+                <select id="branch">
+                  <option value="중앙회" selected>SC제일은행(2026)</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                  <option value="서울 중앙회">서울 중앙회</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-item-wrap">
+              <span class="item-label">
+                <label for="applicant-phone" class="label">인증코드</label>
+              </span>
+              <div class="input-row">
+                <input type="text" id="applicant-phone" name="applicant-phone" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="form-submit-btn-wrap">
+            <button class="btn lg">착한일터 인증</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="app-footer" class="app-footer"></div>
     <div id="app-quick-link" class="app-quick-link"></div>
@@ -524,6 +600,7 @@
 <script src="components/Breadcrumb.js"></script>
 <script src="components/AppFooter.js"></script>
 <script src="components/AppQuickLink.js"></script>
+<script src="components/ModalDonationRequest.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/app_common.js"></script>
