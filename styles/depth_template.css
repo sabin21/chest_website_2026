@@ -156,16 +156,6 @@
     }
   }
 
-  &.donation {
-    text-align: center;
-    > .depth-page-title {
-      max-width: 600px; margin: 0 auto;
-      > img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-  }
 }
 
 @media (max-width: 1024px) {

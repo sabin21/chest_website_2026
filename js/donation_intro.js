@@ -220,8 +220,10 @@ document.querySelectorAll(".don-intro-section-content").forEach((section) => {
    기부상담신청 모달 오픈
 ---------------------------------------- */
 
-document.getElementById("btn-request-consultation")?.addEventListener("click", () => {
-  document.getElementById("modal-request-consultation")?.classList.add("is-open");
+document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-redball").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.getElementById("modal-request-consultation")?.classList.add("is-open");
+  });
 });
 
 document.getElementById("btn-workshop-receipt")?.addEventListener("click", () => {

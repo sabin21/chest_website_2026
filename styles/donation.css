@@ -8,6 +8,7 @@
 
 .page-head-wrap.donation-intro {
   width:100%; padding-top: 40px; position: relative; z-index: 10;
+  gap:12px;
   >.depth-page-title-wrap{
     margin: 0 auto; position: relative;
     >.depth-page-title{
@@ -39,7 +40,7 @@
     padding-top: 48px;
     >.depth-page-title-wrap{
       >.depth-page-title{
-        >img{ width:100%; }
+        >img{ width:90%; }
       }
     }
     >.page-head-gnb-wrap.center{
@@ -116,7 +117,7 @@
   }
   .donation-head-copy-wrap {
     > .head-copy-row {
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 }
@@ -240,7 +241,7 @@
         width: 70px; height:80px; top: 14px; left: 14px;
       }
       >.btn-redball {
-        width: 100px; height:100px; font-size: 16px;
+        width: 100px; height:100px; font-size: 15px;
       }
     }  
   }
@@ -326,7 +327,7 @@
   }
 }
 
-.good-workshop-join-wrap{
+.good-workshop-join-wrap, .join-process-wrap{
   width:100%; display: grid; grid-template-columns: repeat(3, 1fr);
   gap:6px;
   >.card-panel{
@@ -341,6 +342,13 @@
       border-radius: 50%; color:white; font-weight: 700; font-size: 14px;
       justify-content: center; align-items: center;
     }
+    &.big {
+      min-height: 200px; gap:24px;
+      >p{ font-size: 26px; }
+      >.order-num{
+        font-size: 16px; width:32px; height:32px;
+      }
+    }
   }
 }
 
@@ -350,6 +358,13 @@
       padding: 24px 24px 24px 32px; 
       >img{ width: 64px; height: 64px; }
       >p{ font-size: 18px;}
+      &.big {
+        min-height: 160px; gap:16px;
+        >p{ font-size: 22px; }
+        >.order-num{
+          font-size: 14px; width:24px; height:24px;
+        }
+      }
     }
   }
 }
@@ -360,10 +375,13 @@
     >.card-panel{
       padding: 24px 24px 24px 48px; min-height: 120px;
       >p{ font-size: 18px;}
+      &.big {
+        min-height: 140px; gap:16px;
+        >p{ font-size: 18px; }
+      }
     }
   }
 }
-
 
 .donation-intro-video-wrap{
   position: relative; width:100%; height:100%; aspect-ratio: 16/9;
@@ -424,14 +442,24 @@
     }
   }
   >.graphic-wrap{
-    position: relative; width:100%; height:100%; display: flex; 
+    position: relative; width:100%; height:100%; 
+    display: flex; flex-direction: column;
     justify-content: center; align-items: center; min-height: 0;
     padding: 24px 24px;
     >img{ height:100%; }
   }
-  &.big{
-    width: 1084px;
+  &.wide{
+    width: 1084px; 
+    >.graphic-wrap{
+      padding:16px 16px 24px 24px; align-items: flex-start;
+      >.desc{
+        display: block; width:100%; font-size: 14px;
+        padding: 16px 0;
+      }
+    }
   }
+  &.tall { height: 540px; }
+  &.short { height: 400px; }
 }
 @media (max-width:1024px){
   .card-donation-benefit {
@@ -440,12 +468,8 @@
     >.benefit-num{
       margin-bottom: 24px;
       >.inner-row{
-        >.bullet { 
-          width:16px; height:16px;
-        }
-        >.title {
-          font-size:20px;
-        }
+        >.bullet { width:16px; height:16px; }
+        >.title { font-size:20px; }
       } 
     }
     >.card-content-text{
@@ -463,6 +487,14 @@
       padding: 24px 24px;
       >img{ height:100%; }
     }
+    &.wide {
+      width:calc(80% - 16px); 
+      >.graphic-wrap {
+        >img{ height: auto; width: 100%; }
+      }
+    }
+    &.tall { height: 440px; }
+    &.short { height: 380px; }
   }
 }
 @media (max-width:640px){
@@ -482,15 +514,23 @@
     >.card-content-text{
       padding: 0 24px 24px 20px;
       >.headline {
-        font-size: 24px;
+        font-size: 22px;
       }
       >.desc {
-        font-size: 17px; margin-top:8px;
+        font-size: 16px; margin-top:8px;
       }
     }
     >.graphic-wrap{
       padding: 24px 24px;
     }
+    &.wide {
+      width:calc(90% - 16px); 
+      >.graphic-wrap {
+        >img{ height: auto; width: 100%; }
+      }
+    }
+    &.tall { height: 380px; }
+    &.short { height: 260px; }
   }
 }
 
@@ -540,7 +580,7 @@
   .card-donation-case{
     width:calc(90% - 16px); 
     >.card-body{
-      min-height:120px; padding: 24px 24px 32px 28px;
+      min-height:140px; padding: 24px 24px 32px 28px;
       >.category{ 
         font-size: 16px; margin-bottom:4px; 
       }
