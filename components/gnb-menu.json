@@ -15,10 +15,10 @@
       { "label": "기부자맞춤기금",              "href": "./don_intro_custom_fund.html" },
       { "label": "아너 소사이어티",             "href": "./02_02_1.html" },
       { "label": "유산기부(레거시클럽)",        "href": "./02_02_1.html" },
-      { "label": "현물기부",                    "href": "./02_02_1.html" },
+      { "label": "현물기부",                    "href": "./don_intro_spot.html" },
       { "label": "희망자산나눔",                "href": "./02_02_1.html" },
       { "label": "사회공헌 성금기부",           "href": "./02_02_1.html" },
-      { "label": "사회공헌 현물기부",           "href": "./02_02_1.html" },
+      { "label": "사회공헌 현물기부",           "href": "./don_intro_social_spot.html" },
       { "label": "착한소비(공익연계마케팅)",    "href": "./02_02_1.html" },
       { "label": "나눔명문기업",                "href": "./02_02_1.html" }
     ]

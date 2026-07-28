@@ -798,10 +798,10 @@
     >select {
       appearance: none; -webkit-appearance: none; cursor: pointer;
       padding-right: 40px;
-      background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5L0 0L8 0L4 5Z' fill='%2333363D'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5.5L8 11.5L14 5.5' stroke='%2333363D' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 16px center;
-      background-size: 10px 6px;
+      background-size: 12px 12px;
       &:has(option:checked:disabled) { color: var(--color-text-300); }
     }
     &.date-range {
@@ -897,7 +897,7 @@
       >select {
         padding-right: 32px;
         background-position: right 16px center;
-        background-size: 10px 6px;
+        background-size: 12px 12px;
       }
       &.date-range {
         gap: 8px;
