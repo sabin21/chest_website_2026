@@ -4,7 +4,7 @@
     "label": "기부",
     "href": "/02_02_1.html",
     "children": [
-      { "label": "착한나눔(정기기부)",          "href": "./don_intro_good_store.html" },
+      { "label": "착한나눔(정기기부)",          "href": "./don_join_1.html" },
       { "label": "나를 위한 기부(일시기부)",    "href": "./don_intro_good_store.html" },
       { "label": "착한가정",                    "href": "./don_intro_good_family.html" },
       { "label": "착한가게",                    "href": "./don_intro_good_store.html" },
@@ -16,8 +16,8 @@
       { "label": "아너 소사이어티",             "href": "./02_02_1.html" },
       { "label": "유산기부(레거시클럽)",        "href": "./02_02_1.html" },
       { "label": "현물기부",                    "href": "./don_intro_spot.html" },
-      { "label": "희망자산나눔",                "href": "./02_02_1.html" },
-      { "label": "사회공헌 성금기부",           "href": "./02_02_1.html" },
+      { "label": "희망자산나눔",                "href": "./don_intro_asset.html" },
+      { "label": "사회공헌 성금기부",           "href": "./don_intro_social_fund.html" },
       { "label": "사회공헌 현물기부",           "href": "./don_intro_social_spot.html" },
       { "label": "착한소비(공익연계마케팅)",    "href": "./02_02_1.html" },
       { "label": "나눔명문기업",                "href": "./02_02_1.html" }

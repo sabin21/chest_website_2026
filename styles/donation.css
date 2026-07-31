@@ -257,7 +257,7 @@
   > .content-inner-lp3 {
     width: 100%; position: relative; padding-left: calc(50% - 356px);
     > .content-wrap {
-      width: 100%; overflow: hidden; position: relative; display: flex;
+      width: 100%; position: relative; display: flex;
       flex-direction: column; gap: 48px; max-width: 1084px;
       &.full { max-width:100%; }
       &:has(> .grid-col2-wrap) { overflow: visible; }
@@ -777,6 +777,106 @@
 }
 
 /*---------------------------*/
+/* 희망자산나눔 */
+/*---------------------------*/
+
+.asset-content-card{
+  width:100%; border-top: 2px solid var(--color-line-400);
+  display: flex; flex-direction: column;
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
+  background-color: white; border-radius: 0 0 24px 24px;
+  padding: 28px 32px 32px 32px;
+  >.title-wrap{
+    width:100%; padding: 0 0 28px 0;
+    >h3{
+      width:100%; font-size: 32px; font-weight: 700; color: var(--color-text-600);
+    }
+  }
+  >.grid-panel-wrap{
+    width:100%; display: grid; grid-template-columns: repeat(3, 1fr); gap:8px;
+    &.col-4{
+      grid-template-columns: repeat(4, 1fr); 
+    }   
+    >.panel {
+      width:100%; display: flex; background-color: white; 
+      border-radius: 8px; border: 1px solid var(--color-line-150);
+      padding: 24px;
+      >.title-wrap{
+        width:100%; 
+        >h4{ width:100%; font-size: 20px;}
+        >p{ margin:0; padding: 4px 0;}
+      }
+      >.graphic-icon{
+        flex-shrink: 0; flex-grow: 0; aspect-ratio: 1/1;
+        width:80px; height:80px;
+        >img{ width:100%; }
+      }
+    }
+  }
+  >.sub-title{
+    width:100%; padding:40px 0 24px 0;
+    >h3{
+      font-size:24px;
+    }
+  }
+  >.grid-process-wrap{
+    width:100%; display: grid; grid-template-columns: repeat(3, 1fr); gap:12px;
+    >.process-item{
+      width:100%; display: flex; align-items: center; gap: 8px; border-radius: 8px;
+      padding: 16px 12px 16px 20px; background-color: var(--color-solid-200);
+      >.num {
+        display: flex; width:24px; height:24px; color:white; font-size:15px;
+        justify-content: center; align-items: center; font-weight: 700;
+        border-radius: 50%; background-color: var(--color-primary-400);
+      }
+      >h5{ font-size:18px;}
+    } 
+  }
+  >.list-info-text {
+    width:100%; display: flex; flex-direction: column; margin-top: 24px;
+    >.item-info-text{
+      width:100%; display: flex; align-items: center; gap:6px;
+      padding: 12px 0;
+      >.bullet{ display: block; width:4px; height:4px; border-radius: 50%; background-color: var(--color-text-400);}
+      >p{ margin:0; font-size: 18px; font-weight: 600;}
+    }
+  }
+}
+
+/*---------------------------*/
+/* 사회공헌성금기부 */
+/*---------------------------*/
+
+.social-fund-logo-card{
+  width:100%; background-color: white; border-radius: 24px;
+  padding:32px;
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
+  >.grid-wrap{
+    width:100%; display: grid; grid-template-columns: repeat(4, 1fr); gap:12px;
+    >.logo-panel{
+      width:100%; padding:24px; display: flex; border: 1px solid var(--color-line-150);
+      justify-content: center; align-items: center; border-radius: 8px;
+      >img{ width:90%;}
+    }
+  }
+}
+.social-fund-join-wrap{
+  width:100%; display: grid; grid-template-columns: repeat(2, 1fr); gap:12px;
+  >.social-fund-join-card{
+    width:100%; display: flex; flex-direction: column;
+    overflow: hidden; background-color: white; border-radius: 16px; 
+    >.thumbnail{
+      width:100%; overflow: hidden; aspect-ratio: 2/1;
+      border-radius: 0 0 0 16px;
+      >img{ width:100%; height:100%; object-fit: cover; }
+    }
+    >.card-body{
+      width:100%; 
+    }
+  }
+}
+
+/*---------------------------*/
 /*---------------------------*/
 
 .donation-form-full-wrap {
@@ -786,14 +886,6 @@
   text-align: center;
   position: relative;
   padding: 40px 0;
-  > .step-wrap {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    > .dummy-img {
-      width: 100%;
-    }
-  }
 }
 .banner-consulting {
   width: 100%;
@@ -807,15 +899,6 @@
   > .dummy-img {
     width: 100%;
   }
-}
-#donation-step-2,
-#donation-step-3 {
-  display: none;
-}
-
-#donation-step-1 .dummy-img,
-#donation-step-2 .dummy-img {
-  cursor: pointer;
 }
 
 
@@ -831,23 +914,111 @@
   &::before{
     content:''; display: block; position: absolute; left:0; top:0;
     width:100%; height:100%; border-radius: 12px; opacity: 0;
-    border: 2px solid var(--color-line-600); pointer-events: none;
+    border: 2px solid var(--color-text-600); pointer-events: none;
   }
   &:hover{
-    border: 1px solid var(--color-primary-300);
+    border: 1px solid var(--color-line-300);
   }
   &.checked{
     &::before { opacity: 1;}
+    &:hover{ border: 1px solid transparent; }
   }
   >.inner-wrap{
-    width:100%; display: flex; align-items: center; gap:4px;
-    >svg{ width: 80px; height: 80px; aspect-ratio: 1/1;}
-    >.label { display: block; font-size: 20px; font-weight: 700; color: var(--color-text-800);}
+    width:100%; display: flex; align-items: center; gap:12px; cursor: pointer;
+    >img{ width: 80px; height: 80px; aspect-ratio: 1/1; flex-shrink: 0; flex-grow: 0;}
+    >.label { 
+      display: block; font-size: 20px; font-weight: 700; 
+      text-align: left; color: var(--color-text-800);
+      width:100%; min-width: 100px; 
+    }
+  }
+}
+.btn-big-check.square{
+  padding: 12px 16px 24px 16px; min-width:148px;
+  >.inner-wrap{
+    flex-direction: column; gap:0px;
+    >.img{ width:120px; height:80px; aspect-ratio: 3/2;}
+    >.label{ text-align: center; font-size:18px;}
   }
 }
 
+.donation-form-full-wrap{
+  position: relative; margin: 0 auto; width:100%; max-width: 1208px;
+  >.first-choice-bar{
+    width:100%; display: flex; justify-content: center; gap:12px;
+    padding-bottom: 32px;
+  }
+  >.donation-type-full-wrap>.step-block-wrap{
+    >.step-form-title-bar{
+      width:100%; padding: 24px 0; border-top: 1px solid var(--color-line-400);
+      background-color:white;
+      >.title-inner{
+        width:100%; display: flex; align-items: center; 
+        font-weight: 800; gap:6px; font-size: 32px; 
+        >.num { display: block; color:var(--color-primary-400);}
+      }
+    }
+    >.step-form-wrap{
+      width:100%;
+      >.step-form-body {
+        width:100%; background-color: var(--color-solid-100);
+        border-radius: 16px; padding: 40px 48px 40px 48px;
+        display: flex; flex-direction: column; gap:32px;
+      }
+      >.step-form-action-bar{
+        width:100%; display: flex; justify-content: center; align-items: center;
+        padding: 24px 0; margin-bottom: 40px;
+      }
+    }  
+  }
+}
 
+.step-form-body>.form-item-wrap, 
+.step-form-body>.form-state-wrap>.form-item-wrap{
+  width:100%; padding-bottom:16px;
+  >.direction-row {
+    display: flex; align-items: center; gap: 4px; padding: 16px 0 24px 0;
+    font-size: 18px; font-weight: 600; color:var(--color-text-400);
+    >.row-bullet {
+      width: 4px; height: 4px; border-radius: 4px;
+      background-color: var(--color-text-400);
+    }
+  }
+  >.input-item-row{
+    width:100%; display: flex; border-top: 1px solid var(--color-line-150);
+    align-items: center; padding: 20px 0;
 
+    >.btns-row{
+      width:100%; display: flex; gap:12px;
+    }
+  }
+}
+
+.step-form-body>.don-amount-wrap{
+  width:100%; padding: 32px 32px; background-color: white;
+  border-radius: 12px; 
+  >.inner-wrap{ 
+      display: flex; justify-content: right; align-items: center; gap: 8px;
+      font-size:24px; font-weight: 700; color:var(--color-text-400);
+      >.strong{
+        display: block; font-size:44px; color:var(--color-primary-400);
+      } 
+  }
+}
+
+.agreement-wrap{
+  width:100%; display: flex; flex-direction: column; gap: 16px;
+  padding: 24px 0; 
+  >.checkbox-item>.checkbox>.checkbox-label{
+    >a{ color: var(--color-primary-400);}
+  }
+  >.comment-wrap{
+    width:100%; display: flex; flex-direction: column; gap:12px;
+    >.comment-row{
+      display: flex; font-size: 16px; 
+    }
+  }
+}
 
   
 

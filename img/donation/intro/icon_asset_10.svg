@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #414149;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        opacity: 0;
+      }
+
+      .cls-3 {
+        stroke: #e40038;
+      }
+    </style>
+  </defs>
+  <g id="guide_base" class="cls-4">
+    <rect class="cls-1" width="100" height="100"/>
+  </g>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-2" x="14.78" y="20.24" width="70.44" height="53.62" rx="10.29" ry="10.29"/>
+    <rect class="cls-2" x="21.53" y="26.94" width="56.94" height="40.23" rx="6.22" ry="6.22"/>
+    <rect class="cls-2" x="24.83" y="73.86" width="10.19" height="8.32"/>
+    <rect class="cls-2" x="18.45" y="35.43" width="6.16" height="6.16"/>
+    <rect class="cls-2" x="18.45" y="53.16" width="6.16" height="6.16"/>
+    <rect class="cls-2" x="65.3" y="74.26" width="10.19" height="8.32"/>
+    <path class="cls-3" d="M50,34.88c-6.72,0-12.17,5.45-12.17,12.17s5.45,12.17,12.17,12.17,12.17-5.45,12.17-12.17-5.45-12.17-12.17-12.17ZM58.32,45.17h-6.45v-6.45c3.21.72,5.73,3.24,6.45,6.45ZM48.13,38.73v6.45h-6.45c.72-3.21,3.24-5.73,6.45-6.45ZM41.68,48.92h6.45v6.45c-3.21-.72-5.73-3.24-6.45-6.45ZM51.87,55.37v-6.45h6.45c-.72,3.21-3.24,5.73-6.45,6.45Z"/>
+  </g>
+</svg>

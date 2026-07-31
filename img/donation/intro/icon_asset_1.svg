@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #414149;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-5 {
+        opacity: 0;
+      }
+
+      .cls-3 {
+        stroke: #e40038;
+      }
+    </style>
+  </defs>
+  <g id="guide_base" class="cls-5">
+    <rect class="cls-4" width="100" height="100"/>
+  </g>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-3" d="M21.1,60.66h15.7c.55,0,1,.45,1,1v4c0,.55-.45,1-1,1h-15.7v-6h0Z"/>
+    <path class="cls-3" d="M21.1,49.25h15.7c.55,0,1,.45,1,1v4c0,.55-.45,1-1,1h-15.7v-6h0Z"/>
+    <path class="cls-3" d="M21.1,37.84h15.7c.55,0,1,.45,1,1v4c0,.55-.45,1-1,1h-15.7v-6h0Z"/>
+    <path class="cls-1" d="M47.88,35.26h26.41c1.1,0,2,.9,2,2v53.2h-28.41v-55.2h0Z"/>
+    <path class="cls-3" d="M47.88,12.06v78.39h-26.79V31.57c0-.23.11-.45.29-.6l25.28-19.51c.49-.38,1.21-.03,1.21.6Z"/>
+    <g>
+      <path class="cls-1" d="M56.6,90.45v-13.42c0-.36.29-.65.65-.65h9.68c.36,0,.65.29.65.65v13.42"/>
+      <line class="cls-1" x1="62.09" y1="76.38" x2="62.09" y2="90.45"/>
+    </g>
+    <rect class="cls-1" x="64.46" y="41.02" width="6.23" height="6.23" rx="1" ry="1"/>
+    <rect class="cls-1" x="53.49" y="41.02" width="6.23" height="6.23" rx="1" ry="1"/>
+    <rect class="cls-1" x="64.46" y="52.18" width="6.23" height="6.23" rx="1" ry="1"/>
+    <rect class="cls-1" x="53.49" y="52.18" width="6.23" height="6.23" rx="1" ry="1"/>
+    <rect class="cls-1" x="64.46" y="63.35" width="6.23" height="6.23" rx="1" ry="1"/>
+    <rect class="cls-1" x="53.49" y="63.35" width="6.23" height="6.23" rx="1" ry="1"/>
+    <line class="cls-2" x1="13.96" y1="90.45" x2="83.43" y2="90.45"/>
+  </g>
+</svg>

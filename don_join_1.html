@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/app_common.css" />
+  <link rel="stylesheet" href="styles/depth_template.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/donation.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div id="app-breadcrumb" class="depth-head"></div>
+
+    <div class="container-root">
+
+      <div class="container">
+        <div class="page-head-wrap">
+          <div class="depth-page-title-wrap">
+            <div class="depth-page-title">
+              <h1>기부하기</h1>
+            </div>
+          </div>
+          <div class="depth-visual-wrap">
+            <img src="img/character_04.png"/>
+          </div>
+          
+          <div class="page-head-gnb-wrap">
+            <a href="#" class="btn-page-head active">정기기부</a>
+            <a href="#" class="btn-page-head">일시기부</a>
+            <a href="#" class="btn-page-head">착한가정</a>
+            <a href="#" class="btn-page-head">착한가게</a>
+            <a href="#" class="btn-page-head">착한일터</a>
+            <a href="#" class="btn-page-head">착한펫</a>
+          </div>
+        </div>
+
+        <div class="donation-form-full-wrap">
+
+          <div class="first-choice-bar">
+            <button class="btn-big-check checked" id="donor-type-btn-individual">
+              <span class="inner-wrap">
+                <img src="./img/donation/icon_graphic_individual.svg">
+                <span class="label">개인</span>
+              </span>
+            </button>
+            <button class="btn-big-check" id="donor-type-btn-company">
+              <span class="inner-wrap">
+                <img src="./img/donation/icon_graphic_company.svg">
+                <span class="label">기업</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="donation-type-full-wrap" id="donor-type-form-individual">
+
+            <div class="step-block-wrap">
+              <div class="step-form-title-bar">
+                <span class="title-inner">
+                  <span class="num">1.</span>
+                  기부 분야
+                </span>
+              </div>
+
+              <div class="step-form-wrap" id="step-1-body">   
+                <div class="step-form-body">
+                  <div class="form-item-wrap">
+                    <span class="direction-row">
+                      <span class="row-bullet"></span>
+                      원하시는 기부 지역과 금액을 선택해주세요
+                    </span>
+                    <div class="input-item-wrap input-item-row">
+                      <h4 class="item-label">기부 지역</h4>
+                      <div class="input-row">
+                        <select id="mail-3">
+                          <option value="중앙회" selected>중앙회</option>
+                          <option value="서울 중앙회">서울 중앙회</option>
+                          <option value="서울 중앙회">서울 중앙회</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-item-wrap input-item-row">
+                      <h4 class="item-label">기부 금액</h4>
+                      <div class="input-row">
+                        <select id="don-amount-choice">
+                          <option value="10000" selected>10,000</option>
+                          <option value="20000">20,000</option>
+                          <option value="30000">30,000</option>
+                          <option value="50000">50,000</option>
+                          <option value="100000">100,000</option>
+                          <option value="직접입력">직접입력</option>
+                        </select>
+                        <input type="text" id="don-amount-value" placeholder="금액을 입력하세요">
+                        <span class="unit">원</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="don-amount-wrap">
+                    <div class="inner-wrap">
+                      총 기부금액<span class="strong">10,000</span>원
+                    </div>
+                  </div>
+                </div>
+                <div class="step-form-action-bar">
+                  <button class="btn">다음 단계</button>
+                </div>
+              </div>
+
+            </div><!--Step Block End-->
+
+            <div class="step-block-wrap">
+              <div class="step-form-title-bar">
+                <span class="title-inner">
+                  <span class="num">2.</span>
+                  기부자 정보
+                </span>
+              </div>
+
+              <div class="step-form-wrap" id="step-2-body">  
+                <div class="step-form-body">
+                  <div class="form-item-wrap">
+                    <span class="direction-row">
+                      <span class="row-bullet"></span>
+                      기부자 본인을 확인하기 위해서 기부자님의 본인인증이 반드시 필요합니다.
+                    </span>
+                    <button class="btn-big-check">
+                      <span class="inner-wrap">
+                        <img src="./img/donation/icon_graphic_individual.svg">
+                        <span class="label">본인 인증</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="step-form-action-bar">
+                  <button class="btn">다음 단계</button>
+                </div>           
+              </div>
+
+              
+            </div><!--Step Block End-->
+
+            <div class="step-block-wrap">
+              <div class="step-form-title-bar">
+                <span class="title-inner">
+                  <span class="num">3.</span>
+                  기부금 납입
+                </span>
+              </div>
+
+              <div class="step-form-wrap" id="step-3-body">            
+                <div class="step-form-body">
+                  <div class="form-item-wrap">
+                    <span class="direction-row">
+                      <span class="row-bullet"></span>
+                      원하시는 결제방식을 선택해주세요
+                    </span>
+                    <div class="input-item-wrap input-item-row">
+                      <h4 class="item-label">결제 방식</h4>
+                      <div class="btns-row" id="pay-type-choice">
+                        <button class="btn-big-check square checked" id="pay-type-credit">
+                          <span class="inner-wrap">
+                            <img src="./img/donation/icon_pay_credit.svg">
+                            <span class="label">신용카드</span>
+                          </span>
+                        </button>
+                        <button class="btn-big-check square" id="pay-type-transfer">
+                          <span class="inner-wrap">
+                            <img src="./img/donation/icon_pay_transfer.svg">
+                            <span class="label">정기이체</span>
+                          </span>
+                        </button>
+                        <button class="btn-big-check square" id="pay-type-naver">
+                          <span class="inner-wrap">
+                            <img src="./img/donation/icon_pay_naver_pay.svg">
+                            <span class="label">네이버페이</span>
+                          </span>
+                        </button>
+                        <button class="btn-big-check square" id="pay-type-kakao">
+                          <span class="inner-wrap">
+                            <img src="./img/donation/icon_pay_kakao_pay.svg">
+                            <span class="label">카카오페이</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-state-wrap" id="pay-type-form-credit">
+                    <div class="form-item-wrap">
+                      <span class="direction-row">
+                        <span class="row-bullet"></span>
+                        매월 지정하신 날짜로 기부금액이 결제됩니다.
+                      </span>
+                      <div class="input-item-wrap input-item-row">
+                        <h4 class="item-label">결제일 지정</h4>
+                        <div class="input-row">
+                          <select id="mail-3">
+                            <option value="중앙회" selected>10</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                          </select>
+                          <span class="unit">일</span>
+                        </div>
+                      </div>
+                      <div class="input-item-wrap input-item-row">
+                        <h4 class="item-label">카드번호</h4>
+                        <div class="input-row">
+                          <input type="text" id="don-amount-value" placeholder="0000" size="4">
+                          <input type="text" id="don-amount-value" placeholder="0000" size="4">
+                          <input type="text" id="don-amount-value" placeholder="0000" size="4">
+                          <input type="text" id="don-amount-value" placeholder="0000" size="4">
+                        </div>
+                      </div>
+                      <div class="input-item-wrap input-item-row">
+                        <h4 class="item-label">카드유효기간</h4>
+                        <div class="input-row">
+                          <select id="don-amount-choice">
+                            <option value="10000" selected>월</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="100000">100,000</option>
+                            <option value="직접입력">직접입력</option>
+                          </select>
+                          <select id="don-amount-choice">
+                            <option value="10000" selected>년도</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="100000">100,000</option>
+                            <option value="직접입력">직접입력</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="input-item-wrap input-item-row">
+                        <h4 class="item-label">기부금영수증</h4>
+                        <div class="input-row">
+                          <div class="radio-item">
+                            <input id="radio-1" name="radio" type="radio" checked>
+                            <label for="radio-1" class="radio-label">
+                              <span class="label-text">신청</span>
+                            </label>
+                          </div>
+                          <div class="radio-item">
+                            <input id="radio-2" name="radio" type="radio">
+                            <label for="radio-2" class="radio-label">
+                              <span class="label-text">미신청</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div class="agreement-wrap">
+                  <div class="checkbox-item">
+                    <label class="checkbox">
+                      <input type="checkbox" id="agree-privacy" name="agree-privacy" />
+                      <span class="checkbox-box">
+                        <svg class="icon-check" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 4.5L4.2 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="checkbox-label">개인정보 수집 및 이용에 모두 동의합니다.</span>
+                    </label>
+                  </div>
+                  <div class="checkbox-item">
+                    <label class="checkbox">
+                      <input type="checkbox" id="agree-privacy" name="agree-privacy" />
+                      <span class="checkbox-box">
+                        <svg class="icon-check" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 4.5L4.2 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="checkbox-label">개인정보 수집 및 이용동의 <a href="#" data-event="view-privacy-info">(상세보기)</a></span>
+                    </label>
+                  </div>
+                  <div class="checkbox-item">
+                    <label class="checkbox">
+                      <input type="checkbox" id="agree-privacy" name="agree-privacy" />
+                      <span class="checkbox-box">
+                        <svg class="icon-check" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 4.5L4.2 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="checkbox-label">제3자 제공 동의 <a href="#" data-event="view-privacy-info">(상세보기)</a></span>
+                    </label>
+                  </div>
+                  <div class="comment-wrap">
+                    <span class="comment-row">
+                      * 아이폰 사용자의 경우 설정>Safari>팝업차단을 해제하셔야 기부 결제가 가능합니다.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="step-form-action-bar">
+                  <button class="btn xl">기부하기</button>
+                </div>
+              </div>
+
+            </div><!--Step Block End-->
+
+          </div>
+
+        </div>
+
+        <div class="donation-form-full-wrap">
+          <div class="banner-consulting">
+            <img src="img/dummy_sample/banner_consulting.png" class="dummy-img" />
+          </div>
+        </div>
+        
+
+      </div>
+    </div><!-- container-root -->
+    
+    <div class="modal-overlay">
+      <div class="modal-wrap consulting-request">
+        <div class="modal-inner">
+          <button class="btn-close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L14 14M14 2L2 14" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="modal-content" data-lenis-prevent>
+            <img src="img/dummy_sample/consulting_request_wrap.png" class="dummy-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="components/AppHeader.js"></script>
+<script src="components/Breadcrumb.js"></script>
+<script src="components/AppFooter.js"></script>
+<script src="components/AppQuickLink.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app_common.js"></script>
+<script src="js/02_donation_1.js"></script>
+</body>
+
+</html>
