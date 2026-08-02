@@ -75,7 +75,7 @@
   >.head-copy-row {
     width: 100%; font-weight: 700; color: var(--color-text-900); 
     line-height: 1.3em; text-align: center; display: block;
-    font-size: 56px; letter-spacing: -0.03em;
+    font-size: 56px; letter-spacing: -0.04em;
   }
 }
 @media (max-width: 1024px) {
@@ -154,7 +154,7 @@
         position: absolute; width: 680px;
         color: white; font-size: 28px; font-weight: 700;
         line-height: 1.5em; word-break: keep-all;
-        top: calc(50% - 0px); opacity: 0;
+        top: 30vh; opacity: 0; margin: auto;
         text-align:center;
         &.wide { width: 740px; font-size:26px;}
       }
@@ -196,7 +196,7 @@
         width: 200px; height: 200px;
         left: calc(50% - 100px); top: 140px; 
         > .intro-copy {
-          width: 320px; font-size: 20px;
+          width: 320px; font-size: 18px;
           &.wide { width: 340px; font-size: 18px;}
         }
       }
@@ -260,7 +260,7 @@
       width: 100%; position: relative; display: flex;
       flex-direction: column; gap: 48px; max-width: 1084px;
       &.full { max-width:100%; }
-      &:has(> .grid-col2-wrap) { overflow: visible; }
+      &:has(.swiper-container) { overflow: hidden;}
       > .content-title-bar {
         display: flex; width: 1084px;
         justify-content: space-between; align-items: center;
@@ -411,7 +411,9 @@
     &:last-child { margin-right:24px;}
   }
 }
-
+.card-shadow {
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
+}
 .card-donation-benefit {
   position: relative; display: flex;
   flex-direction: column; background-color: white;
@@ -714,6 +716,7 @@
   }
   >.comment { grid-column: span 2; font-size: 15px; color:var(--color-text-400);}
 }
+
 .donation-intro.grid-col3-wrap{
   grid-template-columns: repeat(3, 1fr);
 }
@@ -861,17 +864,105 @@
   }
 }
 .social-fund-join-wrap{
-  width:100%; display: grid; grid-template-columns: repeat(2, 1fr); gap:12px;
+  width:100%; display: grid; grid-template-columns: repeat(4, 1fr); gap:16px;
   >.social-fund-join-card{
     width:100%; display: flex; flex-direction: column;
     overflow: hidden; background-color: white; border-radius: 16px; 
     >.thumbnail{
-      width:100%; overflow: hidden; aspect-ratio: 2/1;
+      width:100%; overflow: hidden; aspect-ratio: 3/2;
       border-radius: 0 0 0 16px;
       >img{ width:100%; height:100%; object-fit: cover; }
     }
     >.card-body{
-      width:100%; 
+      width:100%; padding: 20px 24px; min-height: 150px;
+      >.title { font-size: 20px; }
+      >p{ margin-top:8px; font-size: 15px; line-height:1.4em; }
+    }
+  }
+}
+
+.social-fund-big-number-wrap{
+  width:100%; display: grid; grid-template-columns: repeat(3, 1fr); gap:16px;
+  >.big-number-card{
+    width:100%; padding: 40px 40px 56px 40px; color:white; display: flex; 
+    flex-direction: column; background-color: #4F4FBE;
+    word-break: keep-all; border-radius: 24px;
+    >.num-wrap{
+      display: flex; align-items: baseline; gap:6px;
+      >.big-num { font-size: 128px; line-height: 0.8em; letter-spacing: -0.03em;}
+      >.percent{ font-size: 32px; font-weight: 700;}
+    }
+    >.title {
+      font-size:24px; padding-top:12px;
+    }
+    >.sub-title { font-size: 18px; line-height:1.4em; margin-top:24px; }
+    >.detail-text { font-size: 15px; }
+    &:nth-child(2){ background-color: #00A29A;}
+    &:nth-child(3) { background-color: #113E98;}
+  }
+}
+
+.social-fund-ending{
+  width:100%; background-color: white; display: flex; gap: 40px;
+  border-radius: 0 0 24px 24px; border-top: 2px solid var(--color-line-400);
+  padding: 40px 56px 56px 56px;
+  >.graphic-wrap{
+     width:300px; flex-shrink: 0; flex-grow: 0;
+     >img{ width:100%; } 
+  }
+  >.title-wrap{
+    word-break: keep-all; padding-top: 24px;
+    >.title { font-size: 28px; line-height: 1.4em;}
+    >.detail-text-list {
+      width:100%; margin-top:16px;
+      >.detail-text-item { 
+        width:100%; padding: 6px 0; font-size:18px; font-weight: 600;
+        display: flex; align-items: center; gap: 6px;
+        >.bullet{ 
+          display: block; width:4px; height: 4px; border-radius: 50%;
+          background-color: var(--color-text-400);
+        }
+      }
+    }
+  }
+  
+}
+
+/*---------------------------*/
+/* 착한소비 */
+/*---------------------------*/
+
+.card-good-consumption{
+  width:100%; height:400px; padding: 24px; display: flex;
+  flex-direction: column; position: relative;
+  background-color: white; border-radius: 24px;
+  word-break: keep-all;
+  >.title-wrap{
+    width:100%; padding: 8px;
+    >.title { 
+      width:100%; font-size:20px; color:var(--color-text-400);
+    }
+    >.copy { 
+      display: block; width: 100%; font-size: 24px; 
+      color:var(--color-text-600); margin-top: 16px;
+      line-height: 1.3em; font-weight:700;
+    }
+  }
+  >.graphic-wrap{
+    width:100px; aspect-ratio: 1/1; position: absolute;
+    right: 40px; bottom: 40px;
+    >img{ width:100%; height:100%; object-fit: cover;}
+  }
+  &.wide {
+    height: 360px;
+    >.title-wrap{
+      padding: 16px;
+      >.title { 
+        font-size:24px; color:var(--color-text-400);
+      }
+      >.copy { 
+        font-size: 28px; 
+      }
     }
   }
 }

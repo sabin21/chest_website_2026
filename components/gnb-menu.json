@@ -19,8 +19,8 @@
       { "label": "희망자산나눔",                "href": "./don_intro_asset.html" },
       { "label": "사회공헌 성금기부",           "href": "./don_intro_social_fund.html" },
       { "label": "사회공헌 현물기부",           "href": "./don_intro_social_spot.html" },
-      { "label": "착한소비(공익연계마케팅)",    "href": "./02_02_1.html" },
-      { "label": "나눔명문기업",                "href": "./02_02_1.html" }
+      { "label": "착한소비(공익연계마케팅)",    "href": "./don_intro_good_consumption.html" },
+      { "label": "나눔명문기업",                "href": "./don_intro_social_company.html" }
     ]
   },
   {

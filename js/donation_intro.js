@@ -131,7 +131,7 @@ coverMotionMM.add(
         coverCopy,
         {
           opacity: 1,
-          top: isMobileSmall ? "calc(50% - 100px)" : "calc(50% - 170px)",
+          top: isMobileSmall ? "calc(50% - 170px)" : "calc(50% - 170px)",
           ease: "none",
         },
         0,
