@@ -663,7 +663,7 @@
   gap: 16px; overflow: visible;
   >.card-graphic-panel{
     width:100%; height:430px; padding: 24px; display: flex;
-    flex-direction: column; position: relative;
+    flex-direction: column; position: relative; word-break: keep-all;
     background-color: white; border-radius: 24px;
     filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
     >.title-wrap{
@@ -681,6 +681,18 @@
       width:256px; aspect-ratio: 1/1; position: absolute;
       right: 40px; bottom: 20px;
       >img{ width:100%; height:100%; object-fit: contain;}
+    }
+    &.social-company{
+      height:360px;
+      >.title-wrap{
+        >.title { font-size:28px; margin-bottom: 8px;}
+        >.desc { font-size: 20px; margin:0;}
+        >.detail { display: block; margin-top:8px; }
+      }
+      >.graphic-wrap{
+        width:150px; 
+        right: 40px; bottom: 20px;
+      }
     }
   }
   >.card-wide-panel.list-type{
@@ -966,6 +978,54 @@
     }
   }
 }
+
+/*---------------------------*/
+/* 나눔명문기업 */
+/*---------------------------*/
+
+.card-wide-panel.social-company{
+  width:100%; padding: 32px 32px 32px 32px; grid-column: span 2;
+  background-color: white; border-radius: 24px;
+  filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
+  display: flex; gap:32px;
+  >.inner-block {
+    width:100%;
+    &:first-child{ flex: 3 3 0; }
+    &:last-child{ flex: 1 1 0; }
+    >.title { 
+      width:100%; font-size: 28px; margin-bottom: 16px;
+    }
+    >.panel-wrap{
+      width:100%; display: flex; gap: 8px;
+      >.panel-item {
+        width:100%; padding: 20px; border-radius: 8px; color: var(--color-text-800);
+        background-color: var(--color-solid-200); padding-bottom: 40px; 
+        &.gold{ background-color: #FFC851; }
+        &.silver{ background-color: #D3CEC7; }
+        &.green{ background-color: #1C9A26; color:white;}
+        >.title { font-size:22px; }
+        >.desc { 
+          font-size:18px; font-weight: 700; 
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.social-company-benefit {
+  width:100%; display: grid; gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  >.benefit-item{
+    width:100%; background-color: white; border-radius: 8px;
+    position: relative; padding: 24px; 
+    border: 1px solid var(--color-line-200);
+    min-height: 200px;
+    >.title { font-size: 18px; line-height: 1.4em;}
+    >img { width: 64px; position: absolute; bottom:28px; right:28px;}
+  }
+}
+
 
 /*---------------------------*/
 /*---------------------------*/
