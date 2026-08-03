@@ -331,9 +331,7 @@
     row-gap: 24px; 
   }
 }
-body:has(.project-grid){
-  .app-footer{ margin-top:0; }
-}
+
 @media (max-width: 1024px) {
   .list-grid-wrap {
     &.grid-3col {
