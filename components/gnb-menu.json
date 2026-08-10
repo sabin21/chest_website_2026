@@ -20,7 +20,12 @@
       { "label": "사회공헌 성금기부",           "href": "./don_intro_social_fund.html" },
       { "label": "사회공헌 현물기부",           "href": "./don_intro_social_spot.html" },
       { "label": "착한소비(공익연계마케팅)",    "href": "./don_intro_good_consumption.html" },
-      { "label": "나눔명문기업",                "href": "./don_intro_social_company.html" }
+      { 
+        "label": "나눔명문기업",                "href": "./don_intro_social_company.html",
+        "children": [
+          { "label": "회원기업", "href": "././don_intro_social_company_list.html" }
+        ] 
+      }
     ]
   },
   {
@@ -46,7 +51,7 @@
     "label": "나눔문화 활성화",
     "href": "/bn/initShare.do",
     "children": [
-      { "label": "함께 만든 변화",    "href": "./03_01.html" },
+      { "label": "함께 만든 변화",    "href": "./cul_story_list.html" },
       { "label": "나눔문화연구소",    "href": "./bbs/1018/initPostList.do" },
       { "label": "나눔체험관",        "href": "./bn/sca/initChildse.do" },
       { "label": "홍보영상",          "href": "/bbs/1006/initPostList.do" },

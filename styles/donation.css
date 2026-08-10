@@ -55,7 +55,7 @@
 }
 .donation-back-circle-wrap {
   width: 100%; position: absolute; left:0; top:480px;
-  pointer-events: none; z-index: 1;
+  pointer-events: none; z-index: 0;
   > .back-circle {
     background-color: #ffc4c4; border-radius: 50%;
     position: absolute; display: block;
