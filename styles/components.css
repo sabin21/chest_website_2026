@@ -1198,7 +1198,7 @@
     &::-webkit-scrollbar { display: none; }
 
     >.modal-title-wrap{
-      width: 100%; margin-bottom: 16px; 
+      width: 100%; margin-bottom: 16px; position: relative;
       >.title {
         font-size: 24px; font-weight: 700; color: var(--color-text-800);
         letter-spacing: -0.02em; margin-bottom: 12px; 
@@ -1206,6 +1206,20 @@
       >.desc {
         font-size:16px; font-weight: 500; line-height: 1.4em; 
         color: var(--color-text-400); letter-spacing: -0.02em; 
+      }
+      >.panel-phone-info{
+        position: absolute; width: 160px;
+        right:0px; bottom: 28px;
+        display: none; flex-direction: column;
+        justify-content: right;
+        >.panel-title{
+          width:100%; font-size: 17px; font-weight: 500;
+          color: var(--color-text-400); text-align: right;
+        }
+        >.phone-num{
+          width:100%; font-size: 20px; font-weight: 700;
+          color: var(--color-primary-400); text-align: right;
+        }
       }
     }
     >.form-comment {
@@ -1278,6 +1292,11 @@
       }
     }
   }
+}
+
+/* 아너 소개 페이지(don_intro_honor.html)에서 호출될 때만 전화 문의 패널 노출 */
+.app-root.honor .modal-overlay >.modal-wrap >.modal-inner >.modal-title-wrap >.panel-phone-info {
+  display: flex;
 }
 
 @media (max-width:1024px){
