@@ -1,0 +1,506 @@
+
+.app-root.honor{
+  >.app-main{
+      >.container-root{
+        position: relative; margin-top: -204px;
+      }
+      >.app-footer{
+        margin-top:0; z-index: 10;
+      }  
+  }
+}
+
+.honor-back-wrap{
+  width: 100%; height:100vh; position: fixed; top:0; left:0;
+  background-color: #040303; z-index: -1; pointer-events: none;
+   &::after{
+      content:''; display: block; position: absolute;
+      width:100%; height:100%; top:0; left:0;
+      backdrop-filter: blur(120px); z-index: 1;
+    }
+  >.back-shape-1{
+    position: absolute; left:-100px; bottom: 100px;
+    animation: opacity101 6s infinite;
+  }
+  >.back-shape-2{
+    position: absolute; right:-300px; top: -300px;
+    animation: opacity010 6s infinite;
+  }
+  >.back-shape-3{
+    position: absolute; right:-100px; bottom: -400px;
+  }
+}
+/* transform 은 GSAP(ScrollTrigger)이 제어하므로 keyframe 에서는 opacity 만 변경 */
+@keyframes opacity101 {
+  0%{ opacity: 1;}
+  50% { opacity: 0.4;}
+  100% { opacity: 1;}
+}
+@keyframes opacity010 {
+  0%{ opacity: 0.4;}
+  50% { opacity: 1;}
+  100% { opacity: 0.4;}
+}
+
+.section-honor{
+  width:100%; height:100vh; min-height: 700px; 
+  position: relative; overflow: hidden;
+  >.section-title {
+    width:100%; 
+    >h3{
+      width:100%; text-align: center; font-weight: 700;
+      color:white; font-size: 36px;
+    }
+  }
+}
+.section-outer{
+  width:100%; position: relative; 
+  background-color: #121517;
+  >.section-honor{
+    height:auto; padding-bottom: 120px;
+  }
+}
+
+.section-honor.section-1, .section-honor.section-2{
+  width:100%; max-width: var(--container-max-width); margin: 0 auto;
+  display: flex; align-items: center;
+}
+
+.section-honor.section-1{
+  >.inner-wrap{
+    width:100%; display: flex; gap: 36px; position: relative;
+    justify-content: center; align-items: center; margin-top: 140px;
+    >.page-title-wrap{
+      width:100%; display: flex; flex-direction: column; align-items: center;
+      gap:48px; padding-bottom:24px;
+      >.headline{
+        width:100%; font-size: 40px; color:white; text-align: center;
+      }
+      >.logo-big{
+        width: 480px;
+      }
+    }
+    >.intro-text{
+      width:100%; max-width: 588px; padding: 56px 56px; min-height: 440px;
+      background: linear-gradient(180deg, rgba(65, 25, 85, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
+      >.text {
+        font-size:22px; color:var(--color-text-100);
+        line-height: 1.65em; font-weight: 600;
+      }
+    }
+  }  
+}
+.section-honor.section-2{
+  >.inner-wrap{
+    width:100%; display: flex; position: relative;
+    justify-content: center; align-items: center; gap:0;
+    >.image-wrap{
+      width:100%; overflow: hidden; height: 560px;
+      >img{ width:100%; height:100%; object-fit: cover;}
+    }
+    >.text-content{
+      width:464px; padding: 56px 56px; height: 560px;
+      background: rgba(0,0,0,0.4); flex-shrink: 0; color: white;
+      >.text-wrap{
+        width:100%; display: flex; flex-direction: column;
+        >.row-1{
+          display: block; width:100%; font-size: 32px; font-weight: 700;
+        }
+        >.row-num {
+          display: block; width: 100%; display: flex; gap:8px; align-items: baseline;
+          >.member-num {
+            display: block; font-size: 90px; font-weight: 700;
+          }
+          >.member-unit{
+            display: block; font-size: 32px; color:rgba(255,255,255,0.6);
+          }
+        }
+        >.detail-info{
+          width:100%; font-size: 16px; color:var(--color-text-300);
+          margin-top: 24px;
+        }
+      }
+    }
+  }  
+}
+.layout-row{
+    display: flex; gap:48px; padding: 160px 0 40px 0; height: auto;
+    width:100%; max-width: var(--container-max-width); margin: 0 auto;
+    justify-content: space-between;
+    >.section-title{
+      width:100%; color:white; 
+      >h3{ text-align: left; font-size: 36px;}
+    }
+    >.content-wrap{
+      width:100%; max-width: 1084px; flex-shrink: 0;
+      display: flex; flex-direction: column; 
+    }  
+}
+.join-step-wrap{
+  width:100%; padding: 40px 16px 56px 16px; display: flex; 
+  background-color: rgba(255,255,255,0.05);
+  >.divider { 
+    display: block; width:1px; height: 100%; 
+    background-color: rgba(255,255,255,0.1);
+  }
+  >.step-item {
+    width:25%; display: flex; flex-direction: column; align-items: center;
+    gap: 16px; position: relative;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    &:first-child { border-left: transparent; }
+    >.step-num { 
+      font-size: 24px; font-weight: 700; color: var(--color-text-100);
+      padding: 16px; border-radius: 50%; aspect-ratio: 1/1;
+      background-color: black; text-align: center;
+    }
+    >.title {
+      width:100%; font-size: 28px; font-weight: 700; text-align: center;
+      color: var(--color-text-white);
+    }
+    >.detail{
+      width:100%; font-size:18px; font-weight: 500; text-align: center;
+      line-height: 1.4em;
+      color: var(--color-text-100);
+    }
+  } 
+}
+.join-step-contact-wrap{
+  width:100%; padding: 40px 48px; background-color: rgba(255,255,255,0.02);
+  display: flex; 
+  >.title-sub{
+    width: 200px; flex-grow: 0; font-size: 20px;
+    color: var(--color-text-200);
+  }
+  >.detail{
+    width:100%; color: white; font-size: 18px; line-height: 1.75em;
+    font-weight: 600;
+  }
+}
+.member-content-wrap{
+  width:100%;
+  &:first-child { margin-bottom: 64px;}
+  >.title-sub {
+    width:100%; font-size:24px; font-weight: 700;
+    color: var(--color-text-100); margin-bottom: 24px;
+  }
+  >.items-row{
+    width:100%; display: flex; gap: 16px;
+    >.item{
+      width:100%; background-color: black;
+      display:flex; gap: 16px; 
+      padding: 20px 16px;
+      >.pict { 
+        height: 100px; flex-grow: 0; flex-shrink: 0;
+        >img{ height:100%; } 
+      }
+      >.text-wrap{
+        width:100%; display: flex; flex-direction: column;
+        gap:6px; color: var(--color-text-100); padding-top: 8px;
+        >.title{ font-size:24px; font-weight: 700; color:white; }
+        >p { font-weight: 500; line-height: 1.3em; font-size: 18px;}
+      }
+    }
+  }
+}
+
+.content-title-bar {
+  width:100%; display: flex; justify-content: space-between;
+  margin: 40px 0 48px 0;
+  >.title {
+    width:100%; font-size: 36px; font-weight: 700; color: white;
+  }
+}
+
+.section-honor.section-4, .section-honor.section-5{
+  padding: 120px 0; height:auto;
+}
+.card-honor-benefit {
+  width:100%;
+  >.thumbnail {
+    width:100%; aspect-ratio: 5/3; overflow: hidden;
+    >img{ 
+      width:100%; height:100%; 
+      object-fit: cover; object-position: center;
+    }
+  }
+  >.card-body {
+    padding: 32px 32px; background-color: rgba(0,0,0,0.8);
+    color: var(--color-text-100); min-height: 240px;
+    word-break: keep-all;
+    >.headline{ font-size: 26px; color:white;}
+    >ul{ 
+      margin-top: 16px; font-size: 18px; padding-left: 16px;
+      >li{ 
+        line-height: 1.4em; list-style: disc; margin: 8px 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------*/
+
+.content-title-bar > .swiper-control-basic {
+  >.swiper-pagination {
+    > .swiper-pagination-bullet {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      &.swiper-pagination-bullet-active {
+        background-color: white !important;
+      }
+    }
+  }
+  >.nav-group {
+    background-color: #615441;
+    border: transparent;
+    border-radius: 0px;
+    >.nav-prev, >.nav-next {
+      cursor: pointer;
+    }
+  }
+  &.relative {
+    position: relative; bottom: auto; right: auto; width: auto;
+    > .swiper-pagination { width: auto; }
+  }
+}
+
+/*--------------------------------*/
+
+.btn-honor-basic{
+  display: flex; padding: 16px 16px 16px 20px; width: auto; flex-shrink: 0;
+  border:none; align-items: center; gap: 6px; cursor: pointer;
+  background-color: #615441;
+  &:hover{ background-color: black;}
+  >.label{ font-size:18px; font-weight:700; color:white; display: inline-block;}
+}
+.member-name-grid{
+  width:100%; display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  >.member-name-item{
+    padding: 32px; text-align: center; background-color: rgba(255,255,255,0.05);
+    >span{ font-size: 22px; font-weight: 500; color:white; }
+  }
+}
+
+/*--------------------------------*/
+/* 지역 클럽 */
+
+.local-club {
+  >.layout-row{
+    >.content-wrap{
+      display: flex; gap: 36px; flex-direction: row;
+      >.copy-intro{
+        width:100%; font-size: 24px; font-weight: 700; color:#AE9E8D;
+        line-height: 1.5em;
+      }
+      >.info-list{
+        width:460px; flex-shrink: 0; 
+        >.list-item{
+          width:100%; padding: 16px 0; display: flex; align-items: center;
+          gap:16px; 
+          border-top: 1px solid rgba(255,255,255,0.1);
+          >.item-label{
+            font-size: 20px; font-weight: 700; color: var(--color-text-200);
+          }
+          >.item-value-wrap{
+            display: flex; align-items: baseline; gap: 6px;
+            >.value {
+              font-size: 20px; font-weight: 700; color: white;
+            }
+            >.detail{
+              font-size: 15px; color: var(--color-text-300);
+            }
+          }
+        }
+      }
+    }
+  }
+  >.club-list-outer{
+    width:100%; background-color: #1C1C1C; padding: 48px 48px;
+    display: flex; gap: 40px;
+    >.block-left{
+      >.title{ 
+        width:100%; color:#AE9E8D; font-weight:700; 
+        font-size: 28px;
+      } 
+    }
+    >.club-list-wrap{
+      width:100%; display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 8px; padding: 24px 16px;   
+    }
+  }
+}
+.map-outer{
+  width:100%; padding: 72px 48px 0 48px;
+  >.map-wrap{
+    width:334px; height: 500px; display: flex; justify-content: center;
+  }
+}
+
+
+#korea-map{
+  >path { 
+    fill:#272727; stroke:#404040;
+    &.active {
+      fill:#6C5E4A; stroke:#6C5E4A;
+    }
+  }
+}
+
+.club-item{
+  width:100%; display: flex; flex-direction: column;
+  background-color: #3A3A3A;
+  >.value-wrap{
+    width:100%; padding: 24px; display: flex; 
+    >.value-text{
+      display: block; width:100%;
+      >.label{
+        display: block; width:100%; font-size: 14px; color:var(--color-text-100);
+      }
+      >.value {
+        display: block; width:100%; font-size: 18px; font-weight: 700;
+        color: var(--color-text-100); margin-top: 4px;
+      }
+    }
+  }
+  >.btn-club-detail{
+    width:100%; display: flex; align-items: center;
+    background-color: #2E2E2E; border: none;
+    justify-content: space-between; padding: 16px 20px 16px 24px;
+    cursor: pointer;
+    >.label{
+      color: var(--color-text-100); font-size: 15px; font-weight: 700;
+    }
+  }
+  &.active{
+    background-color: #42342F;
+    >.value-wrap{
+      >.value-text{
+        >.value{ color: white; }
+      }
+    }
+    >.btn-club-detail{
+      background-color: #382A27; 
+      >.label{ color: white;}
+    }
+  }
+}
+
+/*--------------------------------*/
+/* 최하단 영역 */
+
+.section-last {
+  display: flex; gap: 24px; padding: 40px 0 180px 0;
+  >.banner-contact{
+    color: white; background-color: #272727; 
+    width: 50%; display: flex; gap:32px;
+    padding: 32px 40px;
+    >.title{
+      color:#AE9E8D; font-size: 24px; font-weight:700;
+    }
+    >.info-list{
+      width:100%; display: flex; flex-direction: column; gap: 8px;
+      >.info-item {
+        width:100%; font-size:18px; font-weight:700; line-height:1.4em;
+      }
+    }
+  }
+  >.banner-download{
+    display: flex; align-items: center; gap: 20px; padding: 20px;
+    background-color: #272727; width:25%; border: 1px solid transparent;
+    >.thumbnail { width: 118px; }
+    >.title { color: white; font-size: 20px; font-weight: 700;}
+    &:hover{
+      background-color: black; 
+    }
+  }
+}
+
+/*--------------------------------*/
+/* 상담하기 버튼 */
+
+.btn-consulting {
+  width:140px; height: 140px; border-radius: 50%;
+  position: fixed; left: 40px; bottom: 40px; border: none; gap: 6px;
+  background: linear-gradient(180deg, #727B37 0%, #474D22 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: transform 0.2s; cursor: pointer; z-index: 10;
+  >span{ color: white; font-weight: 700;}
+  &:hover{ transform: scale(1.1);}
+}
+
+/*--------------------------------*/
+/* 모달-지역클럽 */
+
+.modal-club-wrap{
+  width:100%; max-width: 1200px; position: relative;
+  display: flex; flex-direction: column;
+  background-color: #DCD5CE;
+  max-height: 100dvh; overflow-y: auto; overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: none; -ms-overflow-style: none;
+  &::-webkit-scrollbar{ display: none; }
+  >.modal-top-bar{
+    width:100%; height:56px; flex-shrink: 0;
+    background-color: black; display: flex; align-items: center;
+    position: sticky; top:0; left:0; z-index: 10;
+    >.club-menu-wrap{
+      display: flex; width:100%; gap:4px;
+      >.club-menu-item{
+        font-size: 16px; font-weight: 700;
+        color: var(--color-text-300); padding: 6px 10px;
+        border-radius: 4px; border: none; background-color: rgba(0,0,0,0.1);
+        &.active{
+          color:white; background-color: #8A6743;
+        }
+      }
+    }
+    >.btn-modal-close{
+      top: auto; background-color: transparent; border: none;
+      >svg{
+        >path{ stroke: white;}
+      }
+    }
+  }
+  >.club-title-bar{
+    width:100%; display: flex; padding:24px 32px;
+    gap:12px; align-items: baseline; background-color: #666052;
+    >.club-title {
+      font-size: 36px; font-weight: 700; color: white;
+    }
+    >.club-title-eng{
+      font-size: 24px; font-weight: 500; color:#C1B79E;
+    }
+  }
+  >.club-hero-wrap{
+    width:100%; display: flex; flex-direction: column;
+    >.club-hero-img{
+      width:100%; height:640px; overflow: hidden;
+      >img{ 
+        width:100%; height:100%; 
+        object-fit: cover; object-position: center;
+      }
+    }
+    >.hero-title-wrap{
+      width: 100%; background-color: #2F2727;
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: center; padding: 48px 120px 72px 120px;
+      >.headline-row-1{
+        width:100%; font-size: 36px; font-weight: 500;
+        color:#B4AA96; text-align: center;
+      }
+      >.headline-row-2{
+        width:100%; font-size: 44px; font-weight: 700;
+        color:white; text-align: center;
+      }
+      >.headcopy{
+        width:100%; font-size: 20px; font-weight: 500;
+        color:white; text-align: center; line-height: 1.5em;
+        margin-top: 24px; word-break: keep-all;
+      }
+
+    }
+  }
+  >.club-body-wrap{
+    width:100%;
+    >.dummy-img{ width:100%;}
+  }
+}

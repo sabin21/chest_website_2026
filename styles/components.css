@@ -472,6 +472,27 @@
   }
 }
 
+.pagination-wrap.white {
+  >.pagination-ctrl-group{
+    >.pagination-ctrl{
+      &:hover {
+        background-color: black;
+      }
+      >svg{ 
+        >path{ stroke: white;}
+      }
+    }
+  }
+  >.pagination-num-group{
+    >.pagination-num-cell{
+      color:white;
+      &.active {
+        background-color: #615441;
+      }
+    }
+  }
+}
+
 /*---------------------------*/
 /* Tags */
 /*---------------------------*/

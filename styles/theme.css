@@ -65,6 +65,7 @@
      ========================================================================== */
 
   /* Text */
+  --color-text-white: #ffffff; 
   --color-text-50: #e6e8ea; /* → Gray/100 */
   --color-text-100: #cdd1d5; /* → Gray/200 */
   --color-text-200: #b1b8be; /* → Gray/300 */

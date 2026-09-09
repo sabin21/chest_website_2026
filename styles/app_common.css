@@ -223,7 +223,10 @@ main {
     > .logo-wrap {
       display: block; position: absolute; left: 24px; top: 16px;
       width: 172px; height: 46px;
-      > img { max-width: 100%; }
+      background-position: center; background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/logo_default.svg);
+      > img { max-width: 100%; display: none;}
     }
     >.gnb-menu-wrap {
       display: block;
@@ -253,6 +256,7 @@ main {
     }    
   }
 }
+
 .btn-gnb-burger {
   width: 40px; height: 40px; 
   cursor: pointer;
@@ -277,6 +281,7 @@ main {
     &.line-3 { top: 50%; width: 100%; transform: translateY(-50%) rotate(-45deg); }
   }
 }
+
 .gnb-inner-menu-bar {
   width: 100%; display: flex; justify-content: center; align-items: center; height: 100%;
   > .gnb-menu-item-wrap {
@@ -300,6 +305,31 @@ main {
         color: var(--color-primary-500);
         &::after {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.app-header.white{
+  >.gnb-bar{
+    > .logo-wrap {
+      background-image: url(../img/logo_white.svg);
+    }
+    >.gnb-menu-wrap{
+      >.gnb-inner-menu-bar{
+        >.gnb-menu-item-wrap{
+          >.gnb-menu-item{
+            color: var(--color-text-white);
+          }
+        }
+      }
+      
+    }
+    >.btn-gnb-sitemap { 
+      > .line-wrap {
+        > .line {
+          border-top: 3px solid var(--color-text-100);
         }
       }
     }

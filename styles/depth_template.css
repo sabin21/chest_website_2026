@@ -96,6 +96,26 @@
   color: var(--color-primary-400);
 }
 
+.depth-head.white{
+  >.depth-head-inner{
+    >.breadcrumb-wrap{
+      >.breadcrumb-home { color: var(--color-text-100); }
+      >.breadcrumb-items {
+        >.breadcrumb-dropdown{
+          >.breadcrumb-item {
+            color: var(--color-text-100);
+            >.breadcrumb-text{
+              color: var(--color-text-100);
+            }
+          }
+        } 
+      }
+    }
+  }
+ 
+    
+  
+}
 /* ==========================================================================
    Page Title 영역
    ========================================================================== */

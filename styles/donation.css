@@ -1033,22 +1033,15 @@
 /*---------------------------*/
 
 .donation-form-full-wrap {
-  width: 100%;
-  max-width: 1208px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  padding: 40px 0;
+  width: 100%; max-width: 1208px;
+  margin: 0 auto; text-align: center;
+  position: relative; padding: 40px 0;
 }
 .banner-consulting {
-  width: 100%;
-  max-width: 1208px;
-  margin: 0 auto;
-  position: relative;
-  margin: 40px 0 40px 0;
-  cursor: pointer;
-  border-radius: 16px;
-  overflow: hidden;
+  width: 100%; max-width: 1208px;
+  margin: 0 auto; position: relative;
+  margin: 40px 0 40px 0; cursor: pointer;
+  border-radius: 16px; overflow: hidden;
   > .dummy-img {
     width: 100%;
   }
