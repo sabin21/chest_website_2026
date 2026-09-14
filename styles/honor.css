@@ -74,18 +74,36 @@
       width:100%; display: flex; flex-direction: column; align-items: center;
       gap:48px; padding-bottom:24px;
       >.headline{
-        width:100%; font-size: 40px; color:white; text-align: center;
+        width:100%; font-size: 48px; color:white; text-align: center;
       }
       >.logo-big{
         width: 480px;
       }
+      >.legacy-title{
+        width:100%; display: block; text-align: center;
+        >.donation-name { 
+          font-size: 80px; font-weight: 700; letter-spacing: -0.03em;
+          color: white; margin: 0 auto;
+        }
+        >.donation-name-sub { 
+          font-size: 48px; font-weight: 700; letter-spacing: -0.03em;
+          color: var(--color-text-200); margin-top:0;
+        }
+      }
+      
     }
     >.intro-text{
       width:100%; max-width: 588px; padding: 56px 56px; min-height: 440px;
       background: linear-gradient(180deg, rgba(65, 25, 85, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
       >.text {
-        font-size:22px; color:var(--color-text-100);
-        line-height: 1.65em; font-weight: 600;
+        font-size:24px; color:var(--color-text-100);
+        line-height: 1.65em; font-weight: 600; word-break: keep-all;
+      }
+      &.legacy {
+        background: linear-gradient(180deg, rgba(85, 48, 25, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
+        >.text{
+          font-size: 22px; 
+        }
       }
     }
   }  
@@ -121,7 +139,26 @@
         }
       }
     }
-  }  
+  }
+  &.legacy {
+    max-width: 100%;
+  }
+  >.hero-cover-wrap{
+    position: absolute; width:100%; height:100%; margin: auto;
+    top:0; left:0; bottom:0; right:0; background-color: black;
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden;
+    >.cover-img{
+      width: 110%; height: 110%; object-fit: cover;
+      position: absolute; transform: translate(-50%, -50%);
+      top:50%; left:50%;
+    }
+    >.cover-copy{
+      width:100%; max-width: 640px; word-break: keep-all;
+      font-size: 24px; font-weight: 700; color:white;
+      line-height: 1.5em; z-index: 2; opacity: 0;
+    }
+  } 
 }
 .layout-row{
     display: flex; gap:48px; padding: 160px 0 40px 0; height: auto;
@@ -133,7 +170,11 @@
     }
     >.content-wrap{
       width:100%; max-width: 1084px; flex-shrink: 0;
-      display: flex; flex-direction: column; 
+      display: flex; flex-direction: column;
+      >.detail-text{
+        width:100%; display: block; color:var(--color-text-200);
+        padding: 16px 0; font-size:15px;
+      }
     }  
 }
 .join-step-wrap{
@@ -202,6 +243,23 @@
     }
   }
 }
+.member-content-wrap.legacy{
+  >.items-row{
+    >.item{
+      position: relative; padding: 24px 24px 120px 32px;
+      >.pict {
+        position: absolute; right:16px; bottom: 16px;
+      }
+      >.text-wrap{
+        >.title{
+          color:#D8B086;
+        }
+        >p{ font-weight: 600;}
+        >.detail{ font-size: 14px; color: var(--color-text-200);}
+      }
+    }
+  }
+}
 
 .content-title-bar {
   width:100%; display: flex; justify-content: space-between;
@@ -214,6 +272,13 @@
 .section-honor.section-4, .section-honor.section-5{
   padding: 120px 0; height:auto;
 }
+.section-honor.section-5.legacy{
+  padding: 40px 0 200px 0;
+}
+.honor-benefit-grid{
+  width:100%; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 .card-honor-benefit {
   width:100%;
   >.thumbnail {
@@ -224,19 +289,42 @@
     }
   }
   >.card-body {
-    padding: 32px 32px; background-color: rgba(0,0,0,0.8);
-    color: var(--color-text-100); min-height: 240px;
+    padding: 32px 32px; background-color: rgba(255,255,255,0.08);
+    color: var(--color-text-100); min-height: 200px;
     word-break: keep-all;
     >.headline{ font-size: 26px; color:white;}
     >ul{ 
       margin-top: 16px; font-size: 18px; padding-left: 16px;
       >li{ 
-        line-height: 1.4em; list-style: disc; margin: 8px 0;
+        line-height: 1.4em; list-style: disc; margin: 6px 0;
       }
     }
   }
 }
 
+.card-legacy-group{
+  width:100%;
+  >.thumbnail {
+    width:100%; aspect-ratio: 5/3; overflow: hidden;
+    >img{ 
+      width:100%; height:100%; 
+      object-fit: cover; object-position: center;
+    }
+  }
+  >.card-body{
+    padding:24px 32px; background-color: rgba(255,255,255,0.08);
+    color:white;
+    >.headline{ font-size: 24px; width:100%; text-align: center;}
+  }
+}
+
+.legacy-story-wrap{
+  width:100%; display: flex; gap:20px;
+  >.card{
+    width:100%;
+    >img{ width:100%;}
+  }
+}
 /*--------------------------------*/
 
 .content-title-bar > .swiper-control-basic {
@@ -272,11 +360,21 @@
   >.label{ font-size:18px; font-weight:700; color:white; display: inline-block;}
 }
 .member-name-grid{
-  width:100%; display: grid; grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  >.member-name-item{
-    padding: 32px; text-align: center; background-color: rgba(255,255,255,0.05);
-    >span{ font-size: 22px; font-weight: 500; color:white; }
+  width:100%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 20px; 
+  >.member-name-item{    
+    width:100%; display: flex; flex-direction: column; gap:0;
+    >.thumbnail{
+      aspect-ratio: 1/1; width:100%;
+      >img{ width:100%; height:100%; object-fit: contain;}
+    }
+    >.item-text{
+      display: flex; flex-direction: column; gap:4px; padding: 20px;
+      background-color: rgba(255,255,255,0.05); text-align: center; 
+      >.name{ font-size: 22px; font-weight: 700; color:white; }
+      >.desc{ font-size: 15px; font-weight: 500; color:var(--color-text-200); }
+    }
+    
   }
 }
 
@@ -315,12 +413,16 @@
   }
   >.club-list-outer{
     width:100%; background-color: #1C1C1C; padding: 48px 48px;
-    display: flex; gap: 40px;
+    display: flex; gap: 40px; margin-top: 120px;
     >.block-left{
       >.title{ 
         width:100%; color:#AE9E8D; font-weight:700; 
         font-size: 28px;
-      } 
+      }
+      >.copy-intro{
+        font-size: 16px; color:var(--color-text-100);
+        line-height: 1.5em; margin-top: 12px;
+      }
     }
     >.club-list-wrap{
       width:100%; display: grid; grid-template-columns: repeat(4, 1fr);
@@ -425,6 +527,9 @@
   transition: transform 0.2s; cursor: pointer; z-index: 10;
   >span{ color: white; font-weight: 700;}
   &:hover{ transform: scale(1.1);}
+  >.legacy-symbol{
+    width: 58px; margin-bottom:4px;
+  }
 }
 
 /*--------------------------------*/
@@ -502,5 +607,71 @@
   >.club-body-wrap{
     width:100%;
     >.dummy-img{ width:100%;}
+  }
+}
+
+/*------------------------*/
+/*지회별 담당자*/
+
+.branch-contact-wrap{
+  width:100%; display: grid; gap:8px; width: 1084px;
+  grid-template-columns: repeat(4, 1fr);
+  >.card-contact {
+    width:100%; background-color: rgba(255,255,255,0.1); overflow: hidden;
+    display: flex; flex-direction: column;
+    padding: 20px 20px; gap:4px;
+    >.branch-title{
+      font-size: 18px; margin-bottom: 4px; color:white;
+    }
+    >.contact-info-wrap{
+      display: flex; flex-direction: column; gap: 4px;
+      >.contact-info-row{
+        display: block; width:100%; display: flex; gap: 8px;
+        align-items: center;
+        >img{ width:14px; height: 14px;}
+        >.info-text { 
+          display: block; width:100%; font-size: 16px;
+          color:var(--color-text-100);
+        }
+      }
+    } 
+  }
+}
+
+@media (max-width:1024px){
+  .branch-contact-wrap{
+    width: 100%; 
+    grid-template-columns: repeat(3, 1fr);
+    >.card-contact {
+      border-radius: 8px; padding: 16px 16px; gap:4px;
+      >.branch-title{
+        font-size: 16px; margin-bottom: 4px;
+      }
+      >.contact-info-row{
+        gap: 8px;
+        >.info-text { font-size: 15px; }
+      }
+    }
+  }
+}
+
+@media (max-width:640px){
+  .branch-contact-wrap{
+    width: 100%; 
+    grid-template-columns: repeat(1, 1fr);
+    >.card-contact {
+      border-radius: 8px; padding: 16px 16px; gap:4px;
+      >.branch-title{
+        font-size: 16px; margin-bottom: 4px;
+      }
+      >.contact-info-wrap{
+        flex-direction: row; gap:8px;
+        >.contact-info-row{
+          gap: 8px;
+          >img{ width:14px; height: 14px;}
+          >.info-text { font-size: 13px; }
+        }
+      }
+    }
   }
 }

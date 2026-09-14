@@ -72,13 +72,15 @@
                 </span>
               </div>
 
-              <div class="step-form-wrap" id="step-1-body">   
+              <div class="step-form-wrap" id="step-payment-body">
                 <div class="step-form-body">
                   <div class="form-item-wrap">
+
                     <span class="direction-row">
                       <span class="row-bullet"></span>
                       원하시는 기부 지역과 금액을 선택해주세요
                     </span>
+
                     <div class="input-item-wrap input-item-row">
                       <h4 class="item-label">기부 지역</h4>
                       <div class="input-row">
@@ -89,6 +91,7 @@
                         </select>
                       </div>
                     </div>
+
                     <div class="input-item-wrap input-item-row">
                       <h4 class="item-label">기부 금액</h4>
                       <div class="input-row">
@@ -104,7 +107,9 @@
                         <span class="unit">원</span>
                       </div>
                     </div>
+
                   </div>
+                  
                   <div class="don-amount-wrap">
                     <div class="inner-wrap">
                       총 기부금액<span class="strong">10,000</span>원
@@ -119,6 +124,7 @@
             </div><!--Step Block End-->
 
             <div class="step-block-wrap">
+
               <div class="step-form-title-bar">
                 <span class="title-inner">
                   <span class="num">2.</span>
@@ -126,7 +132,7 @@
                 </span>
               </div>
 
-              <div class="step-form-wrap" id="step-2-body">  
+              <div class="step-form-wrap" id="step-certification-body">  
                 <div class="step-form-body">
                   <div class="form-item-wrap">
                     <span class="direction-row">
@@ -141,15 +147,16 @@
                     </button>
                   </div>
                 </div>
+
                 <div class="step-form-action-bar">
                   <button class="btn">다음 단계</button>
                 </div>           
               </div>
 
-              
             </div><!--Step Block End-->
 
             <div class="step-block-wrap">
+
               <div class="step-form-title-bar">
                 <span class="title-inner">
                   <span class="num">3.</span>
@@ -157,13 +164,15 @@
                 </span>
               </div>
 
-              <div class="step-form-wrap" id="step-3-body">            
+              <div class="step-form-wrap" id="step-payinfo-body">
+
                 <div class="step-form-body">
                   <div class="form-item-wrap">
                     <span class="direction-row">
                       <span class="row-bullet"></span>
                       원하시는 결제방식을 선택해주세요
                     </span>
+
                     <div class="input-item-wrap input-item-row">
                       <h4 class="item-label">결제 방식</h4>
                       <div class="btns-row" id="pay-type-choice">
@@ -193,25 +202,60 @@
                         </button>
                       </div>
                     </div>
+
+                    <span class="input-guide-row left-indent">
+                      결제 방식에 따라 기부금영수증 발급 기준일이 달라집니다.
+                      <button class="modal-open" id="modal-donation-receipt">
+                        <span class="label">확인하기</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 11L10 7L6 3" stroke="#33363D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </span>
+                    
                   </div>
 
                   <div class="form-state-wrap" id="pay-type-form-credit">
                     <div class="form-item-wrap">
-                      <span class="direction-row">
-                        <span class="row-bullet"></span>
-                        매월 지정하신 날짜로 기부금액이 결제됩니다.
-                      </span>
-                      <div class="input-item-wrap input-item-row">
-                        <h4 class="item-label">결제일 지정</h4>
-                        <div class="input-row">
-                          <select id="mail-3">
-                            <option value="중앙회" selected>10</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                          </select>
-                          <span class="unit">일</span>
+
+                      <div class="input-item-wrap input-item-row" data-pay-type="common">
+                        <h4 class="item-label">기부시작월</h4>
+                        <div class="input-row-wrap">
+                          <div class="input-row">
+                            <select>
+                              <option value="2026" selected>2026</option>
+                              <option value="01">01</option>
+                              <option value="02">02</option>
+                            </select>
+                            <span class="unit mr-8">일</span>
+                            <select>
+                              <option value="10" selected>10</option>
+                              <option value="01">01</option>
+                              <option value="02">02</option>
+                            </select>
+                            <span class="unit">월부터 기부시작</span>
+                          </div>
                         </div>
                       </div>
+
+                      <div class="input-item-wrap input-item-row" data-pay-type="common">
+                        <h4 class="item-label">결제일 지정</h4>
+                        <div class="input-row-wrap">
+                          <div class="input-row">
+                            <select id="mail-3">
+                              <option value="중앙회" selected>10</option>
+                              <option value="01">01</option>
+                              <option value="02">02</option>
+                            </select>
+                            <span class="unit">일</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <span class="input-guide-row left-indent">
+                        매월 지정하신 날짜로 기부금액이 결제됩니다.
+                      </span>
+                      
                       <div class="input-item-wrap input-item-row">
                         <h4 class="item-label">카드번호</h4>
                         <div class="input-row">
@@ -221,27 +265,29 @@
                           <input type="text" id="don-amount-value" placeholder="0000" size="4">
                         </div>
                       </div>
-                      <div class="input-item-wrap input-item-row">
+
+                      <div class="input-item-wrap input-item-row" >
                         <h4 class="item-label">카드유효기간</h4>
                         <div class="input-row">
                           <select id="don-amount-choice">
-                            <option value="10000" selected>월</option>
-                            <option value="20000">20,000</option>
-                            <option value="30000">30,000</option>
-                            <option value="50000">50,000</option>
-                            <option value="100000">100,000</option>
-                            <option value="직접입력">직접입력</option>
+                            <option value="" selected>월</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
                           </select>
                           <select id="don-amount-choice">
-                            <option value="10000" selected>년도</option>
-                            <option value="20000">20,000</option>
-                            <option value="30000">30,000</option>
-                            <option value="50000">50,000</option>
-                            <option value="100000">100,000</option>
-                            <option value="직접입력">직접입력</option>
+                            <option value="" selected>년도</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
                           </select>
                         </div>
                       </div>
+
                       <div class="input-item-wrap input-item-row">
                         <h4 class="item-label">기부금영수증</h4>
                         <div class="input-row">
@@ -259,13 +305,28 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="input-item-wrap input-item-row">
+                        <h4 class="item-label" style="text-align: left;">기부금영수증 주민등록번호</h4>
+                        <div class="input-row">
+                          <input type="text" id="don-amount-value" placeholder="0000" size="6">
+                          -
+                          <input type="text" id="don-amount-value" placeholder="0000" size="6">
+                        </div>
+                      </div>
+
+                      <span class="input-guide-row left-indent">
+                        -기부금영수증발급을 위한 필수 정보입니다.<br>
+                        -개인정보보호법 제2조, 사회복지공동모금회법 제18조, 소득세법 제160조의3, 소득세법시행령 제208조의 3
+                      </span>
+
                     </div>
                   </div>
                   
-                </div>
+                </div><!-- step form body -->
 
-                <div class="agreement-wrap">
-                  <div class="checkbox-item">
+                <ul class="agreement-wrap">
+                  <li class="checkbox-item">
                     <label class="checkbox">
                       <input type="checkbox" id="agree-privacy" name="agree-privacy" />
                       <span class="checkbox-box">
@@ -275,8 +336,8 @@
                       </span>
                       <span class="checkbox-label">개인정보 수집 및 이용에 모두 동의합니다.</span>
                     </label>
-                  </div>
-                  <div class="checkbox-item">
+                  </li>
+                  <li class="checkbox-item">
                     <label class="checkbox">
                       <input type="checkbox" id="agree-privacy" name="agree-privacy" />
                       <span class="checkbox-box">
@@ -286,8 +347,8 @@
                       </span>
                       <span class="checkbox-label">개인정보 수집 및 이용동의 <a href="#" data-event="view-privacy-info">(상세보기)</a></span>
                     </label>
-                  </div>
-                  <div class="checkbox-item">
+                  </li>
+                  <li class="checkbox-item">
                     <label class="checkbox">
                       <input type="checkbox" id="agree-privacy" name="agree-privacy" />
                       <span class="checkbox-box">
@@ -297,13 +358,13 @@
                       </span>
                       <span class="checkbox-label">제3자 제공 동의 <a href="#" data-event="view-privacy-info">(상세보기)</a></span>
                     </label>
-                  </div>
-                  <div class="comment-wrap">
+                  </li>
+                  <li class="comment-wrap">
                     <span class="comment-row">
                       * 아이폰 사용자의 경우 설정>Safari>팝업차단을 해제하셔야 기부 결제가 가능합니다.
                     </span>
-                  </div>
-                </div>
+                  </li>
+                </ul>
 
                 <div class="step-form-action-bar">
                   <button class="btn xl">기부하기</button>

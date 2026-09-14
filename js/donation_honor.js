@@ -36,32 +36,32 @@ ScrollTrigger.defaults({ scroller });
    section-4 회원예우 슬라이더
 ---------------------------------------- */
 
-(() => {
-  const section = document.querySelector(".section-honor.section-4");
-  if (!section) return;
+// (() => {
+//   const section = document.querySelector(".section-honor.section-4");
+//   if (!section) return;
 
-  const container = section.querySelector(".swiper-container");
-  if (!container) return;
+//   const container = section.querySelector(".swiper-container");
+//   if (!container) return;
 
-  new Swiper(container, {
-    slidesPerView: 1.2,
-    spaceBetween: 12,
-    grabCursor: true,
-    navigation: {
-      nextEl: section.querySelector(".swiper-control-basic .nav-next"),
-      prevEl: section.querySelector(".swiper-control-basic .nav-prev"),
-    },
-    pagination: {
-      el: section.querySelector(".swiper-control-basic .swiper-pagination"),
-      clickable: true,
-    },
-    breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 3, spaceBetween: 32 },
-    },
-    loop: false,
-  });
-})();
+//   new Swiper(container, {
+//     slidesPerView: 1.2,
+//     spaceBetween: 12,
+//     grabCursor: true,
+//     navigation: {
+//       nextEl: section.querySelector(".swiper-control-basic .nav-next"),
+//       prevEl: section.querySelector(".swiper-control-basic .nav-prev"),
+//     },
+//     pagination: {
+//       el: section.querySelector(".swiper-control-basic .swiper-pagination"),
+//       clickable: true,
+//     },
+//     breakpoints: {
+//       640: { slidesPerView: 2, spaceBetween: 20 },
+//       1024: { slidesPerView: 3, spaceBetween: 32 },
+//     },
+//     loop: false,
+//   });
+// })();
 
 /* ----------------------------------------
    korea-map path ↔ club-item 연동

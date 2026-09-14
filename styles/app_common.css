@@ -28,6 +28,7 @@ p{ margin:0; }
 .pb-120 { padding-bottom: 120px !important; }
 .pb-160 { padding-bottom: 160px !important; }
 
+.mr-8{ margin-right: 8px;}
 .pc-hidden { visibility: hidden; }
 .md-hidden { display: inline; }
 .sm-hidden { display: inline; }
