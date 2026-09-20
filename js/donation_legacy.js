@@ -169,9 +169,10 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
 
 /* ----------------------------------------
    .hero-cover-wrap 확대 + blur 연출
-   section-2 가 화면 상단에 닿으면 1200px 스크롤되는 동안 pin 되고,
-   hero-cover-wrap 이 전체화면 크기로 커지며 blur(40px) 적용되는 모션은
-   그중 앞의 400px 안에서 끝남
+   (don_intro_good_family.html 의 .donation-cover 확대 연출과 동일한 구조)
+
+   모바일(≤1024px)에서는 pin+스크롤 연출 자체를 제거하고,
+   hero-cover-wrap 을 처음부터 전체화면 크기(완성 상태)로 고정 표시함
 ---------------------------------------- */
 
 (() => {
@@ -179,37 +180,55 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
   const heroCover = section2?.querySelector(".hero-cover-wrap");
   if (!section2 || !heroCover) return;
 
-  ScrollTrigger.create({
-    trigger: section2,
-    start: "top top",
-    end: "+=1200",
-    pin: true,
-    pinType: "transform",
-    scrub: true,
-  });
+  const heroCoverMM = gsap.matchMedia();
 
-  /*
-    타임라인 총 길이(400px 스크롤 구간)를 duration:1 로 두고,
-    각 tween 의 4번째 인자(포지션)로 시작 시점을, duration 으로
-    진행 구간을 조절. 값만 바꾸면 순서/타이밍을 자유롭게 재배치 가능.
-      - width  : 0     ~ 0.6
-      - height : 0.1   ~ 0.7  (width 보다 살짝 늦게 시작)
-      - filter : 0.4   ~ 1    (확대가 어느 정도 진행된 후 blur 시작)
-  */
-  gsap
-    .timeline({
-      defaults: { ease: "none" },
-      scrollTrigger: {
+  heroCoverMM.add(
+    {
+      isMobile: "(max-width: 1024px)",
+      isDesktop: "(min-width: 1025px)",
+    },
+    (context) => {
+      const { isMobile } = context.conditions;
+
+      if (isMobile) {
+        gsap.set(heroCover, { width: "100vw", height: "100vh" });
+        gsap.set('.cover-img', { opacity: 0.6, filter: "blur(10px)" });
+        gsap.set('.cover-copy', { opacity: 1, y: 0 });
+        return;
+      }
+
+      ScrollTrigger.create({
         trigger: section2,
         start: "top top",
-        end: "+=400",
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    })
-    .fromTo(heroCover, { width: "50%" }, { width: "100%", duration: 0.6 }, 0)
-    .fromTo(heroCover, { height: "40%" }, { height: "100%", duration: 0.6 }, 0)
-    .fromTo('.cover-img', { opacity: 1 }, { opacity: 0.6, duration: 0.6 }, 0)
-    .fromTo('.cover-copy', { opacity: 0, y:50 }, { opacity: 1, y: 0, duration: 0.6 }, 0)
-    .fromTo('.cover-img', { filter: "blur(0px)" }, { filter: "blur(32px)", duration: 0.6 }, 0.4);
+        end: "+=600",
+        pin: true,
+        pinType: "transform",
+      });
+
+      /*
+        타임라인 총 길이(250px 스크롤 구간)를 duration:1 로 두고,
+        각 tween 의 4번째 인자(포지션)로 시작 시점을, duration 으로
+        진행 구간을 조절. 값만 바꾸면 순서/타이밍을 자유롭게 재배치 가능.
+          - width  : 0     ~ 0.6
+          - height : 0.1   ~ 0.7  (width 보다 살짝 늦게 시작)
+          - filter : 0.4   ~ 1    (확대가 어느 정도 진행된 후 blur 시작)
+      */
+      gsap
+        .timeline({
+          defaults: { ease: "none" },
+          scrollTrigger: {
+            trigger: section2,
+            start: "top top",
+            end: "+=250",
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        })
+        .fromTo(heroCover, { width: "50%" }, { width: "100%", duration: 0.6 }, 0)
+        .fromTo(heroCover, { height: "40%" }, { height: "100%", duration: 0.6 }, 0)
+        .fromTo('.cover-img', { opacity: 1 }, { opacity: 0.6, duration: 0.6 }, 0)
+        .fromTo('.cover-copy', { opacity: 0, y:50 }, { opacity: 1, y: 0, duration: 0.6 }, 0)
+        .fromTo('.cover-img', { filter: "blur(0px)" }, { filter: "blur(32px)", duration: 0.6 }, 0.4);
+    },
+  );
 })();
