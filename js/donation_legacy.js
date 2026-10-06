@@ -83,11 +83,11 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
   const scenes = [
     {
       trigger: ".section-honor.section-1",
-      back: "#040303",
+      back: "#481C33",
       shapes: {
-        ".back-shape-1": { fill: "#371D0C", x: 0, y: 0, scale: 1 },
-        ".back-shape-2": { fill: "#3A3224", x: 0, y: 0, scale: 1 },
-        ".back-shape-3": { fill: "#271404", x: 0, y: 0, scale: 1 },
+        ".back-shape-1": { fill: "#741935", x: 0, y: 0, scale: 1 },
+        ".back-shape-2": { fill: "#6A3042", x: 0, y: 0, scale: 1 },
+        ".back-shape-3": { fill: "#481645", x: 0, y: 0, scale: 1 },
       },
     },
     {

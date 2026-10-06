@@ -33,37 +33,6 @@ if (lenis) {
 ScrollTrigger.defaults({ scroller });
 
 /* ----------------------------------------
-   section-4 회원예우 슬라이더
----------------------------------------- */
-
-// (() => {
-//   const section = document.querySelector(".section-honor.section-4");
-//   if (!section) return;
-
-//   const container = section.querySelector(".swiper-container");
-//   if (!container) return;
-
-//   new Swiper(container, {
-//     slidesPerView: 1.2,
-//     spaceBetween: 12,
-//     grabCursor: true,
-//     navigation: {
-//       nextEl: section.querySelector(".swiper-control-basic .nav-next"),
-//       prevEl: section.querySelector(".swiper-control-basic .nav-prev"),
-//     },
-//     pagination: {
-//       el: section.querySelector(".swiper-control-basic .swiper-pagination"),
-//       clickable: true,
-//     },
-//     breakpoints: {
-//       640: { slidesPerView: 2, spaceBetween: 20 },
-//       1024: { slidesPerView: 3, spaceBetween: 32 },
-//     },
-//     loop: false,
-//   });
-// })();
-
-/* ----------------------------------------
    korea-map path ↔ club-item 연동
    - path 클릭 시 해당 path 와 data-region 이 같은 club-item 에 .active
    - 기존 .active 는 모두 제거
@@ -136,20 +105,20 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
   const scenes = [
     {
       trigger: ".section-honor.section-1",
-      back: "#040303",
+      back: "#1D3026",
       shapes: {
-        ".back-shape-1": { fill: "#4A1212", x: 0, y: 0, scale: 1 },
-        ".back-shape-2": { fill: "#192140", x: 0, y: 0, scale: 1 },
-        ".back-shape-3": { fill: "#270418", x: 0, y: 0, scale: 1 },
+        ".back-shape-1": { fill: "#1D3026", x: 0, y: 0, scale: 1 },
+        ".back-shape-2": { fill: "#1D3026", x: 0, y: 0, scale: 1 },
+        ".back-shape-3": { fill: "#244031", x: 0, y: 0, scale: 1 },
       },
     },
     {
       trigger: ".section-honor.section-2",
-      back: "#0b1226",
+      back: "#0F1D1C",
       shapes: {
-        ".back-shape-1": { fill: "#123a4a", x: -120, y: 80, scale: 1.2 },
-        ".back-shape-2": { fill: "#1d4b8f", x: 120, y: 60, scale: 1.15 },
-        ".back-shape-3": { fill: "#0a2a3a", x: -60, y: -80, scale: 0.9 },
+        ".back-shape-1": { fill: "#1D3026", x: 0, y: 0, scale: 1 },
+        ".back-shape-2": { fill: "#1D3026", x: 0, y: 0, scale: 1 },
+        ".back-shape-3": { fill: "#244031", x: 0, y: 0, scale: 1 },
       },
     },
     {
@@ -162,8 +131,8 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
       },
     },
     {
-      trigger: ".section-honor.section-5",
-      back: "#0b1226",
+      trigger: ".section-honor.section-4",
+      back: "#071926",
       shapes: {
         ".back-shape-1": { fill: "#123a4a", x: 60, y: -60, scale: 0.85 },
         ".back-shape-2": { fill: "#1d4b8f", x: -100, y: -40, scale: 1.3 },
@@ -227,7 +196,7 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
 ---------------------------------------- */
 
 (() => {
-  const numEl = document.querySelector(".section-honor.section-2 .member-num");
+  const numEl = document.querySelector(".honor-counter .member-num");
   if (!numEl) return;
 
   const target = parseInt(numEl.textContent.replace(/[^\d]/g, ""), 10) || 0;
@@ -268,7 +237,7 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
     ease: "none",
     onUpdate: render,
     scrollTrigger: {
-      trigger: ".section-honor.section-2",
+      trigger: ".section-honor.local-club",
       start: "top 65%",
       end: "top 40%",
       scrub: true,
@@ -291,7 +260,7 @@ document.querySelectorAll("#btn-request-consultation, #btn-request-consultation-
   };
 
   ScrollTrigger.create({
-    trigger: ".section-honor.section-2",
+    trigger: ".section-honor.local-club",
     start: "bottom top",
     // 아래로 스크롤해 섹션이 화면 위로 완전히 벗어남 → 초기화
     onEnter: () => {
