@@ -103,11 +103,12 @@
       }  
     }
     >.intro-text{
-      width:100%; max-width: 588px; padding: 56px 56px; min-height: 320px;      
+      width:100%; max-width: 588px; padding: 56px 56px; min-height: 340px;      
       background: linear-gradient(180deg, #3D614E 0%, rgba(61, 97, 78, 0.1) 100%);
+      display: flex; align-items: center;
       >.text {
         font-size:24px; color:white;
-        line-height: 1.65em; font-weight: 600; word-break: keep-all;
+        line-height: 1.8em; font-weight: 600; word-break: keep-all;
       }
       &.legacy {
         background: linear-gradient(180deg, rgba(105, 38, 85, 1) 0%, rgba(84, 34, 69, 0.1) 100%);
