@@ -88,7 +88,7 @@
         width:100%; font-size: 48px; color:white; text-align: center;
       }
       >.logo-big{
-        width: 480px;
+        width: 420px;
       }
       >.legacy-title{
         width:100%; display: block; text-align: center;
@@ -103,7 +103,7 @@
       }  
     }
     >.intro-text{
-      width:100%; max-width: 588px; padding: 56px 56px; min-height: 440px;      
+      width:100%; max-width: 588px; padding: 56px 56px; min-height: 320px;      
       background: linear-gradient(180deg, #3D614E 0%, rgba(61, 97, 78, 0.1) 100%);
       >.text {
         font-size:24px; color:white;
