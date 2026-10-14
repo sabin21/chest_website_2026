@@ -105,7 +105,7 @@
     >.intro-text{
       width:100%; max-width: 588px; padding: 56px 56px; min-height: 340px;      
       background: linear-gradient(180deg, #3D614E 0%, rgba(61, 97, 78, 0.1) 100%);
-      display: flex; align-items: center;
+      display: flex; align-items: center; justify-content: center;
       >.text {
         font-size:24px; color:white;
         line-height: 1.8em; font-weight: 600; word-break: keep-all;
