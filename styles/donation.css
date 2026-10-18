@@ -1184,6 +1184,105 @@
   }
 }
 
+/*===========================*/
+/* 착한 팬클럽 */
+
+.search-bar.fanclub{
+  width:100%;
+  >.filter-bar{
+    width: 100%; display: flex; gap: 4px;
+    >.filter-btn{
+      font-weight: 700; padding: 8px 12px; font-size:16px;
+      border-radius: 40px; color: black;
+      background-color: white; border: 1px solid black;
+      &.active{
+        background-color: black; 
+        color: white;
+      }
+      &.gold { background-color: #EEC43C; border: 1px solid #df8404;}
+      &.silver { background-color: #c4c4c4; border: 1px solid #a5a5a5;}
+      &.green { background-color: #84e747; border: 1px solid #41a109;}
+    }
+  }
+  >.list-search-wrap{
+    margin-bottom:16px;
+  }
+}
+.content-wrap.fanclub-list{
+  gap:24px !important;
+}
+.card-fanclub-wrap{
+  width:100%; display: grid; gap:16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-fanclub{
+  overflow: hidden; border-radius: 16px;
+  >.thumbnail{
+    width:100%; aspect-ratio: 35/24; overflow: hidden;
+    background-size: cover; background-position: center center;
+    background-image: url("../img/donation/intro/caes_fanclub_default.png");
+    >img{ max-width: 100%;}
+  }
+  >.card-body{
+    width:100%; background-color: white;
+    display: flex; gap:12px;
+    padding: 20px;
+    >.text-wrap{ 
+      width:100%; display: flex; flex-direction: column;
+      align-items: flex-start; gap:6px;
+      >.tag-club-grade{
+        font-weight: 700; border-radius: 40px; color:black; 
+        font-size:14px; padding: 8px 12px; 
+      }
+      >h4{ font-size: 18px; }
+    }
+    >.club-grade-logo{
+      width:70px; height:108px;
+      background-size: contain; background-repeat: no-repeat;
+      background-image:url("../img/donation/logo_fanclub_gold.png");
+    }
+  }
+}
+.card-fanclub.gold{
+  >.card-body{
+    >.text-wrap{
+      >.tag-club-grade{
+        background-color: #EEC43C;
+        &::after{ content: "골드회원"}
+      }
+    }
+    >.club-grade-logo{
+      background-image:url("../img/donation/logo_fanclub_gold.png");
+    }
+  }
+}
+.card-fanclub.silver{
+  >.card-body{
+    >.text-wrap{
+      >.tag-club-grade{
+        background-color: #848484; color:white;
+        &::after{ content: "실버회원"}
+      }
+    }
+    >.club-grade-logo{
+      background-image:url("../img/donation/logo_fanclub_silver.png");
+    }
+  }
+}
+.card-fanclub.green{
+  >.card-body{
+    >.text-wrap{
+      >.tag-club-grade{
+        background-color: #1d930b; color:white;
+        &::after{ content: "그린회원"}
+      }
+    }
+    >.club-grade-logo{
+      background-image:url("../img/donation/logo_fanclub_green.png");
+    }
+  }
+}
+
   
 
 

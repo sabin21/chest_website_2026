@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>사랑의열매</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/app_common.css" />
+  <link rel="stylesheet" href="styles/depth_template.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/donation.css" />
+</head>
+
+<body>
+
+<div id="app-root" class="app-root">
+  <main class="app-main donation">
+
+    <div id="app-header" class="app-header"></div>
+
+    <div id="app-breadcrumb" class="depth-head"></div>
+
+    <div class="container-root">
+
+      <div class="container">
+        <div class="page-head-wrap donation-intro">
+          <div class="depth-page-title-wrap">
+            <div class="depth-page-title">
+              <img src="./img/donation/donation_logos/good_fanclub.png" alt="착한팬클럽" />
+            </div>
+          </div>
+          <div class="page-head-gnb-wrap center">
+            <a href="#" class="btn-page-head active">착한팬클럽 소개</a>
+            <a href="#" class="btn-page-head" id="btn-request-consultation">기부상담하기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="donation-back-circle-wrap">
+        <span class="back-circle circle-1"></span>
+        <span class="back-circle circle-2"></span>
+      </div>
+
+      <section class="donation-hero-wrap">
+        <div class="donation-head-copy-wrap">
+          <span class="head-copy-row">나눔을 실천하여</span>
+          <span class="head-copy-row">나눔문화를 이끄는 팬들의 모임</span>
+        </div>
+        <div class="donation-hero-pict-wrap">
+          <span class="pict-circle pict-1">
+            <img src="./img/donation/intro/case_fanclub_1.jpg" alt="착한가게 - 본도시락 " />
+          </span>
+          <span class="pict-circle pict-2">
+            <img src="./img/donation/intro/case_fanclub_3.jpg" alt="착한가게 - 본도시락 " />
+          </span>
+          <span class="pict-circle donation-cover">
+            <img src="./img/donation/intro/cover_fanclub.jpg" class="cover-image" alt="사회공헌현물기부 이미지" />
+            <p class="intro-copy wide">
+              착한팬클럽은 팬클럽이 3,000만원 이상의 <br class="xs-hidden"> 
+              기부금을 3년 이내 약정 또는 일시기부하여 <br class="xs-hidden">
+              참여하는 기부 프로그램입니다<br>
+              나눔리더스클럽에 속해 있으며 착한팬클럽 가입시 <br class="xs-hidden">
+              인증패를 수여받고, 팬클럽의 선한 영향력이 <br class="xs-hidden">
+              널리 홍보됩니다.
+            </p>
+          </span>
+        </div>
+      </section>
+
+      <div class="donation-redball-wrap" id="btn-request-consultation-redball">
+        <div class="redball-inner">
+          <div class="pict-wrap">
+            <img src="./img/donation/character_1.png" alt="열매둥이 캐릭터" />
+          </div>
+          <a class="btn-redball">기부상담하기</a>
+        </div>
+      </div>
+
+      <section class="don-intro-section-content scene-1">
+        <div class="content-inner-lp3">
+          <div class="content-wrap">
+            <span class="content-title-bar">
+              <span class="content-title text-scale-40">회원설명</span>
+            </span>
+
+            <div class="donation-intro grid-col2-wrap">
+              <div class="card-graphic-panel social-company">
+                <div class="title-wrap">
+                  <h3 class="title">정회원</h3>
+                  <p class="desc">1년 이내 누적기부금(일시 또는 약정)이 3,000만원 이상인 모임 또는 단체</p>
+                </div>
+                <div class="graphic-wrap">
+                  <img src="./img/donation/intro/icon_social_campany_1.svg" />
+                </div>
+              </div>
+              <div class="card-graphic-panel social-company">
+                <div class="title-wrap">
+                  <h3 class="title">약정회원</h3>
+                  <p class="desc">3,000만원 이상 기부금을 1년 이내에 납부하기로 약정한 모임 또는 단체</p>
+                </div>
+                <div class="graphic-wrap">
+                  <img src="./img/donation/intro/icon_social_campany_2.svg" />
+                </div>
+              </div>
+              <div class="card-wide-panel social-company">
+                <div class="inner-block">
+                  <h3 class="title">정회원</h3>
+                  <div class="panel-wrap">
+                    <div class="panel-item gold">
+                      <h5 class="title">골드</h5>
+                      <p class="desc">3,000만원 이상 일시 기부 완납 또는 그린 이후 누적 기부금 1억원 이상</p>
+                    </div>
+                    <div class="panel-item silver">
+                      <h5 class="title">실버</h5>
+                      <p class="desc">5,000만원 이상 일시 기부 완납 또는 그린 이후 누적 기부금 5,000만원 이상</p>
+                    </div>
+                    <div class="panel-item green">
+                      <h5 class="title">그린</h5>
+                      <p class="desc">1억원 이상 일시 기부 완납 또는 3년 이내 기부 약정</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </section>
+
+      <section class="don-intro-section-content scene-last">
+        <div class="content-inner-lp3">
+          <div class="content-wrap fanclub-list">
+            <span class="content-title-bar">
+              <span class="content-title">착한팬클럽 회원</span>
+            </span>
+
+            <div class="search-bar fanclub">
+              <div class="list-search-wrap">
+                <div class="search-form">
+                  <input type="text" class="input-search" placeholder="검색어를 입력하세요" />
+                  <button class="btn-search">
+                    <img src="img/common/icon_list_search.svg" alt="검색 아이콘" />
+                  </button>
+                </div>
+              </div>
+              <div class="filter-bar">
+                <button class="filter-btn active">전체</button>
+                <button class="filter-btn gold">골드</button>
+                <button class="filter-btn silver">실버</button>
+                <button class="filter-btn green">그린</button>
+              </div> 
+            </div>
+
+            <div class="card-fanclub-wrap">
+              <div class="card-fanclub gold">
+                <div class="thumbnail">
+                  <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" />
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>김희재와 희랑별</h4>
+                  </span>
+                  <div class="club-grade-logo"></div>
+                </div>
+              </div>
+              <div class="card-fanclub silver">
+                <div class="thumbnail">
+                  <img src="./img/donation/intro/case_fanclub_2.jpg" alt="팬클럽" />
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>박성현프로 네이버공식팬카페 남달라</h4>
+                  </span>
+                  <div class="club-grade-logo"></div>
+                </div>
+              </div>
+              <div class="card-fanclub silver">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>탁스튜디오(구 영탁이 딱이야)</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub gold">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>박서진팬카페 닻별</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub green">
+                <div class="thumbnail">
+                  <img src="./img/donation/intro/case_fanclub_3.jpg" alt="팬클럽" />
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>영웅시대 서울2구역방</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub green">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>박서진 팬클럽 닻별 서울지부</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub gold">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>김호중 공식팬카페 트바로티</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub silver">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>영웅시대 with Hero 부산남수해</h4>
+                  </span>
+                  <div class="club-grade-logo">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub silver">
+                <div class="thumbnail">
+                  <img src="./img/donation/intro/case_fanclub_5.jpg" alt="팬클럽" />
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>영웅시대 with Hero 울산 울산따라따라</h4>
+                  </span>
+                  <div class="club-grade-logo gold">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub silver">
+                <div class="thumbnail">
+                  <img src="./img/donation/intro/case_fanclub_4.jpg" alt="팬클럽" />
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>영웅시대 부산봉사방</h4>
+                  </span>
+                  <div class="club-grade-logo">
+                  </div>
+                </div>
+              </div>
+              <div class="card-fanclub green">
+                <div class="thumbnail">
+                  <!-- <img src="./img/donation/intro/case_fanclub_1.jpg" alt="팬클럽" /> -->
+                </div>
+                <div class="card-body">
+                  <span class="text-wrap">
+                    <span class="tag-club-grade"></span>
+                    <h4>영웅시대 with Hero 부산금정산</h4>
+                  </span>
+                  <div class="club-grade-logo">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- container-root -->
+
+    <div class="modal-overlay" id="modal-request-consultation"></div>
+
+    <div id="app-footer" class="app-footer"></div>
+    <div id="app-quick-link" class="app-quick-link"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script src="components/AppHeader.js"></script>
+<script src="components/Breadcrumb.js"></script>
+<script src="components/AppFooter.js"></script>
+<script src="components/AppQuickLink.js"></script>
+<script src="components/ModalDonationRequest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app_common.js"></script>
+<script src="js/donation_intro.js"></script>
+</body>
+
+</html>

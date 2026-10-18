@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+  <title>Template-basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="campaign_2027/css/type_a.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+      "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+      "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <main class="app-main">
+
+    <div class="container-root page-wrap">
+
+      <canvas id="main-canvas" aria-label="사랑의 온도탑 3D 모델"></canvas>
+
+      <div id="loading">모델 불러오는 중… <span id="pct">0%</span></div>
+
+      <div class="panel" role="group" aria-label="온도탑 조작">
+        <div class="row">
+          <span class="temp" id="tempLabel">50.0°</span>
+          <input id="temp" type="range" min="0" max="100" step="0.5" value="50" aria-label="나눔온도">
+        </div>
+      </div>
+
+      <div class="content-wrap">
+        <section class="section">
+
+        </section>
+        <section class="section">
+          
+        </section>
+        <section class="section">
+          
+        </section>
+        <section class="section">
+          
+        </section>
+      </div>
+     
+
+    </div><!-- container-root -->
+
+  </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12.1.3/swiper-bundle.min.js"></script>
+<script type="module" src="campaign_2027/js/type_a.js"></script>
+</body>
+
+</html>

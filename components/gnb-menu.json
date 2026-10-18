@@ -11,6 +11,7 @@
       { "label": "착한일터",                    "href": "./don_intro_good_workshop.html" },
       { "label": "착한펫",                      "href": "./don_intro_good_pet.html" },
       { "label": "나눔리더스클럽",              "href": "./don_intro_leaders_club.html" },
+      { "label": "착한팬클럽",              "href": "./don_intro_fanclub.html" },
       { "label": "나눔리더",                    "href": "./don_intro_leader.html" },
       { "label": "기부자맞춤기금",              "href": "./don_intro_custom_fund.html" },
       { "label": "아너 소사이어티",             "href": "./don_intro_honor.html" },
@@ -33,7 +34,7 @@
     "label": "캠페인",
     "href": "",
     "children": [
-      { "label": "희망나눔캠페인",             "href": "./cam_hope2026.html" },
+      { "label": "희망나눔캠페인",             "href": "./cam_hope2027_a.html" },
       { "label": "희망여름 착착착 나눔캠페인", "href": "./cam_hope_summer.html" },
       {
         "label": "열매모아(크라우드펀딩)", "href": "./cam_funding_list.html",
