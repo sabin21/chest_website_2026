@@ -47,26 +47,6 @@ function groundShadow(radius){
   return m;
 }
 
-const FLOOR_COLOR_SCROLL = new THREE.Color('#FFE8D2');   // 스크롤 후 바닥 색
-const pickRGB = (c) => ({ r: c.r, g: c.g, b: c.b });
-
-// 바닥면 (눈 덮인 바닥, 가장자리는 투명하게 페이드)
-function ground(radius){
-  const c = document.createElement('canvas'); c.width = c.height = 512;
-  const g = c.getContext('2d');
-  const grd = g.createRadialGradient(256,256,0,256,256,256);
-  // #RRGGBBAA (마지막 2자리 = 투명도)
-  grd.addColorStop(0,'#f8fafcff');
-  grd.addColorStop(0.6,'#f0f4f8e6');
-  grd.addColorStop(1,'#f0f4f800');
-  g.fillStyle = grd; g.fillRect(0,0,512,512);
-  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
-  const m = new THREE.Mesh(new THREE.CircleGeometry(radius, 64),
-    new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false }));
-  m.rotation.x = -Math.PI/2;
-  m.renderOrder = -1;   // 그림자보다 먼저 그려 겹침 깜빡임 방지
-  return m;
-}
 
 // 간판 텍스트: "나눔온도" "{온도}도" ----//
 
@@ -146,18 +126,14 @@ const FLOOR_CLIP = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);   // y >= 0 �
 const basePos = new THREE.Vector3();
 const lookTarget = new THREE.Vector3();
 const scrollCam = {
-  zoom: 0,    // 0~1, 탑까지 거리를 이 비율만큼 줄임
-  angle: 0,   // 탑 중심 기준 Y축 회전 (rad)
+  zoom: 0,    // 탑까지 거리를 이 비율만큼 줄임 (음수면 멀어짐: -0.25 → 거리 1.25배)
   shift: 0,   // 화면상 탑 위치를 오른쪽으로 미는 비율 (화면 폭 기준, 음수면 왼쪽)
   lift: 0,    // 화면상 탑 위치를 위로 올리는 비율 (화면 높이 기준)
 };
 const camOffset = new THREE.Vector3();
-const Y_AXIS = new THREE.Vector3(0, 1, 0);
 
 function updateCamera(){
-  camOffset.subVectors(basePos, lookTarget)
-    .multiplyScalar(1 - scrollCam.zoom)
-    .applyAxisAngle(Y_AXIS, scrollCam.angle);
+  camOffset.subVectors(basePos, lookTarget).multiplyScalar(1 - scrollCam.zoom);
   camera.position.addVectors(lookTarget, camOffset);
   camera.lookAt(lookTarget);
   // 투영 영역만 옮겨 원근 왜곡 없이 탑을 화면 오른쪽·위로 보냄 (aspect도 함께 설정됨)
@@ -185,9 +161,6 @@ new GLTFLoader().load(MODEL_URL, (gltf) => {
   const size = box.getSize(new THREE.Vector3());
   const center = box.getCenter(new THREE.Vector3());
   const r = Math.max(size.x, size.y, size.z);
-  const floor = ground(r * 5);
-  floor.position.set(center.x, 0, center.z);
-  scene.add(floor);
   const shadow = groundShadow(Math.max(size.x, size.z) * 0.9);
   scene.add(shadow);
 
@@ -199,8 +172,11 @@ new GLTFLoader().load(MODEL_URL, (gltf) => {
   tower.traverse((o) => { if (o.material) o.material.clippingPlanes = [FLOOR_CLIP]; });
 
   // 카메라: 처음부터 탑 정면(+Z) 고정
+  // CAM_DISTANCE: 보는 각도는 유지하고 거리만 배율 적용 (화면상 크기 ∝ 1/거리 → 1.25배 = 80% 크기)
+  const CAM_DISTANCE = 1.25;
   lookTarget.set(center.x, center.y + 0.2, center.z);
-  basePos.set(center.x, center.y - 2, center.z + r * 2.2);
+  basePos.set(center.x, center.y - 2, center.z + r * 2.2)
+    .sub(lookTarget).multiplyScalar(CAM_DISTANCE).add(lookTarget);
 
   // 하나의 타임라인: [0 ~ 'intro'] 로딩 인트로 → ['intro' ~ 끝] section-2 스크롤 구간
   const tl = gsap.timeline({ paused: true, defaults: { duration: 3, ease: 'power2.inOut' } });
@@ -209,24 +185,25 @@ new GLTFLoader().load(MODEL_URL, (gltf) => {
     .fromTo(tower.position, { y: -box.max.y }, { y: 0, ease: 'power3.out' }, 0)
     .fromTo(tower.rotation, { y: 0 }, { y: Math.PI * 2, ease: 'power2.out' }, 0)
     .fromTo(shadow.material, { opacity: 0 }, { opacity: 1, duration: 2 }, 0.5)
+    .fromTo('#btn-donate-1', { y: 300}, {y:0, duration: 0.5}, 2)
     .fromTo('.hero-copy-wrap', { y: "-80vh"}, {y:0, duration: 0.8}, 2)
     .fromTo('.model-pict', { x: "50vw"}, {x:0, duration: 0.8}, 2.5)
-    .fromTo('.hero-content', { x: "50vw"}, {x:0, duration: 0.8}, 3)
+    .fromTo('.hero-content', { x: "-50vw"}, {x:0, duration: 0.8}, 3)
     // 솟아남이 끝난 뒤 탑을 화면 중앙에서 20% 왼쪽으로 이동
     .to(scrollCam, { shift: -0.08, duration: 1 }, 2)
     .addLabel('intro')
+    // 스크롤: 탑이 왼쪽으로 이동하며 80% 크기로 작아짐(거리 1.25배)
     .to(scrollCam, {
-      zoom: 0.45, angle: THREE.MathUtils.degToRad(35), shift: 0.35, lift: 0.14,
+      zoom: -0.25, shift: -0.3, lift: 0,
       duration: 1, ease: 'none',
     }, 'intro')
     .to('.model-pict', { x: "50vw", duration: 0.8}, 'intro')
-    .to('.hero-content', { x: "50vw", duration: 0.8}, 'intro')
+    .to('.hero-content', { x: "-80vw", duration: 0.8}, 'intro')
     .to('.hero-copy-wrap', { y: "-80vh", duration: 0.8}, 'intro')
     .to('.hero-background-2', { opacity: 1, duration: 0.8}, 'intro')
     .fromTo('.local-map-title', { x: "-50vw"}, {x:0, duration: 0.8},'intro')
-    .fromTo('.local-data-panel', { x: "-50vw"}, {x:0, duration: 0.8}, 'intro')
-    .fromTo('.map-wrap', { x: "-80vw"}, {x:0, duration: 0.8}, 'intro')
-    .to(floor.material.color, { ...pickRGB(FLOOR_COLOR_SCROLL), duration: 0.8, ease: 'none' }, 'intro');
+    .fromTo('.local-data-panel', { x: "80vw"}, {x:0, duration: 0.8}, 'intro')
+    .fromTo('.map-wrap', { x: "80vw"}, {x:0, duration: 0.8}, 'intro');
 
   const introEnd = tl.labels.intro;
   const scrollLen = tl.duration() - introEnd;

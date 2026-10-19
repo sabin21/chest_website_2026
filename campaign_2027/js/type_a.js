@@ -252,12 +252,13 @@ new GLTFLoader().load(MODEL_URL, (gltf) => {
     .to(basePos, { x: center.x, y: center.y - 2 , z: center.z + r * 2.2 }, 0)
     .to(lookTarget, { y: center.y + 0.2 }, 0)
     .to(tower.rotation, { y: Math.PI * 2.1, duration: 2, ease: 'power1.inOut' }, 2)
+    .fromTo('.btn-donate', { y: 500}, {y:0, duration: 0.8}, 2)
     .fromTo('.hero-copy-wrap', { y: "-80vh"}, {y:0, duration: 0.8}, 2)
     .fromTo('.model-pict', { x: "50vw"}, {x:0, duration: 0.8}, 2.5)
     .fromTo('.hero-content', { x: "50vw"}, {x:0, duration: 0.8}, 3)
     .addLabel('intro')
     .to(scrollCam, {
-      zoom: 0.45, angle: THREE.MathUtils.degToRad(35), shift: 0.35, lift: 0.14,
+      zoom: 0.45, angle: THREE.MathUtils.degToRad(35), shift: 0.30, lift: 0.16,
       duration: 1, ease: 'none',
     }, 'intro')
     .to('.model-pict', { x: "50vw", duration: 0.8}, 'intro')

@@ -40,6 +40,7 @@
   --color-primary-500: #cd293f;
   --color-primary-600: #b22638;
 }
+
 *, *::after, *::before{ box-sizing:border-box; }
 :where(a, a:visited, a:hover, a:active) {
   color: inherit;
@@ -91,47 +92,41 @@ html{ overflow-x:hidden; }
   }
 }
 
-.panel{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);
-  width:min(520px,calc(100% - 32px));background:white;backdrop-filter:blur(10px);
-  border:1px solid gray;border-radius:16px;padding:14px 16px;box-shadow:0 8px 30px rgba(58,42,34,.12);
-  z-index: 10; display: none;
+#loading{
+  position:fixed;inset:0;display:grid;place-items:center;
+  font-size:15px;color:gray;pointer-events:none;
 }
-.row{display:flex;align-items:center;gap:12px}
-.row+.row{margin-top:10px}
-.temp{font-weight:700;font-size:22px;color:red;min-width:72px;font-variant-numeric:tabular-nums}
-button:focus-visible,input:focus-visible{ outline:2px solid green; outline-offset:2px}
-#loading{position:fixed;inset:0;display:grid;place-items:center;font-size:15px;color:gray;pointer-events:none}
-#loading.err{color:red;padding:24px;text-align:center;line-height:1.6}
+#loading.err{
+  color:red; padding:24px;text-align:center;line-height:1.6;
+}
 
 /*==============================*/
 
 .btn-donate {
-  display: flex; position: fixed; z-index: 100; width: 184px; 
-  left: calc(50% - 560px); bottom: calc(50% - 350px);
-  justify-content: center;
-  >.character-img{
-    position: absolute; top:-95px; width: 130px; height: 140px;
-    >img{ max-width: 100%;}
-  }
-  >.red-ball{
-    width: 184px; aspect-ratio: 1/1; border-radius: 50%;
-    background-color: var(--color-primary-400); 
-    display: flex; justify-content: center; align-items: center;
-    color:white; font-weight: 700; text-align: center;
-    font-size: 22px; border:1px solid var(--color-primary-400); 
-    transition: all 0.2s;
-    &:hover{
-      background-color: white; color: var(--color-text-600);
-      border:1px solid var(--color-line-500); 
+  display: flex; position: fixed; z-index: 100; border-radius: 60px;
+  left:calc(50% - 80px); bottom: 60px; padding: 20px 48px 20px 40px;
+  justify-content: center; align-items: center; gap: 4px;
+  background-color: var(--color-primary-400);
+  color:white; font-weight: 700; text-align: center;
+  font-size: 22px; border:1px solid var(--color-primary-400); 
+  transition: all 0.2s;
+  &:hover{
+    background-color: white; color: var(--color-text-600);
+    border:1px solid var(--color-line-500);
+    >svg{
+      path{
+        stroke: white; fill:var(--color-primary-400);
+      }
     }
-  }
+  }  
 }
+
 /*==============================*/
 
 .hero-background {
   display: block; width:100%; height:100vh; min-height:800px;
   position: fixed; 
-  background: linear-gradient(180deg, #e2e9eb 10%, #eae4de 70%);
+  background: linear-gradient(180deg, #FFC8C9 10%, #F9E4D7 70%);
   >.hero-background-2{
     display: block; width:100%; height:100vh; min-height:800px;
     background: linear-gradient(180deg, #cbd7db 10%, #f9e5d4 70%);
@@ -146,18 +141,18 @@ button:focus-visible,input:focus-visible{ outline:2px solid green; outline-offse
   }
   >.section-1{
     >.hero-copy-wrap{
-      position: absolute; top: calc(50% - 280px); left:calc(50% - 720px); width: 524px;
+      position: absolute; top: calc(50% - 340px); left:calc(50% + 30px); width: 637px;
       >img{ max-width: 100%;}
     }
     >.model-pict{
-      position: fixed; width:340px; height: 420px;
-      right: calc(50% - 500px); bottom: calc(50% - 400px);
-      >img{ max-width: 100%;} 
+      position: fixed; width:650px; max-height: 440px;
+      right: calc(50% - 800px); bottom: 0;
+      /* >img{ max-width: 100%;}  */
     }
     >.hero-content{
       position: fixed; width:320px; 
-      right: calc(50% - 680px); bottom: calc(50% - 260px);
-      >img{ max-width: 100%;}
+      left: calc(50% - 620px); bottom: calc(50% - 220px);
+      >img{ max-width: 100%; }
     }
   }
   >.section-2{
@@ -166,6 +161,7 @@ button:focus-visible,input:focus-visible{ outline:2px solid green; outline-offse
 }
 
 /*==============================*/
+
 .local-map-title {
   position: fixed; width: 340px;
   left: calc(50% - 620px); top: calc(50% - 320px);
@@ -173,10 +169,10 @@ button:focus-visible,input:focus-visible{ outline:2px solid green; outline-offse
 }
 .map-wrap{
   width: 352px; height: 590px;
-  position: fixed; left:calc(50% - 200px); top: calc(50% - 300px);
+  position: fixed; left:calc(50% - 100px); top: calc(50% - 300px);
 }
 #korea-map{
-  display: block; width: 100%; height: 100%;   /* viewBox 비율 유지하며 map-wrap에 맞춤 */
+  display: block; width: 100%; height: 100%;
   >path {
     fill:#ffffff; stroke:#CDC4B8;
     &.active {
@@ -188,7 +184,7 @@ button:focus-visible,input:focus-visible{ outline:2px solid green; outline-offse
 .local-data-panel{
   width: 320px; overflow: hidden; position: fixed;
   background-color: white; border-radius: 12px;
-  left: calc(50% - 620px); top: calc(50% - 240px);
+  left: calc(50% + 250px); top: calc(50% - 240px);
   filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.1));
   >.local-title{
     width:100%; background-color: var(--color-primary-400);
