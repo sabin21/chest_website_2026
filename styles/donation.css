@@ -1192,7 +1192,7 @@
   >.filter-bar{
     width: 100%; display: flex; gap: 4px;
     >.filter-btn{
-      font-weight: 700; padding: 8px 12px; font-size:16px;
+      font-weight: 700; padding: 12px 18px; font-size:16px;
       border-radius: 40px; color: black;
       background-color: white; border: 1px solid black;
       &.active{
@@ -1200,8 +1200,8 @@
         color: white;
       }
       &.gold { background-color: #EEC43C; border: 1px solid #df8404;}
-      &.silver { background-color: #c4c4c4; border: 1px solid #a5a5a5;}
-      &.green { background-color: #84e747; border: 1px solid #41a109;}
+      &.silver { background-color: #a0a0a0; border: 1px solid #717171; color: white;}
+      &.green { background-color: #57c414; border: 1px solid #296e01; color: white;}
     }
   }
   >.list-search-wrap{
@@ -1216,7 +1216,14 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .card-fanclub{
-  overflow: hidden; border-radius: 16px;
+  overflow: hidden; border-radius: 12px;
+  background-size: cover; background-position: center;
+  background-repeat: no-repeat; aspect-ratio: 350/218;
+  padding: 74px 100px 16px 24px;
+  background-image: url('../img/donation/intro/fanclub_card_gold.png');
+  >.club-title{
+    width: 100%; font-weight: 700; font-size: 22px;
+  }
   >.thumbnail{
     width:100%; aspect-ratio: 35/24; overflow: hidden;
     background-size: cover; background-position: center center;
@@ -1243,44 +1250,15 @@
     }
   }
 }
+
 .card-fanclub.gold{
-  >.card-body{
-    >.text-wrap{
-      >.tag-club-grade{
-        background-color: #EEC43C;
-        &::after{ content: "골드회원"}
-      }
-    }
-    >.club-grade-logo{
-      background-image:url("../img/donation/logo_fanclub_gold.png");
-    }
-  }
+  background-image:url("../img/donation/intro/fanclub_card_gold.png");
 }
 .card-fanclub.silver{
-  >.card-body{
-    >.text-wrap{
-      >.tag-club-grade{
-        background-color: #848484; color:white;
-        &::after{ content: "실버회원"}
-      }
-    }
-    >.club-grade-logo{
-      background-image:url("../img/donation/logo_fanclub_silver.png");
-    }
-  }
+  background-image:url("../img/donation/intro/fanclub_card_silver.png");
 }
 .card-fanclub.green{
-  >.card-body{
-    >.text-wrap{
-      >.tag-club-grade{
-        background-color: #1d930b; color:white;
-        &::after{ content: "그린회원"}
-      }
-    }
-    >.club-grade-logo{
-      background-image:url("../img/donation/logo_fanclub_green.png");
-    }
-  }
+  background-image:url("../img/donation/intro/fanclub_card_green.png");
 }
 
   

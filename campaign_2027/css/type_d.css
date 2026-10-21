@@ -1,0 +1,123 @@
+@import "../fonts/pretendard_gov/pretendard-gov-dynamic-subset.css";
+@import "./normalize.css";
+
+:root {
+  /* Text */
+  --color-text-white: #ffffff; 
+  --color-text-50: #e6e8ea; /* → Gray/100 */
+  --color-text-100: #cdd1d5; /* → Gray/200 */
+  --color-text-200: #b1b8be; /* → Gray/300 */
+  --color-text-300: #8a949e; /* → Gray/400 */
+  --color-text-400: #58616a; /* → Gray/600 */
+  --color-text-500: #33363d; /* → Gray/800 */
+  --color-text-600: #1e2124; /* → Gray/900 */
+  --color-text-700: #131416; /* → Gray/950 */
+
+  /* Line */
+  --color-line-50: #f0f1f2; /* → Gray/75  */
+  --color-line-100: #e6e8ea; /* → Gray/100 */
+  --color-line-150: #d8dfe4; /* → Gray/175 */
+  --color-line-200: #cdd1d5; /* → Gray/200 */
+  --color-line-300: #8a949e; /* → Gray/400 */
+  --color-line-400: #58616a; /* → Gray/600 */
+  --color-line-500: #33363d; /* → Gray/800 */
+
+  /* Solid */
+  --color-solid-50: #fafafa; /* → Gray/25  */
+  --color-solid-100: #f4f5f6; /* → Gray/50  */
+  --color-solid-200: #f0f1f2; /* → Gray/75  */
+  --color-solid-300: #e6e8ea; /* → Gray/100 */
+  --color-solid-400: #cdd1d5; /* → Gray/200 */
+  --color-solid-500: #8a949e; /* → Gray/400 */
+  --color-solid-700: #464c53; /* → Gray/700 */
+  --color-solid-800: #33363d; /* → Gray/800 */
+  --color-solid-900: #131416; /* → Gray/950 */
+  --color-solid-white: #ffffff; /* → Gray/White */
+
+  /* Primary */
+  --color-primary-300: #ff4751;
+  --color-primary-400: #ee243e;
+  --color-primary-500: #cd293f;
+  --color-primary-600: #b22638;
+}
+
+*, *::after, *::before{ box-sizing:border-box; }
+:where(a, a:visited, a:hover, a:active) {
+  color: inherit;
+  text-decoration: none;
+}
+ul, li {
+  list-style: none; margin: 0; padding: 0;
+}
+
+html,body{
+  margin:0; padding:0; scrollbar-width: thin;
+  font-family:"Pretendard GOV","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+
+/*==============================*/
+
+.page-wrap{
+  width:100%; height:100vh; min-height: 720px; max-height: 1080px; display: flex;
+  >.block-l{
+    width:50%; height:100vh; min-height: 720px; max-height:100%; background-color: #FFE8DF;
+    position: relative;
+    >.hero-inner{
+      width:100%; height:100%;
+      display: flex; justify-content: center; align-items: center;
+      >img{ width: 75%; }
+    }
+  }
+  >.block-r{
+    width:50%; height:100vh; min-height: 720px; max-height:100%; 
+    display: grid; grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    >.item-link {
+      width:100%; padding: 8%;
+      background-size: cover; background-position: center;
+      &#item-donate{
+        background-image: url('../img/d_block_2.png');
+      }
+      &#item-local{
+        background-image: url('../img/d_block_3.png');
+      }
+      >.item-title{
+        width:100%; font-size: 30px; font-weight: 700;
+        color:white;
+      }
+    }
+  }
+}
+
+/*==============================*/
+
+.campaign-header{
+  position:absolute; width:100%; top:0;left:0;right:0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding:16px 28px;
+  >.chest-logo{
+    display: block; width: 180px;
+    >img{ max-width: 100%;}
+  }
+  >.btn-goto-home{
+    display: flex; background: var(--color-primary-400); border-radius: 60px; gap:6px;
+    color:white;
+    font-size:18px; font-weight: 700; justify-content: center; align-items: center;
+    padding: 16px 18px 16px 24px;
+    transition: background 0.25s;
+    &:hover{
+      background: #1e2124;
+    }
+  }
+}
+
+/*==============================*/
+
+.video-wrap{
+  position: relative; width:100%; height:100%; grid-column: span 2;
+  background-color: gray; overflow: hidden;
+  >video{
+    position: absolute; inset: 0; width:100%; height:100%;
+    display: block; object-fit: cover;   /* 비율 유지하며 영역을 꽉 채움 */
+  }
+}

@@ -190,20 +190,22 @@ new GLTFLoader().load(MODEL_URL, (gltf) => {
     .fromTo('.model-pict', { x: "50vw"}, {x:0, duration: 0.8}, 2.5)
     .fromTo('.hero-content', { x: "-50vw"}, {x:0, duration: 0.8}, 3)
     // 솟아남이 끝난 뒤 탑을 화면 중앙에서 20% 왼쪽으로 이동
-    .to(scrollCam, { shift: -0.08, duration: 1 }, 2)
+    .to(scrollCam, { shift: -0.06, duration: 1 }, 2)
     .addLabel('intro')
     // 스크롤: 탑이 왼쪽으로 이동하며 80% 크기로 작아짐(거리 1.25배)
     .to(scrollCam, {
-      zoom: -0.25, shift: -0.3, lift: 0,
+      zoom: -0.32, shift: -0.25, lift: 0,
       duration: 1, ease: 'none',
     }, 'intro')
+    .to(tower.rotation, { y: Math.PI * 0, ease: 'power2.out' }, 'intro')
     .to('.model-pict', { x: "50vw", duration: 0.8}, 'intro')
     .to('.hero-content', { x: "-80vw", duration: 0.8}, 'intro')
     .to('.hero-copy-wrap', { y: "-80vh", duration: 0.8}, 'intro')
-    .to('.hero-background-2', { opacity: 1, duration: 0.8}, 'intro')
-    .fromTo('.local-map-title', { x: "-50vw"}, {x:0, duration: 0.8},'intro')
-    .fromTo('.local-data-panel', { x: "80vw"}, {x:0, duration: 0.8}, 'intro')
-    .fromTo('.map-wrap', { x: "80vw"}, {x:0, duration: 0.8}, 'intro');
+    // .to('.hero-background-2', { opacity: 1, duration: 0.8}, 'intro')
+    .to('#btn-donate-1', {y:200, duration: 0.5}, 'intro')
+    .fromTo('.local-panel-wrap', { x: "80vw"}, {x:0, duration: 2}, 'intro')
+    .fromTo('.model-pict-2', { x: "80vw"}, {x:0, duration: 1.6}, 'intro')
+    ;
 
   const introEnd = tl.labels.intro;
   const scrollLen = tl.duration() - introEnd;
