@@ -1254,6 +1254,7 @@
   width:100%; display: grid; gap:16px;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .card-fanclub{
   overflow: hidden; border-radius: 12px;
   background-size: cover; background-position: center;
@@ -1274,6 +1275,19 @@
 .card-fanclub.green{
   background-image:url("../img/donation/intro/fanclub_card_green.png");
 }
+@media (max-width: 1024px){
+  .card-fanclub-wrap{
+    gap:12px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-fanclub{
+    border-radius: 8px;
+    padding: 84px 100px 16px 28px;
+    >.club-title{
+      font-size: 24px;
+    }
+  }
+}
 @media (max-width: 640px){
   .card-fanclub-wrap{
     gap:12px;
@@ -1283,7 +1297,7 @@
     border-radius: 8px;
     padding: 74px 100px 16px 24px;
     >.club-title{
-      width: 100%; font-weight: 700; font-size: 22px;
+      font-size: 22px;
     }
   }
 }
