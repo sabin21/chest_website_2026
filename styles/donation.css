@@ -696,7 +696,7 @@
     }
   }
   >.card-wide-panel.list-type{
-    width:100%; padding: 8px 32px 24px 32px; grid-column: span 2;
+    width:100%; padding: 8px 32px 24px 32px; grid-column: 1 / -1;
     background-color: white; border-radius: 24px;
     filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
     >.inner-wrap{
@@ -727,7 +727,7 @@
       margin-top: 12px;
     }
   }
-  >.comment { grid-column: span 2; font-size: 15px; color:var(--color-text-400);}
+  >.comment { grid-column: 1 / -1; font-size: 15px; color:var(--color-text-400);}
 }
 
 .donation-intro.grid-col3-wrap{
@@ -757,16 +757,17 @@
 
 @media (max-width:480px){
   .donation-intro.grid-col2-wrap, .donation-intro.grid-col3-wrap{
-    gap: 8px; grid-template-columns: 1fr;
+    gap: 8px; 
+    grid-template-columns: repeat(1, 1fr);
     >.card-graphic-panel{
       height: 280px; border-radius: 12px;
       >.title-wrap{
         padding: 12px 12px;
         >.title { 
-          font-size:22px; 
+          font-size:20px; 
         }
         >.desc { 
-          font-size: 16px; margin-top: 6px;
+          font-size: 14px; margin-top: 6px;
         }
       }
       >.graphic-wrap{
@@ -774,7 +775,7 @@
       }
     }
     >.card-wide-panel.list-type{
-      padding: 8px 16px 24px 16px; grid-column: span 1;
+      padding: 8px 16px 24px 16px;
       border-radius: 12px;
       >.inner-wrap{
         >.list-item{
@@ -789,7 +790,6 @@
         }
       }
     }
-    >.comment { grid-column: span 1;}
   }
 }
 
@@ -986,7 +986,7 @@
 /*---------------------------*/
 
 .card-wide-panel.social-company{
-  width:100%; padding: 32px 32px 32px 32px; grid-column: span 2;
+  width:100%; padding: 32px 32px 32px 32px; grid-column: 1 / -1;
   background-color: white; border-radius: 24px;
   filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.08));
   display: flex; gap:32px;
@@ -1009,6 +1009,29 @@
         >.desc { 
           font-size:18px; font-weight: 700; 
           margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:640px){
+  .card-wide-panel.social-company{
+    padding: 16px; border-radius: 12px;
+    >.inner-block {
+      flex-direction: column;
+      >.title { 
+        font-size: 20px;
+      }
+      >.panel-wrap{
+        flex-direction: column;
+        >.panel-item {
+          padding: 20px; border-radius: 6px; 
+          padding-bottom: 24px; 
+          >.title { font-size:18px; }
+          >.desc { 
+            font-size:14px;
+          }
         }
       }
     }
@@ -1224,31 +1247,6 @@
   >.club-title{
     width: 100%; font-weight: 700; font-size: 22px;
   }
-  >.thumbnail{
-    width:100%; aspect-ratio: 35/24; overflow: hidden;
-    background-size: cover; background-position: center center;
-    background-image: url("../img/donation/intro/caes_fanclub_default.png");
-    >img{ max-width: 100%;}
-  }
-  >.card-body{
-    width:100%; background-color: white;
-    display: flex; gap:12px;
-    padding: 20px;
-    >.text-wrap{ 
-      width:100%; display: flex; flex-direction: column;
-      align-items: flex-start; gap:6px;
-      >.tag-club-grade{
-        font-weight: 700; border-radius: 40px; color:black; 
-        font-size:14px; padding: 8px 12px; 
-      }
-      >h4{ font-size: 18px; }
-    }
-    >.club-grade-logo{
-      width:70px; height:108px;
-      background-size: contain; background-repeat: no-repeat;
-      background-image:url("../img/donation/logo_fanclub_gold.png");
-    }
-  }
 }
 
 .card-fanclub.gold{
@@ -1260,7 +1258,19 @@
 .card-fanclub.green{
   background-image:url("../img/donation/intro/fanclub_card_green.png");
 }
-
+@media (max-width: 640px){
+  .card-fanclub-wrap{
+    gap:12px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-fanclub{
+    border-radius: 8px;
+    padding: 74px 100px 16px 24px;
+    >.club-title{
+      width: 100%; font-weight: 700; font-size: 22px;
+    }
+  }
+}
   
 
 
