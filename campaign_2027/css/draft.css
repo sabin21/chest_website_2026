@@ -74,7 +74,7 @@
   overflow-x: hidden;
 }
 
-.draft-index-page-wrap{
+.draft-index-wrap{
   width: 100%; display: flex; flex-direction: column; align-items: center;
   >.index-container{
     width:100%; max-width: 1200px; padding: 100px 40px;
@@ -92,12 +92,13 @@
         >h2{ font-size: 28px; margin: 12px 0;} 
       }
       >.links-wrap{
-        width: 100%; display: flex; gap: 16px; padding: 20px 0;
+        width: 100%; display: flex; gap: 14px; padding: 20px 0;
+        flex-wrap: wrap;
         >.link-item{
-          width: 23%; padding: 28px; text-align: center; display: flex; flex-direction: column;
+          width: 24%; padding: 28px; text-align: center; display: flex; flex-direction: column;
           border: 1px solid rgb(197, 199, 202); background-color: white; border-radius: 12px;
           color: var(--color-gray-900); transition: filter 0.25s;
-          max-height: 150px;
+          max-height: 150px; text-decoration: none;
           >h4{ font-size: 22px; width:100%; padding:0; margin:12px 0 8px 0; }
           >p{ font-size: 18px; font-weight: 500; padding:0; margin:8px 0 12px 0;}
           &:hover{

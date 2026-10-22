@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>희망 2027 나눔캠페인</title>
+  <title>희망2027 나눔캠페인</title>
   <link rel="stylesheet" href="./css/type_d.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 
   <div class="block-r">
     <div class="video-wrap">
-      <video muted loop playsinline>
+      <video autoplay muted loop playsinline>
         <source src="./video/hero_video_1.mp4" type="video/mp4">
       </video>
     </div>
@@ -38,11 +38,31 @@
     <div class="item-link" id="item-local">
       <h4 class="item-title">지역별 <br>모금현황보기</h4>
     </div>
+    <div class="popup-local">
+      <h3 class="popup-title">지역별 모금현황</h3>
+      <button class="btn-close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.34277 4.34302L10.0001 10.0004M10.0001 10.0004L15.6569 15.6572M10.0001 10.0004L15.6571 4.3434M10.0001 10.0004L4.3429 15.6576" stroke-width="2" stroke-linecap="round" stroke="white"/>
+        </svg>
+      </button>
+      <div class="map-content">
+        <img src="./img/d_map.png" />
+      </div>
+      <img src="./img/d_map_pict.png" class="pict" />
+    </div>
   </div>
-
-
-
 </div>
+
+<script>
+  // 지역별 모금현황 팝업 열기 / 닫기
+  const popupLocal = document.querySelector('.popup-local');
+  document.getElementById('item-local').addEventListener('click', () => {
+    popupLocal.classList.add('active');
+  });
+  popupLocal.querySelector('.btn-close').addEventListener('click', () => {
+    popupLocal.classList.remove('active');
+  });
+</script>
 
 </body>
 </html>

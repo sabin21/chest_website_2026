@@ -3,35 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>사랑의 온도탑</title>
-<link rel="stylesheet" href="./css/style.css">
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
+<title>희망2027 나눔캠페인</title>
+<link rel="stylesheet" href="./css/draft.css">
 </head>
-<body>
-<canvas id="view" aria-label="사랑의 온도탑 3D 모델"></canvas>
-<header>
-  <h1>사랑의 온도탑</h1>
-  <p>드래그해서 돌려 보고, 아래에서 나눔온도를 올려 보세요.</p>
-</header>
-<div id="loading">모델 불러오는 중… <span id="pct">0%</span></div>
-
-<div class="panel" role="group" aria-label="온도탑 조작">
-  <div class="row">
-    <span class="temp" id="tempLabel">50.0°</span>
-    <input id="temp" type="range" min="0" max="100" step="0.5" value="50" aria-label="나눔온도">
+<body class="draft-index-body">
+  <div class="draft-index-wrap">
+    <div class="index-container">
+      <div class="head-wrap">
+        <h1>희망2027 나눔캠페인 시안</h1>
+      </div>
+      <div class="draft-block">
+        <div class="title-wrap">
+          <h2>캠페인 메인화면</h2>
+        </div>
+        <div class="links-wrap">
+          <a class="link-item" target="_blank" href="./type_a.html">
+            <h4>Type-A</h4>
+            <p>Desktop</p>
+          </a>
+          <a class="link-item" target="_blank" href="./mo_frame_a_1.html">
+            <h4>Type-A</h4>
+            <p>Mobile</p>
+          </a>
+          <a class="link-item" target="_blank" href="./type_b.html">
+            <h4>Type-B</h4>
+            <p>Desktop</p>
+          </a>
+          <a class="link-item" target="_blank" href="./mo_frame_b_1.html">
+            <h4>Type-B</h4>
+            <p>Mobile</p>
+          </a>
+          <a class="link-item" target="_blank" href="./type_c.html">
+            <h4>Type-C</h4>
+            <p>Desktop</p>
+          </a>
+          <a class="link-item" target="_blank" href="./mo_frame_c_1.html">
+            <h4>Type-C</h4>
+            <p>Mobile</p>
+          </a>
+          <a class="link-item" target="_blank" href="./type_d.html">
+            <h4>Type-D</h4>
+            <p>Desktop</p>
+          </a>
+          <a class="link-item" target="_blank" href="./mo_frame_d_1.html">
+            <h4>Type-D</h4>
+            <p>Mobile</p>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <button id="rotateBtn" class="primary" type="button" aria-pressed="false">자동 회전</button>
-  </div>
-</div>
 
-<script type="module" src="./js/main.js"></script>
 </body>
 </html>

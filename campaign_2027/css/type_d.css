@@ -71,7 +71,7 @@ html,body{
   >.block-r{
     width:50%; height:100vh; min-height: 720px; max-height:100%; 
     display: grid; grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); position: relative;
     >.item-link {
       width:100%; padding: 8%;
       background-size: cover; background-position: center;
@@ -79,6 +79,7 @@ html,body{
         background-image: url('../img/d_block_2.png');
       }
       &#item-local{
+        cursor: pointer;
         background-image: url('../img/d_block_3.png');
       }
       >.item-title{
@@ -119,5 +120,37 @@ html,body{
   >video{
     position: absolute; inset: 0; width:100%; height:100%;
     display: block; object-fit: cover;   /* 비율 유지하며 영역을 꽉 채움 */
+  }
+}
+
+/*==============================*/
+
+.popup-local {
+  width:0%; height:0%; position: absolute;
+  bottom:0; right:0; background-color: #1F1F1E;
+  overflow: hidden; transition: width 0.25s, height 0.25s;
+  >.popup-title{
+    width: 100%; color:white; font-size: 36px; padding: 32px 40px 0px 40px;
+  }
+  >.btn-close{
+    border-radius: 50%; position: absolute; top:24px; right: 24px;
+    border: 1px solid rgba(255,255,255,0.7); display: flex; 
+    justify-content: center; align-items: center; background: transparent;
+    width:40px; height: 40px;
+  }
+  >.map-content{
+    width: 72%; min-width: 560px; margin: 0 auto;
+    padding-top: 72px;
+    >img{ max-width: 100%; }
+  }
+  >.pict{
+    width: 64%; position: absolute; bottom:0; right:24px; opacity: 0;
+    transition: opacity 0.4s;
+  }
+  &.active{
+    width:100%; height:100%;
+    >.pict{
+      opacity: 1;
+    }
   }
 }
