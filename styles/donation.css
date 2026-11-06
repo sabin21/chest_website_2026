@@ -453,6 +453,13 @@
     padding: 24px 24px;
     >img{ height:100%; }
   }
+  >.icon-wrap{
+    position: absolute; right: 48px; bottom:48px;
+    width:100px; height: 100px;
+    >img{
+      width:100%; height:100%;
+    }
+  }
   &.wide{
     width: 1084px; 
     >.graphic-wrap{
@@ -465,6 +472,9 @@
   }
   &.tall { height: 540px; }
   &.short { height: 400px; }
+  &:has(.icon-wrap){
+    height:440px;
+  }
 }
 @media (max-width:1024px){
   .card-donation-benefit {
@@ -492,6 +502,10 @@
       padding: 24px 24px;
       >img{ height:100%; }
     }
+    >.icon-wrap{
+      position: absolute; right: 48px; bottom:48px;
+      width:72px; height: 72px;
+    }
     &.wide {
       width:calc(80% - 16px); 
       >.graphic-wrap {
@@ -500,6 +514,9 @@
     }
     &.tall { height: 440px; }
     &.short { height: 380px; }
+    &:has(.icon-wrap){
+      height:320px;
+    }
   }
 }
 @media (max-width:640px){
